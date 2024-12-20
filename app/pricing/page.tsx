@@ -1,9 +1,6 @@
 import { FunctionComponent } from 'react';
-
-interface PricingProps {}
-
-const Pricing: FunctionComponent<PricingProps> = () => {
-  return <div className="">Pricing</div>;
+const Pricing: FunctionComponent = () => {
+  return <div className="m-auto">Pricing</div>;
 };
 
 export default Pricing;

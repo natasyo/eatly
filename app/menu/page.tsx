@@ -1,9 +1,7 @@
 import { FunctionComponent } from 'react';
 
-interface MenuProps {}
-
-const Menu: FunctionComponent<MenuProps> = () => {
-  return <div className="">Menu</div>;
+const Menu: FunctionComponent = () => {
+  return <div className="m-auto">Menu</div>;
 };
 
 export default Menu;

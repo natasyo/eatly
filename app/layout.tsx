@@ -6,10 +6,12 @@ import Header from '@/react/sections/header/header';
 const inter = Inter({
   variable: '--font-inter',
   weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
 });
 const poppins = Poppins({
   variable: '--font-popins',
   weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
 });
 export const metadata: Metadata = {
   title: 'Eatly',
