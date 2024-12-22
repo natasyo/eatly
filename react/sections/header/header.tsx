@@ -10,7 +10,7 @@ interface HeaderProps {}
 
 const Header: FunctionComponent<HeaderProps> = () => {
   return (
-    <header className="px-4">
+    <header>
       <div className="container mx-auto flex items-center justify-between border-b border-eatly-gray pb-[25px] pt-[47px]">
         <div className="flex items-center">
           <Link href="/" className="mr-[54px] xl:mr-[77px]">
