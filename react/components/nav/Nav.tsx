@@ -11,8 +11,11 @@ const Nav: FunctionComponent<NavProps> = ({ navItems, className }) => {
     <nav className={`${className}`}>
       <ul className="flex">
         {navItems.map((item) => (
-          <li className="mx-[27px]" key={item.link}>
-            <Link href={item.link} className="font-inter text-eatly-gray-400 font-medium">
+          <li className="xl:mx-[26px]" key={item.link}>
+            <Link
+              href={item.link}
+              className="font-inter text-[12.68px] font-medium text-eatly-gray-400 xl:text-lg"
+            >
               {item.label}
             </Link>
           </li>

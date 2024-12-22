@@ -1,14 +1,14 @@
-import { FunctionComponent, ReactElement } from 'react';
+import { FunctionComponent, ReactElement, ReactNode } from 'react';
 
 interface BtnProps {
   className?: string;
-  children: ReactElement | String;
+  children: String | ReactNode;
 }
 
 const Btn: FunctionComponent<BtnProps> = ({ children, className }) => {
   return (
     <button
-      className={`font-inter text-eatly-gray-400 rounded-2xl px-6 py-4 font-bold ${className}`}
+      className={`rounded-2xl px-6 py-4 font-inter font-bold text-eatly-gray-400 ${className}`}
     >
       {children}
     </button>
