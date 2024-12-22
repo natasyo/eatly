@@ -1,8 +1,8 @@
-import { FunctionComponent, ReactElement } from 'react';
+import { FunctionComponent, ReactElement, ReactNode } from 'react';
 import Btn from './btn';
 
 interface BtnPrimaryProps {
-  children: ReactElement | String;
+  children: String | ReactNode;
   className?: String;
 }
 
