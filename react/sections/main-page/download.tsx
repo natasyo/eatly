@@ -7,8 +7,8 @@ import { FunctionComponent } from 'react';
 
 const DownLoad: FunctionComponent = () => {
   return (
-    <div className="pb-[120px] pt-[104px]">
-      <div className="container flex items-end justify-end">
+    <div>
+      <div className="container flex items-end justify-end border-b border-eatly-gray pb-[115px] pt-[104px]">
         <div className="mr-[97px] flex w-[50%] justify-center">
           <Image
             src={downImg.src}

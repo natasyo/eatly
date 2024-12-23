@@ -1,0 +1,164 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "The Chicken King",
+      "type": "Healthy",
+      "time_wait": 24,
+      "rating": 4.8,
+      "image": "/img/chicken.png"
+    },
+    {
+      "id": 2,
+      "name": "Mangoes",
+      "type": "Trending",
+      "time_wait": 64,
+      "rating": 3.5,
+      "image": "/img/burger.png"
+    },
+    {
+      "id": 3,
+      "name": "Wine - Saint Emilion",
+      "type": "Healthy",
+      "time_wait": 18,
+      "rating": 3.3,
+      "image": "/img/chicken.png"
+    },
+    {
+      "id": 4,
+      "name": "Beer - Camerons Auburn",
+      "type": "Healthy",
+      "time_wait": 67,
+      "rating": 3.0,
+      "image": "http://dummyimage.com/140x100.png/5fa2dd/ffffff"
+    },
+    {
+      "id": 5,
+      "name": "Chocolate - Feathers",
+      "type": "Trending",
+      "time_wait": 86,
+      "rating": 2.1,
+      "image": "/img/burger.png"
+    },
+    {
+      "id": 6,
+      "name": "Beef - Kindney, Whole",
+      "type": "Healthy",
+      "time_wait": 59,
+      "rating": 1.7,
+      "image": "http://dummyimage.com/239x100.png/cc0000/ffffff"
+    },
+    {
+      "id": 7,
+      "name": "Honey - Lavender",
+      "type": "Elevator",
+      "time_wait": 40,
+      "rating": 4.2,
+      "image": "http://dummyimage.com/238x100.png/cc0000/ffffff"
+    },
+    {
+      "id": 8,
+      "name": "Oil - Canola",
+      "type": "Healthy",
+      "time_wait": 50,
+      "rating": 1.1,
+      "image": "http://dummyimage.com/129x100.png/dddddd/000000"
+    },
+    {
+      "id": 9,
+      "name": "Olives - Kalamata",
+      "type": "Healthy",
+      "time_wait": 78,
+      "rating": 2.0,
+      "image": "http://dummyimage.com/240x100.png/cc0000/ffffff"
+    },
+    {
+      "id": 10,
+      "name": "Healthy",
+      "type": "Healthy",
+      "time_wait": 100,
+      "rating": 4.0,
+      "image": "http://dummyimage.com/188x100.png/5fa2dd/ffffff"
+    },
+    {
+      "id": 11,
+      "name": "Wine - Sogrape Mateus Rose",
+      "type": "Masonry",
+      "time_wait": 95,
+      "rating": 4.1,
+      "image": "http://dummyimage.com/228x100.png/dddddd/000000"
+    },
+    {
+      "id": 12,
+      "name": "Olives - Green, Pitted",
+      "type": "Trending",
+      "time_wait": 60,
+      "rating": 1.8,
+      "image": "http://dummyimage.com/108x100.png/5fa2dd/ffffff"
+    },
+    {
+      "id": 13,
+      "name": "Healthy",
+      "type": "Trending",
+      "time_wait": 43,
+      "rating": 1.2,
+      "image": "http://dummyimage.com/184x100.png/dddddd/000000"
+    },
+    {
+      "id": 14,
+      "name": "Dooleys Toffee",
+      "type": "Healthy",
+      "time_wait": 66,
+      "rating": 1.2,
+      "image": "http://dummyimage.com/214x100.png/cc0000/ffffff"
+    },
+    {
+      "id": 15,
+      "name": "Soy Protein",
+      "type": "Trending",
+      "time_wait": 14,
+      "rating": 1.6,
+      "image": "http://dummyimage.com/107x100.png/cc0000/ffffff"
+    },
+    {
+      "id": 16,
+      "name": "Foil Wrap",
+      "type": "Trending",
+      "time_wait": 39,
+      "rating": 1.9,
+      "image": "http://dummyimage.com/197x100.png/cc0000/ffffff"
+    },
+    {
+      "id": 17,
+      "name": "Appetizer - Lobster Phyllo Roll",
+      "type": "Trending",
+      "time_wait": 47,
+      "rating": 3.2,
+      "image": "http://dummyimage.com/206x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 18,
+      "name": "Sausage - Chorizo",
+      "type": "Trending",
+      "time_wait": 14,
+      "rating": 1.0,
+      "image": "http://dummyimage.com/152x100.png/cc0000/ffffff"
+    },
+    {
+      "id": 19,
+      "name": "Skirt - 29 Foot",
+      "type": "Trending",
+      "time_wait": 18,
+      "rating": 3.1,
+      "image": "http://dummyimage.com/233x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 20,
+      "name": "Trending",
+      "type": "Termite Control",
+      "time_wait": 31,
+      "rating": 3.1,
+      "image": "http://dummyimage.com/106x100.png/cc0000/ffffff"
+    }
+  ]
+}

@@ -36,6 +36,11 @@ body {
     line-height: 114%;
     @apply font-bold;
   }
+  h3,
+  .h3 {
+    @apply text-4.5xl;
+    @apply font-semibold;
+  }
   p {
     @apply text-lg;
     @apply font-inter;
