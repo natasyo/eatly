@@ -18,6 +18,8 @@ const colors = {
   'eatly-red-100': '#F7C5BA',
   'eatly-red-700': '#FB471D',
   'eatly-black-500': '#323142',
+  'eatly-green-700': '#309D5B',
+  'eatly-green-100': '#33AC64',
 };
 const sizes = {
   '15': '3.75rem',
