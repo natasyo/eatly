@@ -1,10 +1,10 @@
 import { FunctionComponent } from 'react';
-import { getRestaurants } from '@/backend/api';
+import { getTopRestaurants } from '@/backend/api';
 import RestaurantCard from '@/react/components/cards/restaurant';
 import BtnMore from '@/react/components/buttons/btn-more';
 
 const Restaurants: FunctionComponent = () => {
-  const restaurants = getRestaurants(3);
+  const restaurants = getTopRestaurants(3);
   return (
     <div>
       <div className="container border-b border-eatly-gray xl:pb-[129px] xl:pt-[86px]">

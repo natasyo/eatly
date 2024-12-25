@@ -4,11 +4,13 @@ const colors = {
   'eatly-violet-100': '#DBD9EE',
   'eatly-violet': '#6C5FBC',
   'eatly-gray': '#CBCBCB',
+  'eatly-gray-10': '#F9F9F9',
   'eatly-gray-50': '#F4F4F6',
   'eatly-gray-300': '#C5C5C5',
   'eatly-gray-400': '#606060',
   'eatly-black': '#282828',
   'eatly-black-300': '#201F1F',
+  'eatly-black-600': '#323142',
   'eatly-gray-500': '#676767',
   'eatly-gray-600': '#8E97A6',
   'eatly-gray-700': '#ACADB9',
@@ -24,7 +26,9 @@ const colors = {
 const sizes = {
   '15': '3.75rem',
   '18': '4.5rem',
+  '21': '5.25rem',
   '44': '11rem',
+  '58': '14.5rem',
 };
 export default {
   content: [

@@ -1,18 +1,39 @@
-import { Dishe } from '@/types';
+'use client';
+import { getTopDishes } from '@/backend/api';
+import BtnMore from '@/react/components/buttons/btn-more';
+import DisheCard from '@/react/components/cards/dishe';
 import { FunctionComponent } from 'react';
 
 interface TopDishesProps {
   className?: string;
-  dishe: Dishe;
 }
 
 const TopDishes: FunctionComponent<TopDishesProps> = ({ className }) => {
+  let count = 5;
+  if (window !== undefined) {
+    if (window.innerWidth >= 1536) {
+      count = 6;
+    }
+    if (window.innerWidth < 768) {
+      count = 4;
+    }
+  }
+
+  const items = getTopDishes(count);
   return (
     <div className={`${className}`}>
-      <div className="container pt-24">
-        <h3 className="text-center">
-          Our Top <span className="text-eatly-violet">Restaurants</span>
+      <div className="container border-b border-eatly-gray pb-[132px] pt-21">
+        <h3 className="mb-15 text-center">
+          Our Top <span className="text-eatly-violet">Dishes</span>
         </h3>
+        <div className="grid grid-cols-5 gap-[31px] 2xl:grid-cols-6">
+          {items.map((item) => (
+            <DisheCard item={item} key={item.id} />
+          ))}
+        </div>
+        <div className="container mt-18 flex justify-end">
+          <BtnMore href="/" text="View All" />
+        </div>
       </div>
     </div>
   );

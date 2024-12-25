@@ -15,7 +15,7 @@ const poppins = Poppins({
 });
 const manrope = Manrope({
   variable: '--font-manrope',
-  weight: ['400'],
+  weight: ['400', '700'],
   subsets: ['latin'],
 });
 export const metadata: Metadata = {
@@ -30,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${poppins.variable} ${manrope.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${poppins.variable} ${manrope.variable} bg-eatly-gray-10 antialiased`}
+      >
         <Header></Header>
         {children}
       </body>
