@@ -22,7 +22,7 @@ const TopDishes: FunctionComponent<TopDishesProps> = ({ className }) => {
       }
     }
     setItems(getTopDishes(count));
-  }, [window]);
+  }, []);
   return (
     <div className={`${className}`}>
       <div className="container border-b border-eatly-gray pb-[132px] pt-21">

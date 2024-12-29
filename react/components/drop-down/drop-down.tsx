@@ -34,7 +34,7 @@ const DropDown: FunctionComponent<DropDownProps> = ({
   });
   useEffect(
     function () {
-      onSelectValue(valueState);
+      onSelectValue && onSelectValue(valueState);
     },
     [valueState],
   );
