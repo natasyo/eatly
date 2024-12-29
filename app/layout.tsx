@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins, Manrope } from 'next/font/google';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { Inter, Poppins, Manrope, Quicksand } from 'next/font/google';
 import './globals.scss';
 import Header from '@/react/sections/header/header';
 
@@ -12,10 +14,16 @@ const poppins = Poppins({
   variable: '--font-popins',
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
+  style: ['italic', 'normal'],
 });
 const manrope = Manrope({
   variable: '--font-manrope',
   weight: ['400', '700', '800'],
+  subsets: ['latin'],
+});
+const quicksand = Quicksand({
+  variable: '--font-quicksand',
+  weight: ['400', '700'],
   subsets: ['latin'],
 });
 export const metadata: Metadata = {
@@ -31,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${poppins.variable} ${manrope.variable} bg-eatly-gray-10 antialiased`}
+        className={`${inter.variable} ${poppins.variable} ${quicksand.variable} ${manrope.variable} bg-eatly-gray-10 antialiased`}
       >
         <Header></Header>
         {children}

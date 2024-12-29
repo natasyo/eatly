@@ -50,3 +50,37 @@ body {
     @apply mx-auto;
   }
 }
+.reviews {
+  .slick-list {
+    margin-right: -1000px;
+  }
+  .slick-slide {
+    height: 239px;
+    .review-header {
+      display: none;
+    }
+    & > div {
+      height: 100%;
+    }
+    &.slick-current {
+      height: 346px;
+      .review-header {
+        display: flex;
+      }
+    }
+  }
+  .slick-dots {
+    li {
+      height: 100%;
+      border-radius: 20px;
+      button {
+        &::before {
+          content: none;
+        }
+      }
+      &.slick-active {
+        @apply bg-eatly-violet;
+      }
+    }
+  }
+}

@@ -37,8 +37,9 @@ const Banner: FunctionComponent = () => {
               width={starGreen.width}
               height={starGreen.height}
               alt="star green"
+              className="mr-5"
             />
-            <Stars />
+            <Stars showNumber={true} />
           </div>
         </div>
         <div className="xl:-mr-10">

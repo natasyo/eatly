@@ -11,6 +11,7 @@ const colors = {
   'eatly-gray-400': '#606060',
   'eatly-gray-800': '#A0AEC0',
   'eatly-black': '#282828',
+  'eatly-black-100': ' #030314',
   'eatly-black-200': '#1A202C',
   'eatly-black-300': '#201F1F',
   'eatly-black-600': '#323142',
@@ -59,6 +60,7 @@ export default {
         popins: 'var(--font-popins)',
         inter: 'Inter',
         manrope: 'Manrope',
+        quicksand: 'Quicksand',
       },
       fontSize: {
         '2lg': ['1.1875rem', '120%'], //19px

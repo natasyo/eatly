@@ -9364,5 +9364,167 @@
       "expense": { "value": 149, "increased": 41 },
       "vocher": { "value": 39, "increased": 82 }
     }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "photo": "/img/alexander.png",
+      "name": "Alexander R.",
+      "position": "01 Year With Us ",
+      "sayText": "Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time",
+      "rating": 1
+    },
+    {
+      "id": 2,
+      "photo": "http://dummyimage.com/114x138.png/cc0000/ffffff",
+      "name": "Sylvan Allnatt",
+      "position": "Electrical Engineer",
+      "sayText": "consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo ",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "photo": "http://dummyimage.com/159x218.png/ff4444/ffffff",
+      "name": "Zane Camillo",
+      "position": "Software Test Engineer IV",
+      "sayText": "ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc ",
+      "rating": 5
+    },
+    {
+      "id": 4,
+      "photo": "http://dummyimage.com/156x157.png/dddddd/000000",
+      "name": "Cly Pinckstone",
+      "position": "Geological Engineer",
+      "sayText": "morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit ",
+      "rating": 2
+    },
+    {
+      "id": 5,
+      "photo": "http://dummyimage.com/133x188.png/dddddd/000000",
+      "name": "Jourdain Delamar",
+      "position": "Financial Advisor",
+      "sayText": "id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque ",
+      "rating": 5
+    },
+    {
+      "id": 6,
+      "photo": "http://dummyimage.com/230x126.png/5fa2dd/ffffff",
+      "name": "Lorette Penny",
+      "position": "Computer Systems Analyst IV",
+      "sayText": "vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam ",
+      "rating": 3
+    },
+    {
+      "id": 7,
+      "photo": "http://dummyimage.com/242x205.png/dddddd/000000",
+      "name": "Brita Conyer",
+      "position": "Nuclear Power Engineer",
+      "sayText": "ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis",
+      "rating": 5
+    },
+    {
+      "id": 8,
+      "photo": "http://dummyimage.com/197x194.png/5fa2dd/ffffff",
+      "name": "Dallas Whitemarsh",
+      "position": "Assistant Professor",
+      "sayText": "ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna ",
+      "rating": 4
+    },
+    {
+      "id": 9,
+      "photo": "http://dummyimage.com/103x107.png/ff4444/ffffff",
+      "name": "Ab Greenhall",
+      "position": "Database Administrator I",
+      "sayText": "accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel ",
+      "rating": 4
+    },
+    {
+      "id": 10,
+      "photo": "http://dummyimage.com/101x135.png/cc0000/ffffff",
+      "name": "Rosie Casham",
+      "position": "Teacher",
+      "sayText": "in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc ",
+      "rating": 5
+    },
+    {
+      "id": 11,
+      "photo": "http://dummyimage.com/239x169.png/cc0000/ffffff",
+      "name": "Antons Waldera",
+      "position": "Chemical Engineer",
+      "sayText": "sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit ",
+      "rating": 2
+    },
+    {
+      "id": 12,
+      "photo": "http://dummyimage.com/169x201.png/ff4444/ffffff",
+      "name": "Brynn Henstridge",
+      "position": "Computer Systems Analyst I",
+      "sayText": "massa donec dapibus duis at velit eu est congue elementum in",
+      "rating": 3
+    },
+    {
+      "id": 13,
+      "photo": "http://dummyimage.com/228x224.png/5fa2dd/ffffff",
+      "name": "Omar Jamme",
+      "position": "Associate Professor",
+      "sayText": "vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat ",
+      "rating": 2
+    },
+    {
+      "id": 14,
+      "photo": "http://dummyimage.com/146x106.png/cc0000/ffffff",
+      "name": "Joletta Dodamead",
+      "position": "Librarian",
+      "sayText": "at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse",
+      "rating": 2
+    },
+    {
+      "id": 15,
+      "photo": "http://dummyimage.com/227x244.png/ff4444/ffffff",
+      "name": "Kerry Rape",
+      "position": "VP Product Management",
+      "sayText": "aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque",
+      "rating": 5
+    },
+    {
+      "id": 16,
+      "photo": "http://dummyimage.com/140x239.png/5fa2dd/ffffff",
+      "name": "Jo Sedgman",
+      "position": "Graphic Designer",
+      "sayText": "nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas",
+      "rating": 5
+    },
+    {
+      "id": 17,
+      "photo": "http://dummyimage.com/180x150.png/ff4444/ffffff",
+      "name": "Nigel Crinidge",
+      "position": "Senior Editor",
+      "sayText": "in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla",
+      "rating": 4
+    },
+    {
+      "id": 18,
+      "photo": "http://dummyimage.com/219x114.png/ff4444/ffffff",
+      "name": "Jordan Morse",
+      "position": "Accountant III",
+      "sayText": "tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula",
+      "rating": 1
+    },
+    {
+      "id": 19,
+      "photo": "http://dummyimage.com/219x128.png/ff4444/ffffff",
+      "name": "Liesa Andri",
+      "position": "Software Test Engineer III",
+      "sayText": "laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam ",
+      "rating": 5
+    },
+    {
+      "id": 20,
+      "photo": "http://dummyimage.com/165x184.png/ff4444/ffffff",
+      "name": "Dillon Gorgl",
+      "position": "Physical Therapy Assistant",
+      "sayText": "dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia",
+      "rating": 3
+    }
   ]
 }
