@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
+import { Inter, Poppins, Manrope } from 'next/font/google';
 import './globals.scss';
 import Header from '@/react/sections/header/header';
 
@@ -11,6 +11,11 @@ const inter = Inter({
 const poppins = Poppins({
   variable: '--font-popins',
   weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+});
+const manrope = Manrope({
+  variable: '--font-manrope',
+  weight: ['400', '700', '800'],
   subsets: ['latin'],
 });
 export const metadata: Metadata = {
@@ -25,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${poppins.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${poppins.variable} ${manrope.variable} bg-eatly-gray-10 antialiased`}
+      >
         <Header></Header>
         {children}
       </body>
