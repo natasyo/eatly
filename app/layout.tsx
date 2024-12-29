@@ -15,7 +15,7 @@ const poppins = Poppins({
 });
 const manrope = Manrope({
   variable: '--font-manrope',
-  weight: ['400', '700'],
+  weight: ['400', '700', '800'],
   subsets: ['latin'],
 });
 export const metadata: Metadata = {

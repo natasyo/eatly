@@ -12,8 +12,8 @@ const Banner: FunctionComponent = () => {
       <div className="container mx-auto flex items-center justify-between">
         <div className="max-w-[50%] xl:w-[567px]">
           <p className="mb-5 flex items-center">
-            <span className="bg-eatly-black-300 mr-5 block h-[1px] w-[54px] opacity-20"></span>
-            <span className="text-eatly-black-300 font-popins text-[15px] font-semibold uppercase tracking-[2px] text-opacity-20">
+            <span className="mr-5 block h-[1px] w-[54px] bg-eatly-black-300 opacity-20"></span>
+            <span className="font-popins text-[15px] font-semibold uppercase tracking-[2px] text-eatly-black-300 text-opacity-20">
               OVER 1000 USERS
             </span>
           </p>

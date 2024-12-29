@@ -2,26 +2,33 @@ import type { Config } from 'tailwindcss';
 
 const colors = {
   'eatly-violet-100': '#DBD9EE',
+  'eatly-violet-200': '#F4F0FF',
   'eatly-violet': '#6C5FBC',
   'eatly-gray': '#CBCBCB',
   'eatly-gray-10': '#F9F9F9',
   'eatly-gray-50': '#F4F4F6',
   'eatly-gray-300': '#C5C5C5',
   'eatly-gray-400': '#606060',
+  'eatly-gray-800': '#A0AEC0',
   'eatly-black': '#282828',
+  'eatly-black-200': '#1A202C',
   'eatly-black-300': '#201F1F',
   'eatly-black-600': '#323142',
   'eatly-gray-500': '#676767',
   'eatly-gray-600': '#8E97A6',
   'eatly-gray-700': '#ACADB9',
+  'eatly-gray-350': '#EDF2F7',
   'blue-gray': '#334155',
   'eatly-yellow-100': '#F7EDD0',
   'eatly-yellow-700': '#DAA31A',
   'eatly-red-100': '#F7C5BA',
+  'eatly-red-200': '#F1534E',
   'eatly-red-700': '#FB471D',
   'eatly-black-500': '#323142',
   'eatly-green-700': '#309D5B',
   'eatly-green-100': '#33AC64',
+  'eatly-white-100': '#FAFAFA',
+  'eatly-orange-100': '#FBAD18',
 };
 const sizes = {
   '15': '3.75rem',
@@ -54,6 +61,9 @@ export default {
         manrope: 'Manrope',
       },
       fontSize: {
+        '2lg': ['1.1875rem', '120%'], //19px
+        '2.5xl': ['1.375rem', '120%'], //22px
+        '2.9xl': ['1.75rem', '120%'], //28px
         '4.3xl': ['2.6875rem', '125%'], //43px
         '4.5xl': ['2.8125rem', '125%'], //45px
         '5xl': ['3.125rem', '125%'], //50px

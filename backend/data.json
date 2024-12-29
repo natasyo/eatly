@@ -232,7 +232,7 @@
       "time_wait": 22,
       "rating": 4.9,
       "price": 8924.17,
-      "image": "http://dummyimage.com/149x100.png/cc0000/ffffff"
+      "image": "/img/swe-dish.png"
     },
     {
       "id": 9,
@@ -241,7 +241,7 @@
       "time_wait": 34,
       "rating": 1.1,
       "price": 4474.97,
-      "image": "http://dummyimage.com/199x100.png/cc0000/ffffff"
+      "image": "/img/dishe3.png"
     },
     {
       "id": 10,
@@ -250,7 +250,7 @@
       "time_wait": 89,
       "rating": 3.9,
       "price": 6310.07,
-      "image": "http://dummyimage.com/112x100.png/cc0000/ffffff"
+      "image": "/img/dishe4.png"
     },
     {
       "id": 11,
@@ -259,7 +259,7 @@
       "time_wait": 86,
       "rating": 1.6,
       "price": 4173.95,
-      "image": "http://dummyimage.com/136x100.png/5fa2dd/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 12,
@@ -268,7 +268,7 @@
       "time_wait": 45,
       "rating": 4.0,
       "price": 8842.11,
-      "image": "http://dummyimage.com/175x100.png/cc0000/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 13,
@@ -277,7 +277,7 @@
       "time_wait": 54,
       "rating": 4.6,
       "price": 7376.82,
-      "image": "http://dummyimage.com/183x100.png/dddddd/000000"
+      "image": "/img/swe-dish.png"
     },
     {
       "id": 14,
@@ -286,7 +286,7 @@
       "time_wait": 17,
       "rating": 3.5,
       "price": 7703.27,
-      "image": "http://dummyimage.com/113x100.png/ff4444/ffffff"
+      "image": "/img/dishe3.png"
     },
     {
       "id": 15,
@@ -295,7 +295,7 @@
       "time_wait": 27,
       "rating": 3.1,
       "price": 3181.44,
-      "image": "http://dummyimage.com/225x100.png/ff4444/ffffff"
+      "image": "/img/dishe4.png"
     },
     {
       "id": 16,
@@ -304,7 +304,7 @@
       "time_wait": 32,
       "rating": 4.2,
       "price": 9355.55,
-      "image": "http://dummyimage.com/233x100.png/5fa2dd/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 17,
@@ -313,7 +313,7 @@
       "time_wait": 33,
       "rating": 4.8,
       "price": 968.73,
-      "image": "http://dummyimage.com/219x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 18,
@@ -322,7 +322,7 @@
       "time_wait": 58,
       "rating": 1.0,
       "price": 4965.32,
-      "image": "http://dummyimage.com/167x100.png/dddddd/000000"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 19,
@@ -943,7 +943,7 @@
       "time_wait": 11,
       "rating": 5.0,
       "price": 9032.36,
-      "image": "http://dummyimage.com/175x100.png/cc0000/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 88,
@@ -1177,7 +1177,7 @@
       "time_wait": 48,
       "rating": 2.0,
       "price": 5588.52,
-      "image": "http://dummyimage.com/113x100.png/ff4444/ffffff"
+      "image": "/img/dishe3.png"
     },
     {
       "id": 114,
@@ -1384,7 +1384,7 @@
       "time_wait": 14,
       "rating": 1.5,
       "price": 8433.53,
-      "image": "http://dummyimage.com/171x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 137,
@@ -1645,7 +1645,7 @@
       "time_wait": 10,
       "rating": 4.5,
       "price": 536.73,
-      "image": "http://dummyimage.com/171x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 166,
@@ -2023,7 +2023,7 @@
       "time_wait": 1,
       "rating": 1.7,
       "price": 8761.34,
-      "image": "http://dummyimage.com/143x100.png/cc0000/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 208,
@@ -2059,7 +2059,7 @@
       "time_wait": 78,
       "rating": 2.7,
       "price": 4076.39,
-      "image": "http://dummyimage.com/136x100.png/5fa2dd/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 212,
@@ -2176,7 +2176,7 @@
       "time_wait": 95,
       "rating": 1.3,
       "price": 9396.3,
-      "image": "http://dummyimage.com/143x100.png/cc0000/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 225,
@@ -2266,7 +2266,7 @@
       "time_wait": 21,
       "rating": 2.6,
       "price": 6640.22,
-      "image": "http://dummyimage.com/167x100.png/dddddd/000000"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 235,
@@ -2626,7 +2626,7 @@
       "time_wait": 14,
       "rating": 4.7,
       "price": 698.37,
-      "image": "http://dummyimage.com/199x100.png/cc0000/ffffff"
+      "image": "/img/dishe3.png"
     },
     {
       "id": 275,
@@ -2725,7 +2725,7 @@
       "time_wait": 88,
       "rating": 1.1,
       "price": 8442.25,
-      "image": "http://dummyimage.com/112x100.png/cc0000/ffffff"
+      "image": "/img/dishe4.png"
     },
     {
       "id": 286,
@@ -2743,7 +2743,7 @@
       "time_wait": 7,
       "rating": 1.4,
       "price": 3957.3,
-      "image": "http://dummyimage.com/171x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 288,
@@ -2959,7 +2959,7 @@
       "time_wait": 30,
       "rating": 1.7,
       "price": 6816.04,
-      "image": "http://dummyimage.com/167x100.png/dddddd/000000"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 312,
@@ -3076,7 +3076,7 @@
       "time_wait": 67,
       "rating": 2.2,
       "price": 7791.76,
-      "image": "http://dummyimage.com/233x100.png/5fa2dd/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 325,
@@ -3085,7 +3085,7 @@
       "time_wait": 68,
       "rating": 4.8,
       "price": 8355.55,
-      "image": "http://dummyimage.com/246x100.png/ff4444/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 326,
@@ -3166,7 +3166,7 @@
       "time_wait": 6,
       "rating": 2.3,
       "price": 2817.32,
-      "image": "http://dummyimage.com/194x100.png/cc0000/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 335,
@@ -3247,7 +3247,7 @@
       "time_wait": 77,
       "rating": 3.2,
       "price": 1776.68,
-      "image": "http://dummyimage.com/246x100.png/ff4444/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 344,
@@ -3463,7 +3463,7 @@
       "time_wait": 17,
       "rating": 3.7,
       "price": 257.0,
-      "image": "http://dummyimage.com/143x100.png/cc0000/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 368,
@@ -3580,7 +3580,7 @@
       "time_wait": 59,
       "rating": 4.7,
       "price": 4850.01,
-      "image": "http://dummyimage.com/194x100.png/cc0000/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 381,
@@ -3814,7 +3814,7 @@
       "time_wait": 87,
       "rating": 2.3,
       "price": 7871.22,
-      "image": "http://dummyimage.com/171x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 407,
@@ -3958,7 +3958,7 @@
       "time_wait": 32,
       "rating": 1.5,
       "price": 1674.01,
-      "image": "http://dummyimage.com/194x100.png/cc0000/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 423,
@@ -4075,7 +4075,7 @@
       "time_wait": 36,
       "rating": 3.1,
       "price": 2938.8,
-      "image": "http://dummyimage.com/225x100.png/ff4444/ffffff"
+      "image": "/img/dishe4.png"
     },
     {
       "id": 436,
@@ -4273,7 +4273,7 @@
       "time_wait": 83,
       "rating": 4.5,
       "price": 5083.09,
-      "image": "http://dummyimage.com/136x100.png/5fa2dd/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 458,
@@ -4453,7 +4453,7 @@
       "time_wait": 63,
       "rating": 4.0,
       "price": 1609.7,
-      "image": "http://dummyimage.com/195x100.png/dddddd/000000"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 478,
@@ -4480,7 +4480,7 @@
       "time_wait": 92,
       "rating": 4.2,
       "price": 3167.14,
-      "image": "http://dummyimage.com/143x100.png/cc0000/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 481,
@@ -4741,7 +4741,7 @@
       "time_wait": 100,
       "rating": 3.0,
       "price": 4461.0,
-      "image": "http://dummyimage.com/225x100.png/ff4444/ffffff"
+      "image": "/img/dishe4.png"
     },
     {
       "id": 510,
@@ -4750,7 +4750,7 @@
       "time_wait": 12,
       "rating": 3.3,
       "price": 8651.7,
-      "image": "http://dummyimage.com/195x100.png/dddddd/000000"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 511,
@@ -4921,7 +4921,7 @@
       "time_wait": 59,
       "rating": 1.7,
       "price": 3252.55,
-      "image": "http://dummyimage.com/219x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 530,
@@ -5119,7 +5119,7 @@
       "time_wait": 47,
       "rating": 3.5,
       "price": 2084.61,
-      "image": "http://dummyimage.com/219x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 552,
@@ -5182,7 +5182,7 @@
       "time_wait": 3,
       "rating": 3.6,
       "price": 4003.36,
-      "image": "http://dummyimage.com/175x100.png/cc0000/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 559,
@@ -5326,7 +5326,7 @@
       "time_wait": 85,
       "rating": 2.9,
       "price": 9288.2,
-      "image": "http://dummyimage.com/219x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 575,
@@ -5470,7 +5470,7 @@
       "time_wait": 28,
       "rating": 3.0,
       "price": 7966.96,
-      "image": "http://dummyimage.com/149x100.png/cc0000/ffffff"
+      "image": "/img/swe-dish.png"
     },
     {
       "id": 591,
@@ -5623,7 +5623,7 @@
       "time_wait": 26,
       "rating": 4.5,
       "price": 9453.79,
-      "image": "http://dummyimage.com/113x100.png/ff4444/ffffff"
+      "image": "/img/dishe3.png"
     },
     {
       "id": 608,
@@ -5641,7 +5641,7 @@
       "time_wait": 94,
       "rating": 2.6,
       "price": 2118.44,
-      "image": "http://dummyimage.com/113x100.png/ff4444/ffffff"
+      "image": "/img/dishe3.png"
     },
     {
       "id": 610,
@@ -5767,7 +5767,7 @@
       "time_wait": 60,
       "rating": 2.0,
       "price": 3628.88,
-      "image": "http://dummyimage.com/225x100.png/ff4444/ffffff"
+      "image": "/img/dishe4.png"
     },
     {
       "id": 624,
@@ -6046,7 +6046,7 @@
       "time_wait": 84,
       "rating": 1.2,
       "price": 491.01,
-      "image": "http://dummyimage.com/175x100.png/cc0000/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 655,
@@ -6352,7 +6352,7 @@
       "time_wait": 1,
       "rating": 2.3,
       "price": 7189.1,
-      "image": "http://dummyimage.com/171x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 689,
@@ -6361,7 +6361,7 @@
       "time_wait": 92,
       "rating": 4.1,
       "price": 9513.24,
-      "image": "http://dummyimage.com/246x100.png/ff4444/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 690,
@@ -6460,7 +6460,7 @@
       "time_wait": 12,
       "rating": 2.2,
       "price": 9159.4,
-      "image": "http://dummyimage.com/194x100.png/cc0000/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 701,
@@ -6577,7 +6577,7 @@
       "time_wait": 87,
       "rating": 3.2,
       "price": 6477.02,
-      "image": "http://dummyimage.com/175x100.png/cc0000/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 714,
@@ -6649,7 +6649,7 @@
       "time_wait": 35,
       "rating": 2.4,
       "price": 3857.12,
-      "image": "http://dummyimage.com/113x100.png/ff4444/ffffff"
+      "image": "/img/dishe3.png"
     },
     {
       "id": 722,
@@ -7099,7 +7099,7 @@
       "time_wait": 93,
       "rating": 3.8,
       "price": 5927.4,
-      "image": "http://dummyimage.com/225x100.png/ff4444/ffffff"
+      "image": "/img/dishe4.png"
     },
     {
       "id": 772,
@@ -7117,7 +7117,7 @@
       "time_wait": 26,
       "rating": 3.2,
       "price": 9719.26,
-      "image": "http://dummyimage.com/171x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 774,
@@ -8449,7 +8449,7 @@
       "time_wait": 30,
       "rating": 3.9,
       "price": 3570.56,
-      "image": "http://dummyimage.com/143x100.png/cc0000/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 922,
@@ -8665,7 +8665,7 @@
       "time_wait": 67,
       "rating": 2.5,
       "price": 491.55,
-      "image": "http://dummyimage.com/199x100.png/cc0000/ffffff"
+      "image": "/img/dishe3.png"
     },
     {
       "id": 946,
@@ -8791,7 +8791,7 @@
       "time_wait": 35,
       "rating": 4.2,
       "price": 791.71,
-      "image": "http://dummyimage.com/136x100.png/5fa2dd/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 960,
@@ -8827,7 +8827,7 @@
       "time_wait": 98,
       "rating": 2.8,
       "price": 7540.09,
-      "image": "http://dummyimage.com/225x100.png/ff4444/ffffff"
+      "image": "/img/dishe4.png"
     },
     {
       "id": 964,
@@ -8998,7 +8998,7 @@
       "time_wait": 56,
       "rating": 2.7,
       "price": 8794.76,
-      "image": "http://dummyimage.com/175x100.png/cc0000/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 983,
@@ -9161,6 +9161,208 @@
       "rating": 2.4,
       "price": 1412.93,
       "image": "http://dummyimage.com/103x100.png/dddddd/000000"
+    }
+  ],
+  "purchases": [
+    {
+      "id": 1,
+      "productId": 1,
+      "status": "On The Way",
+      "dateTime": "19/01/2024"
+    },
+    {
+      "id": 2,
+      "productId": 2,
+      "status": "Delivered",
+      "dateTime": "07/06/2024"
+    },
+    {
+      "id": 3,
+      "productId": 7,
+      "status": "Cancelled",
+      "dateTime": "28/08/2024"
+    },
+    {
+      "id": 4,
+      "productId": 4,
+      "status": "Cancelled",
+      "dateTime": "09/01/2024"
+    },
+    {
+      "id": 5,
+      "productId": 65,
+      "status": "Cancelled",
+      "dateTime": "28/05/2024"
+    },
+    {
+      "id": 6,
+      "productId": 98,
+      "status": "On The Way",
+      "dateTime": "20/08/2024"
+    },
+    {
+      "id": 7,
+      "productId": 88,
+      "status": "On The Way",
+      "dateTime": "22/02/2024"
+    },
+    {
+      "id": 8,
+      "productId": 50,
+      "status": "On The Way",
+      "dateTime": "23/08/2024"
+    },
+    {
+      "id": 9,
+      "productId": 54,
+      "status": "Delivered",
+      "dateTime": "27/12/2023"
+    },
+    {
+      "id": 10,
+      "productId": 2,
+      "status": "On The Way",
+      "dateTime": "18/02/2024"
+    },
+    {
+      "id": 11,
+      "productId": 11,
+      "status": "On The Way",
+      "dateTime": "31/03/2024"
+    },
+    {
+      "id": 12,
+      "productId": 55,
+      "status": "Cancelled",
+      "dateTime": "31/08/2024"
+    },
+    {
+      "id": 13,
+      "productId": 6,
+      "status": "Delivered",
+      "dateTime": "19/05/2024"
+    },
+    {
+      "id": 14,
+      "productId": 14,
+      "status": "On The Way",
+      "dateTime": "09/05/2024"
+    },
+    {
+      "id": 15,
+      "productId": 23,
+      "status": "Cancelled",
+      "dateTime": "27/03/2024"
+    },
+    {
+      "id": 16,
+      "productId": 4,
+      "status": "On The Way",
+      "dateTime": "21/06/2024"
+    },
+    {
+      "id": 17,
+      "productId": 88,
+      "status": "Delivered",
+      "dateTime": "02/11/2024"
+    },
+    {
+      "id": 18,
+      "productId": 37,
+      "status": "Delivered",
+      "dateTime": "16/09/2024"
+    },
+    {
+      "id": 19,
+      "productId": 19,
+      "status": "Cancelled",
+      "dateTime": "14/11/2024"
+    },
+    {
+      "id": 20,
+      "productId": 85,
+      "status": "Delivered",
+      "dateTime": "23/12/2024"
+    },
+    {
+      "id": 21,
+      "productId": 16,
+      "status": "On The Way",
+      "dateTime": "15/09/2024"
+    },
+    {
+      "id": 22,
+      "productId": 31,
+      "status": "On The Way",
+      "dateTime": "16/09/2024"
+    },
+    {
+      "id": 23,
+      "productId": 58,
+      "status": "Delivered",
+      "dateTime": "28/03/2024"
+    },
+    {
+      "id": 24,
+      "productId": 68,
+      "status": "On The Way",
+      "dateTime": "17/12/2024"
+    },
+    {
+      "id": 25,
+      "productId": 23,
+      "status": "On The Way",
+      "dateTime": "16/07/2024"
+    },
+    {
+      "id": 26,
+      "productId": 5,
+      "status": "On The Way",
+      "dateTime": "20/01/2024"
+    },
+    {
+      "id": 27,
+      "productId": 85,
+      "status": "On The Way",
+      "dateTime": "10/06/2024"
+    },
+    {
+      "id": 28,
+      "productId": 94,
+      "status": "On The Way",
+      "dateTime": "04/01/2024"
+    },
+    {
+      "id": 29,
+      "productId": 76,
+      "status": "Delivered",
+      "dateTime": "14/09/2024"
+    },
+    {
+      "id": 30,
+      "productId": 36,
+      "status": "Cancelled",
+      "dateTime": "21/12/2024"
+    }
+  ],
+  "purchasesInfo": [
+    {
+      "id": "1",
+      "month": "january",
+      "expense": { "value": 409.0, "increased": 90 },
+      "vocher": { "value": 49, "increased": 60 }
+    },
+    {
+      "id": "2",
+      "month": "february",
+      "expense": { "value": 949, "increased": 60 },
+      "vocher": { "value": 19, "increased": 10 }
+    },
+    {
+      "id": "3",
+      "month": "march",
+      "expense": { "value": 149, "increased": 41 },
+      "vocher": { "value": 39, "increased": 82 }
     }
   ]
 }
