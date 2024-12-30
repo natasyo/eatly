@@ -1,21 +1,16 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import logo from '@/public/img/logo.svg';
 import { FunctionComponent } from 'react';
 import Nav from '@/react/components/nav/Nav';
 import BtnPrimary from '@/react/components/buttons/btn-primary';
 import Btn from '@/react/components/buttons/btn';
 import BtnMenu from '@/react/components/buttons/btn-menu';
-interface HeaderProps {}
+import Logo from '@/react/components/logo/logo';
 
-const Header: FunctionComponent<HeaderProps> = () => {
+const Header: FunctionComponent = () => {
   return (
     <header>
       <div className="container mx-auto flex items-center justify-between border-b border-eatly-gray pb-[25px] pt-[47px]">
         <div className="flex items-center">
-          <Link href="/" className="mr-[54px] xl:mr-[77px]">
-            <Image src={logo.src} alt="df" width={logo.width} height={logo.height} />
-          </Link>
+          <Logo className="mr-[54px] xl:mr-[77px]" />
           <Nav
             className="hidden lg:block"
             navItems={[

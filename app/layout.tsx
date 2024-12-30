@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { Inter, Poppins, Manrope, Quicksand } from 'next/font/google';
 import './globals.scss';
 import Header from '@/react/sections/header/header';
+import Footer from '@/react/sections/footer/footer';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -37,12 +38,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${inter.variable} ${poppins.variable} ${quicksand.variable} ${manrope.variable} bg-eatly-gray-10 antialiased`}
+        className={`${inter.variable} ${poppins.variable} ${quicksand.variable} ${manrope.variable} h-full bg-eatly-gray-10 antialiased`}
       >
-        <Header></Header>
-        {children}
+        <div className="flex h-full flex-col justify-between">
+          <Header />
+          <div className="grow">{children}</div>
+
+          <Footer />
+        </div>
       </body>
     </html>
   );

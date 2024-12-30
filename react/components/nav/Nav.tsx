@@ -3,7 +3,7 @@ import { FunctionComponent } from 'react';
 
 interface NavProps {
   navItems: { label: string; link: string }[];
-  className?: String;
+  className?: string;
 }
 
 const Nav: FunctionComponent<NavProps> = ({ navItems, className }) => {

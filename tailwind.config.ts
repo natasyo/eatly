@@ -19,6 +19,7 @@ const colors = {
   'eatly-gray-600': '#8E97A6',
   'eatly-gray-700': '#ACADB9',
   'eatly-gray-350': '#EDF2F7',
+  'eatly-gray-360': '#EAEAEA',
   'blue-gray': '#334155',
   'eatly-yellow-100': '#F7EDD0',
   'eatly-yellow-700': '#DAA31A',
