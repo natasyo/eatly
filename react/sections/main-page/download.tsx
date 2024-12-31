@@ -19,9 +19,9 @@ const DownLoad: FunctionComponent = () => {
           />
         </div>
         <div className="max-w-[398px] lg:max-w-[547px]">
-          <h2 className="mb-11 lg:mb-16 xl:pr-4">
+          <h3 className="mb-11 max-w-[320px] lg:mb-16 lg:max-w-full xl:pr-4">
             Premium <span className="text-eatly-violet">Quality</span> For Your Health
-          </h2>
+          </h3>
           <ul className="list-disc pl-8">
             <li className="mb-5 text-sm text-eatly-gray-500 lg:mb-8 lg:text-xl">
               Premium quality food is made with ingredients that are packed with essential vitamins,

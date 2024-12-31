@@ -47,7 +47,7 @@ body {
     @apply font-bold;
     @apply text-3xl;
     @media (width >= 886px) {
-      @apply text-3.2xl;
+      @apply text-4xl;
     }
     @media (width >= 1024px) {
       @apply text-4.6xl;
@@ -61,10 +61,10 @@ body {
     @apply font-semibold;
     @apply text-3xl;
     @media (width >= 886px) {
-      @apply text-4xl;
+      @apply text-3.2xl;
     }
     @media (width >= 1024px) {
-      @apply text-4.3xl;
+      @apply text-4.5xl;
     }
     @media (width >= 1280px) {
       @apply text-4.5xl;

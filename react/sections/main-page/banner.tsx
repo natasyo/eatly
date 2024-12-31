@@ -46,7 +46,7 @@ const Banner: FunctionComponent = () => {
             <Stars showNumber={true} />
           </div>
         </div>
-        <div className="md:-mr-7 md:max-w-[486px] xl:-mr-10">
+        <div className="md:-mr-7 md:max-w-[486px] lg:max-w-[680px] xl:-mr-10">
           <Image src={enjImg.src} height={enjImg.height} width={enjImg.width} alt="Enjoy Foods" />
         </div>
       </div>
