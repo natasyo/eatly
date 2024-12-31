@@ -7,7 +7,7 @@ const Restaurants: FunctionComponent = () => {
   const restaurants = getTopRestaurants(3);
   return (
     <div>
-      <div className="container border-b border-eatly-gray xl:pb-[129px] xl:pt-[86px]">
+      <div className="container border-b border-eatly-gray p-7 lg:pb-28 lg:pt-20 xl:pb-[129px] xl:pt-[86px]">
         <h3 className="mb-[70px] text-center">
           Our Top <span className="text-eatly-violet">Restaurants</span>
         </h3>

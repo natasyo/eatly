@@ -3,6 +3,7 @@ import type { Config } from 'tailwindcss';
 const colors = {
   'eatly-violet-100': '#DBD9EE',
   'eatly-violet-200': '#F4F0FF',
+  'eatly-violet-300': '#C5BFED',
   'eatly-violet': '#6C5FBC',
   'eatly-gray': '#CBCBCB',
   'eatly-gray-10': '#F9F9F9',
@@ -64,19 +65,43 @@ export default {
         quicksand: 'Quicksand',
       },
       fontSize: {
+        xxs: ['0.625rem', '120%'], //10px
         '2lg': ['1.1875rem', '120%'], //19px
         '2.5xl': ['1.375rem', '120%'], //22px
         '2.9xl': ['1.75rem', '120%'], //28px
+        '3.2xl': ['2rem', '125%'], //41px
+        '4.1xl': ['2.5625rem', '125%'], //41px
         '4.3xl': ['2.6875rem', '125%'], //43px
         '4.5xl': ['2.8125rem', '125%'], //45px
+        '4.6xl': ['2.875rem', '125%'], //46px
         '5xl': ['3.125rem', '125%'], //50px
         '5.1xl': ['3.1875rem', '125%'], //51px
+        '6xl': ['3.75rem', '120%'], //60px
         '7xl': ['4.375rem', '120%'], //70px
         '5.3xl': ['3.2125rem', '120%'], //53px
         '8xl': ['4.6875rem', '120%'], //75px
       },
       padding: { ...sizes },
       margin: { ...sizes },
+    },
+    container: {
+      padding: {
+        DEFAULT: '0',
+        xl: '1rem',
+      },
+      screens: {
+        '2xl': { max: '1535px' },
+        xl: { max: '1279px' },
+        lg: { max: '1023px' },
+        md: { max: '885px' },
+        sm: { max: '639px' },
+
+        minsm: { min: '640px' },
+        minmd: { min: '886px' },
+        minlg: { min: '1024px' },
+        minxl: { min: '1280px' },
+        min2xl: { min: '1536px' },
+      },
     },
   },
   plugins: [],
