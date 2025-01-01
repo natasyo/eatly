@@ -7,13 +7,6 @@
   --foreground: #171717;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 body {
   color: var(--foreground);
   background: var(--background);
@@ -26,18 +19,18 @@ body {
     @apply font-popins;
 
     @apply text-4.6xl;
-    @media (width >= 886px) {
+    @media (width >= 919px) {
       @apply text-5.3xl;
       letter-spacing: -1px;
     }
-    @media (width >= 1024px) {
+    @media (width >= 1090px) {
       @apply text-6xl;
     }
-    @media (width >= 1280px) {
+    @media (width >= 1296px) {
       @apply text-7xl;
       @apply tracking-[-3px];
     }
-    @media (width >= 1536px) {
+    @media (width >= 1552px) {
       @apply text-8xl;
     }
   }
@@ -46,13 +39,13 @@ body {
     line-height: 114%;
     @apply font-bold;
     @apply text-3xl;
-    @media (width >= 886px) {
+    @media (width >= 919px) {
       @apply text-4xl;
     }
-    @media (width >= 1024px) {
+    @media (width >= 1090px) {
       @apply text-4.6xl;
     }
-    @media (width >= 1280px) {
+    @media (width >= 1296px) {
       @apply text-5.1xl;
     }
   }
@@ -60,13 +53,13 @@ body {
   .h3 {
     @apply font-semibold;
     @apply text-3xl;
-    @media (width >= 886px) {
+    @media (width >= 919px) {
       @apply text-3.2xl;
     }
-    @media (width >= 1024px) {
+    @media (width >= 1090px) {
       @apply text-4.5xl;
     }
-    @media (width >= 1280px) {
+    @media (width >= 1296px) {
       @apply text-4.5xl;
     }
   }
@@ -74,10 +67,8 @@ body {
     @apply text-lg;
     @apply font-inter;
   }
-  .container {
-    @apply mx-auto;
-  }
 }
+
 .reviews {
   .slick-list {
     margin-right: -1000px;

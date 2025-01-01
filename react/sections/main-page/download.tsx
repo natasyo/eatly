@@ -15,7 +15,7 @@ const DownLoad: FunctionComponent = () => {
             height={downImg.height}
             width={downImg.width}
             alt="Premium Quality For Your Health"
-            className="md:w-[264px] lg:w-auto"
+            className="max-h-[625px] md:w-[264px] lg:w-auto"
           />
         </div>
         <div className="max-w-[398px] lg:max-w-[547px]">

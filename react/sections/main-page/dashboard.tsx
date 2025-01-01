@@ -11,10 +11,10 @@ const Dashboard: FunctionComponent = () => {
   return (
     <div>
       <div className="container flex justify-between border-b border-eatly-gray pb-[120px] pt-[104px]">
-        <div className="max-w-[500px]">
-          <p className="mb-12 pl-3 font-popins text-5xl font-bold leading-[116%] tracking-[0.01em]">
+        <div className="max-w-[514px]">
+          <h2 className="mb-12 pl-3 font-popins leading-[116%] tracking-[0.01em]">
             Control <span className="text-eatly-violet">Purchases</span> Via Dashboard
-          </p>
+          </h2>
           {purcharses.map((item) => (
             <Purchase purcharse={item} key={item.id} className="mb-[15px] w-[345px]" />
           ))}

@@ -25,14 +25,14 @@ const TopDishes: FunctionComponent<TopDishesProps> = ({ className }) => {
   }, []);
   return (
     <div className={`${className ? className : ''}`}>
-      <div className="container border-b border-eatly-gray pb-[132px] pt-16 lg:pt-21">
+      <div className="container border-b border-eatly-gray pb-[91px] pt-16 lg:pb-[132px] lg:pt-21">
         <h3 className="mb-10 text-center lg:mb-15">
           Our Top <span className="text-eatly-violet">Dishes</span>
         </h3>
         <div className="grid grid-cols-5 gap-[21px] xl:gap-[31px] 2xl:grid-cols-6">
           {items ? items.map((item) => <DisheCard item={item} key={item.id} />) : <p>Loading</p>}
         </div>
-        <div className="container mt-18 flex justify-end">
+        <div className="container mt-11 flex justify-end lg:mt-18">
           <BtnMore href="/" text="View All" />
         </div>
       </div>

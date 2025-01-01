@@ -8,7 +8,7 @@ interface CardTitleProps {
 const CardTitle: FunctionComponent<CardTitleProps> = ({ text, className }) => {
   return (
     <p
-      className={`text-ellipsis whitespace-nowrap font-popins text-lg font-semibold text-eatly-black-500 lg:text-[25.79px] ${className}`}
+      className={`text-ellipsis whitespace-nowrap font-popins text-lg font-semibold text-eatly-black-500 lg:text-lg xl:text-[25.79px] ${className}`}
     >
       {text}
     </p>

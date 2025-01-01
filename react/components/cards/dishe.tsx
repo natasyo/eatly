@@ -30,19 +30,19 @@ const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
       <div className="-mt-1 px-4 lg:px-6">
         <CardType type={item.type} className={`-mb-1 h-[22px] xl:mb-1`} />
         <CardTitle
-          className="mb-1 overflow-clip text-nowrap !text-base lg:!text-[23px]"
+          className="mb-1 overflow-clip text-nowrap !text-base xl:!text-[23px]"
           text={item.name}
         />
         <WaitAndRating
           wait={item.time_wait}
           rating={item.rating}
-          className="mb-3 text-base xl:text-[17px]"
+          className="!xl:text-[17px] mb-3 !text-xs"
         />
         <div className="flex items-center justify-between">
           <CardPrice price={item.price} />
           <CardAddBtn />
         </div>
-        <CardLike className="absolute right-3 top-[14px] lg:right-4 lg:top-5" />
+        <CardLike className="absolute right-3 top-[14px] xl:right-4 xl:top-5" />
       </div>
     </div>
   );
