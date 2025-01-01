@@ -7,7 +7,7 @@ interface CardAddBtnProps {
 const CardAddBtn: FunctionComponent<CardAddBtnProps> = ({ className }) => {
   return (
     <button
-      className={`bg-eatly-black-600 flex h-10 w-11 items-center justify-center rounded-lg ${className}`}
+      className={`flex h-7 w-8 items-center justify-center rounded-lg bg-eatly-black-600 xl:h-10 xl:w-11 ${className}`}
     >
       <svg
         width="16"
@@ -15,6 +15,7 @@ const CardAddBtn: FunctionComponent<CardAddBtnProps> = ({ className }) => {
         viewBox="0 0 16 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className="size-[10px] xl:size-auto"
       >
         <mask id="path-1-inside-1_1_16678" fill="white">
           <path d="M15.2818 9.36025H8.94222V15.7891H6.41234V9.36025H0.102539V7.06848H6.41234V0.609863H8.94222V7.06848H15.2818V9.36025Z" />

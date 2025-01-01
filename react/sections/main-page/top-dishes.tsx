@@ -24,12 +24,12 @@ const TopDishes: FunctionComponent<TopDishesProps> = ({ className }) => {
     setItems(getTopDishes(count));
   }, []);
   return (
-    <div className={`${className}`}>
-      <div className="container border-b border-eatly-gray pb-[132px] pt-21">
-        <h3 className="mb-15 text-center">
+    <div className={`${className ? className : ''}`}>
+      <div className="container border-b border-eatly-gray pb-[132px] pt-16 lg:pt-21">
+        <h3 className="mb-10 text-center lg:mb-15">
           Our Top <span className="text-eatly-violet">Dishes</span>
         </h3>
-        <div className="grid grid-cols-5 gap-[31px] 2xl:grid-cols-6">
+        <div className="grid grid-cols-5 gap-[21px] xl:gap-[31px] 2xl:grid-cols-6">
           {items ? items.map((item) => <DisheCard item={item} key={item.id} />) : <p>Loading</p>}
         </div>
         <div className="container mt-18 flex justify-end">

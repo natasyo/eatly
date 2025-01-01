@@ -7,7 +7,7 @@ const Restaurants: FunctionComponent = () => {
   const restaurants = getTopRestaurants(3);
   return (
     <div>
-      <div className="container border-b border-eatly-gray pt-15 lg:pb-28 lg:pt-20 xl:pb-[129px] xl:pt-[86px]">
+      <div className="container border-b border-eatly-gray pb-[88px] pt-15 lg:pb-28 lg:pt-20 xl:pb-[129px] xl:pt-[86px]">
         <h3 className="mb-12 text-center lg:mb-[70px]">
           Our Top <span className="text-eatly-violet">Restaurants</span>
         </h3>
@@ -16,7 +16,7 @@ const Restaurants: FunctionComponent = () => {
             <RestaurantCard key={item.id} item={item} />
           ))}
         </div>
-        <div className="mt-[68px] flex justify-end">
+        <div className="mt-11 flex justify-end lg:mt-[68px]">
           <BtnMore href="/" text="View All" className="mr-3" />
         </div>
       </div>
