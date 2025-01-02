@@ -1,5 +1,6 @@
 'use client';
 import { getTopDishes } from '@/backend/api';
+import { useResizeWindow } from '@/hooks/resizeWindow';
 import BtnMore from '@/react/components/buttons/btn-more';
 import DisheCard from '@/react/components/cards/dishe';
 import { Dishe } from '@/types';
@@ -10,8 +11,7 @@ interface TopDishesProps {
 }
 
 const TopDishes: FunctionComponent<TopDishesProps> = ({ className }) => {
-  const [items, setItems] = useState<Dishe[]>();
-  useEffect(() => {
+  const getCount = () => {
     let count = 5;
     if (typeof window !== 'undefined') {
       if (window.innerWidth >= 1536) {
@@ -21,8 +21,15 @@ const TopDishes: FunctionComponent<TopDishesProps> = ({ className }) => {
         count = 4;
       }
     }
-    setItems(getTopDishes(count));
+    return count;
+  };
+  const [items, setItems] = useState<Dishe[]>();
+  useEffect(() => {
+    setItems(getTopDishes(getCount()));
   }, []);
+  useResizeWindow(() => {
+    setItems(getTopDishes(getCount()));
+  });
   return (
     <div className={`${className ? className : ''}`}>
       <div className="container border-b border-eatly-gray pb-[76px] pt-[85px] sm:pb-[91px] sm:pt-16 lg:pb-[132px] lg:pt-21">

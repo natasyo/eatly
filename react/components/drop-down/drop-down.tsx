@@ -67,7 +67,7 @@ const DropDown: FunctionComponent<DropDownProps> = ({
         </svg>
       </p>
       <ul
-        className={`absolute w-full overflow-hidden bg-eatly-white-100 transition-all ${isOpen ? 'max-h-52' : 'max-h-0 overflow-hidden'}`}
+        className={`absolute z-10 w-full overflow-hidden bg-eatly-white-100 transition-all ${isOpen ? 'max-h-52' : 'max-h-0 overflow-hidden'}z-inde`}
       >
         {options.map((option) => (
           <li
