@@ -8,19 +8,21 @@ import Stars from '@/react/components/stars/stars';
 
 const Banner: FunctionComponent = () => {
   return (
-    <div className="overflow-hidden md:pb-10 md:pt-9 lg:pb-15 lg:pt-11 xl:pb-16 xl:pt-12">
-      <div className="container mx-auto flex items-center justify-between">
+    <div className="overflow-hidden pt-[57px] sm:pb-8 md:pb-10 md:pt-9 lg:pb-15 lg:pt-11 xl:pb-16 xl:pt-12">
+      <div className="container mx-auto items-center justify-between sm:flex">
         <div className="max-w-[50%] md:w-[515px] xl:w-[567px]">
-          <p className="mb-3 flex items-center md:mb-5">
-            <span className="mr-5 block h-[1px] w-[38px] bg-eatly-black-300 opacity-20 lg:w-[54px]"></span>
-            <span className="font-popins text-[11px] font-semibold uppercase tracking-[2px] text-eatly-black-300 text-opacity-20 lg:text-[15px]">
+          <p className="mb-3 flex items-center justify-center sm:mb-5 sm:justify-start">
+            <span className="mr-5 block h-[1px] w-[38px] bg-eatly-black-300 md:opacity-20 lg:w-[54px]"></span>
+            <span className="font-popins text-[11px] font-semibold uppercase tracking-[2px] text-eatly-black-300 md:text-opacity-20 lg:text-[15px]">
               OVER 1000 USERS
             </span>
           </p>
-          <h1 className="mb-3lg:mb-4">
-            Enjoy Foods All Over The <span className="text-eatly-violet">World</span>
+          <h1 className="mb-3 text-center sm:text-left lg:mb-4">
+            Enjoy Foods <span className="hidden md:inline">All</span> Over{' '}
+            <span className="hidden md:inline">The</span>
+            <span className="text-eatly-violet">World</span>
           </h1>
-          <p className="pr-16 text-eatly-gray-500 opacity-70 md:text-[12.68px] md:leading-[146%] lg:text-base xl:text-lg">
+          <p className="pr-16 text-[11px] leading-[154%] text-eatly-gray-500 opacity-70 md:text-[12.68px] md:leading-[146%] lg:text-base xl:text-lg">
             EatLy help you set saving goals, earn cash back offers, Go to disclaimer for more
             details and get paychecks up to two days early. Get a{' '}
             <span className="text-eatly-violet">$20 bonus</span>.

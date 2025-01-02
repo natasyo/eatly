@@ -23,7 +23,7 @@ const RestaurantCard: FunctionComponent<RestaurantCardProps> = ({ className, ite
         height={180}
         className="w-full object-cover xl:h-44"
       />
-      <div className="px-6 pb-4 pt-1 lg:pl-[33px] lg:pr-7 lg:pt-[10px]">
+      <div className="px-6 pb-4 pt-1 sm:px-3 md:px-6 lg:pl-[33px] lg:pr-7 lg:pt-[10px]">
         <CardType type={item.type} className={`-mb-1 h-[25px] lg:mb-1`} />
         <CardTitle text={item.name} className="-mb-0.5 lg:mb-1" />
         <div className="flex items-center justify-between">

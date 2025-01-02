@@ -17,7 +17,7 @@ const TopDishes: FunctionComponent<TopDishesProps> = ({ className }) => {
       if (window.innerWidth >= 1536) {
         count = 6;
       }
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 917) {
         count = 4;
       }
     }
@@ -29,7 +29,7 @@ const TopDishes: FunctionComponent<TopDishesProps> = ({ className }) => {
         <h3 className="mb-10 text-center lg:mb-15">
           Our Top <span className="text-eatly-violet">Dishes</span>
         </h3>
-        <div className="grid grid-cols-5 gap-[21px] xl:gap-[31px] 2xl:grid-cols-6">
+        <div className="grid sm:grid-cols-4 sm:gap-4 md:grid-cols-5 md:gap-[21px] xl:gap-[31px] 2xl:grid-cols-6">
           {items ? items.map((item) => <DisheCard item={item} key={item.id} />) : <p>Loading</p>}
         </div>
         <div className="container mt-11 flex justify-end lg:mt-18">

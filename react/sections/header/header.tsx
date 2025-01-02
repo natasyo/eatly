@@ -9,9 +9,9 @@ const Header: FunctionComponent = () => {
   return (
     <header>
       <div className="container">
-        <div className="flex items-center justify-between border-b border-eatly-gray pb-3 pt-8 lg:pb-[25px] lg:pt-[47px]">
+        <div className="flex items-center justify-between border-b border-eatly-gray pb-[30px] pt-8 md:pb-3 lg:pb-[25px] lg:pt-[47px]">
           <div className="flex items-center">
-            <Logo className="mr-[54px] w-20 xl:mr-[77px]" />
+            <Logo className="mr-[54px] w-20 min-w-[111px] xl:mr-[77px]" />
             <Nav
               className="hidden md:block"
               navItems={[

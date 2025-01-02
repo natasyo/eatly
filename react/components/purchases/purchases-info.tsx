@@ -40,7 +40,7 @@ const PurchaseInfo: FunctionComponent<PurchaseInfoProps> = ({ className }) => {
           options={periodOptions}
           placeholder="select period"
           current={periodOptions[0]}
-          className="w-[175px]"
+          className="sm:ml-4 sm:w-[160px] md:ml-0 md:w-[175px]"
           onSelectValue={changePeriod}
         />
       </div>

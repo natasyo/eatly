@@ -11,7 +11,7 @@ const Restaurants: FunctionComponent = () => {
         <h3 className="mb-12 text-center lg:mb-[70px]">
           Our Top <span className="text-eatly-violet">Restaurants</span>
         </h3>
-        <div className="grid grid-cols-3 gap-[22px] lg:gap-[30px]">
+        <div className="grid grid-cols-3 gap-4 md:gap-[22px] lg:gap-[30px]">
           {restaurants.map((item) => (
             <RestaurantCard key={item.id} item={item} />
           ))}

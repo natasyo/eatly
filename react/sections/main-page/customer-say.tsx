@@ -23,6 +23,21 @@ const CustomerSay: FunctionComponent = () => {
     variableWidth: true,
     className: 'reviews',
     swipe: true,
+    responsive: [
+      {
+        breakpoint: 1055,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 672,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: false,
+        },
+      },
+    ],
   };
   return (
     <div className="pb-[34px] pt-[71px] lg:pt-[104px]">
