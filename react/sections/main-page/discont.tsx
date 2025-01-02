@@ -24,7 +24,7 @@ const Discont: FunctionComponent<DiscontProp> = ({ className }) => {
           <Image
             src={discontImage}
             alt="discont"
-            className="mx-auto mt-4 h-[170px] w-[170px] sm:mx-0 sm:max-w-[195px] sm:lg:max-w-full"
+            className="mx-auto mt-4 h-[170px] w-[170px] sm:mx-0 sm:max-w-[195px] sm:lg:max-w-full md:h-auto md:w-auto"
           />
         </div>
       </div>
