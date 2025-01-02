@@ -1,8 +1,8 @@
-import { FunctionComponent, ReactElement, ReactNode } from 'react';
+import { FunctionComponent, ReactNode } from 'react';
 
 interface BtnProps {
   className?: string;
-  children: String | ReactNode;
+  children: string | ReactNode;
 }
 
 const Btn: FunctionComponent<BtnProps> = ({ children, className }) => {

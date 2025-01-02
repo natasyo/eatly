@@ -11,15 +11,17 @@ const Discont: FunctionComponent<DiscontProp> = ({ className }) => {
   return (
     <div className={`${className}`}>
       <div className="container">
-        <div className="ml-9 flex h-[280px] items-start justify-between rounded-[30px] bg-[url('../public/img/discont-bg.png')] pl-16 pr-18 pt-12">
+        <div className="ml-6 flex h-[200px] items-start justify-between rounded-[30px] bg-[url('../public/img/discont-bg.png')] pl-11 pr-[52px] pt-[34px] lg:ml-9 lg:h-[280px] lg:pl-16 lg:pr-18 lg:pt-12">
           <div>
-            <p className="mb-5 font-popins text-7xl font-extrabold uppercase text-white">GET 50%</p>
+            <p className="mb-3 font-popins text-5xl font-extrabold uppercase text-white lg:mb-5 lg:text-7xl">
+              GET 50%
+            </p>
             <ContactForm
-              className="w-[440px] rounded-[14px]"
+              className="w-[314px] rounded-[14px] lg:w-[440px]"
               placeholder=" Enter Your Email Address"
             />
           </div>
-          <Image src={discontImage} alt="discont" className="mt-4" />
+          <Image src={discontImage} alt="discont" className="mt-4 max-w-[195px] lg:max-w-full" />
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ interface DiagramProps {
 
 const Diagram: FunctionComponent<DiagramProps> = ({ className, classNameInner, increased }) => {
   return (
-    <div className={`${className} relative h-[9px] w-full`}>
+    <div className={`${className} relative h-[7px] w-full lg:h-[9px]`}>
       <div
         style={{ width: `${increased}%` }}
         className={`${classNameInner} absolute h-full rounded-full transition-all`}
