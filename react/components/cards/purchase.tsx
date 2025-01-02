@@ -10,7 +10,7 @@ interface PurchaseProps {
 const Purchase: FunctionComponent<PurchaseProps> = ({ className, purcharse }) => {
   return (
     <div
-      className={`flex items-end ${className ? className : ''} rounded-xl bg-white pb-1 pl-[14px] pr-3 pt-1 lg:pb-2 lg:pl-5 lg:pr-4`}
+      className={`flex items-end ${className ? className : ''} rounded-xl bg-white py-0.5 pl-[14px] pr-3 md:pb-1 md:pt-1 lg:pb-2 lg:pl-5 lg:pr-4`}
     >
       <Image
         src={purcharse.dishe.image}

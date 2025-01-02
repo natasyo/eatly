@@ -12,7 +12,9 @@ interface BtnMoreProps {
 const BtnMore: FunctionComponent<BtnMoreProps> = ({ text, href, className }) => {
   return (
     <Link href={href} className={`${className} flex items-center`}>
-      <span className="text-sm font-medium text-eatly-gray-700 lg:text-lg xl:text-xl">{text}</span>
+      <span className="text-xl font-medium text-eatly-gray-700 sm:text-sm lg:text-lg xl:text-xl">
+        {text}
+      </span>
       <Image src={arrow} alt="arrow" className="ml-[14px] w-3 lg:ml-5 lg:w-auto" />
     </Link>
   );

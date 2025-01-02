@@ -17,7 +17,7 @@ export default function Home() {
       <TopDishes />
       <Dashboard />
       <CustomerSay />
-      <Discont className="mb-[154px] lg:mb-[214px]" />
+      <Discont className="mb-[192px] sm:mb-[154px] lg:mb-[214px]" />
     </div>
   );
 }

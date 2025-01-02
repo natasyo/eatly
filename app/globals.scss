@@ -71,13 +71,16 @@ body {
 
 .reviews {
   .slick-list {
-    margin-right: -1000px;
+    @media (width >= 672px) {
+      margin-right: -1000px;
+    }
   }
   .slick-slide {
+    height: 170px;
     @media (width >= 1296px) {
       height: 239px;
     }
-    height: 170px;
+
     .review-header {
       display: none;
     }
@@ -85,19 +88,27 @@ body {
       height: 100%;
     }
     &.slick-current {
+      height: 206px;
+      @media (width >= 672px) {
+        height: 246px;
+      }
+
       @media (width >= 1296px) {
         height: 346px;
       }
-      height: 246px;
       .review-header {
         display: flex;
       }
     }
   }
   .slick-dots {
+    @media (width < 672px) {
+      bottom: -50px;
+    }
     li {
       height: 100%;
       border-radius: 20px;
+      margin: 0;
       button {
         &::before {
           content: none;

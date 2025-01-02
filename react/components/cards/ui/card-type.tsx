@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 
 interface CardTypeProps {
   type: string;
-  className?: String;
+  className?: string;
 }
 
 const CardType: FunctionComponent<CardTypeProps> = ({ type, className }) => {

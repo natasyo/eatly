@@ -1,13 +1,13 @@
 import { FunctionComponent } from 'react';
 
 interface CardAddBtnProps {
-  className?: String;
+  className?: string;
 }
 
 const CardAddBtn: FunctionComponent<CardAddBtnProps> = ({ className }) => {
   return (
     <button
-      className={`flex h-7 w-8 items-center justify-center rounded-lg bg-eatly-black-600 xl:h-10 xl:w-11 ${className}`}
+      className={`flex h-7 w-8 items-center justify-center rounded-[5px] bg-eatly-black-600 md:rounded-lg xl:h-10 xl:w-11 ${className}`}
     >
       <svg
         width="16"

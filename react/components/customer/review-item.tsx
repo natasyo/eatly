@@ -12,12 +12,12 @@ interface ReviewItemProps {
 const ReviewItem: FunctionComponent<ReviewItemProps> = ({ className, item }) => {
   return (
     <div
-      className={`mr-[22px] flex flex-col justify-between rounded-xl bg-white py-7 pl-8 pr-8 lg:mr-9 lg:py-9 lg:pl-12 ${className ? className : ''}`}
+      className={`sm;mr-[22px] flex flex-col justify-between rounded-xl bg-white px-6 py-7 sm:px-8 lg:mr-9 lg:py-9 lg:pl-12 ${className ? className : ''}`}
     >
       <div>
-        <div className="review-header mb-7 flex items-center justify-between">
+        <div className="review-header mb-5 flex items-center justify-between sm:mb-7">
           <div className="flex items-center">
-            <div className="mr-5 h-[50px] w-[50px] shrink-0 overflow-hidden rounded-full lg:h-[72px] lg:w-[72px]">
+            <div className="mr-5 h-[42px] w-[42px] shrink-0 overflow-hidden rounded-full sm:h-[50px] sm:w-[50px] lg:h-[72px] lg:w-[72px]">
               <Image
                 alt={item.photo}
                 src={item.photo}

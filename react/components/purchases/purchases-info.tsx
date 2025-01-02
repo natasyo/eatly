@@ -34,8 +34,8 @@ const PurchaseInfo: FunctionComponent<PurchaseInfoProps> = ({ className }) => {
 
   return (
     <div className={`rounded-[25px] bg-white ${className} shadow-eatly-3xl`}>
-      <div className="mb-6 flex items-center justify-between lg:mb-10">
-        <p className="font-manrope text-xl font-extrabold lg:text-2.9xl">Purchases</p>
+      <div className="mb-5 flex items-center justify-between md:mb-6 lg:mb-10">
+        <p className="font-manrope text-base font-extrabold md:text-xl lg:text-2.9xl">Purchases</p>
         <DropDown
           options={periodOptions}
           placeholder="select period"
