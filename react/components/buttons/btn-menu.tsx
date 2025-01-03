@@ -1,24 +1,24 @@
-'use client';
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent } from 'react';
 
 interface BtnMenuProps {
   className?: String;
+  isOpen: boolean;
+  onShowMenu?: () => void;
 }
-const BtnMenu: FunctionComponent<BtnMenuProps> = ({ className }) => {
-  const [isShow, setIsShow] = useState(false);
+const BtnMenu: FunctionComponent<BtnMenuProps> = ({ className, onShowMenu, isOpen }) => {
   function menuClick() {
-    setIsShow(!isShow);
+    onShowMenu && onShowMenu();
   }
   return (
     <button className={`${className} relative h-[24px] w-[29px]`} onClick={menuClick}>
       <span
-        className={`${isShow ? 't-[10px] rotate-45' : 'top-0'} bg-eatly-black absolute block h-[2px] w-[31px] rounded transition-all`}
+        className={`${isOpen ? 't-[10px] rotate-45 bg-white' : 'top-0 bg-eatly-black'} absolute block h-[2px] w-[31px] rounded transition-all`}
       ></span>
       <span
-        className={`${isShow && 'opacity-0'} bg-eatly-black absolute top-[10px] block h-[2px] w-[31px] rounded transition-all`}
+        className={`${isOpen && 'opacity-0'} absolute top-[10px] block h-[2px] w-[31px] rounded bg-eatly-black transition-all`}
       ></span>
       <span
-        className={`${isShow ? 't-[10px] -rotate-45' : 'top-[20px]'} bg-eatly-black absolute block h-[2px] w-[31px] rounded transition-all`}
+        className={`${isOpen ? 't-[10px] -rotate-45 bg-white' : 'top-[20px] bg-eatly-black'} absolute block h-[2px] w-[31px] rounded transition-all`}
       ></span>
     </button>
   );

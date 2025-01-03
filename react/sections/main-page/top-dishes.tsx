@@ -14,13 +14,14 @@ const TopDishes: FunctionComponent<TopDishesProps> = ({ className }) => {
   const getCount = () => {
     let count = 5;
     if (typeof window !== 'undefined') {
-      if (window.innerWidth >= 1536) {
+      if (window.innerWidth >= 1568) {
         count = 6;
       }
       if (window.innerWidth < 917) {
         count = 4;
       }
     }
+    console.log(window.innerWidth, count);
     return count;
   };
   const [items, setItems] = useState<Dishe[]>();
