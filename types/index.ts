@@ -45,3 +45,11 @@ export interface Review {
   sayText: string;
   rating: string;
 }
+
+export interface Category {
+  id: number;
+  image: string;
+  title: string;
+  colorBg: string;
+  colorTitle: string;
+}

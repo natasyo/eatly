@@ -9349,20 +9349,38 @@
     {
       "id": "1",
       "month": "january",
-      "expense": { "value": 409.0, "increased": 90 },
-      "vocher": { "value": 49, "increased": 60 }
+      "expense": {
+        "value": 409.0,
+        "increased": 90
+      },
+      "vocher": {
+        "value": 49,
+        "increased": 60
+      }
     },
     {
       "id": "2",
       "month": "february",
-      "expense": { "value": 949, "increased": 60 },
-      "vocher": { "value": 19, "increased": 10 }
+      "expense": {
+        "value": 949,
+        "increased": 60
+      },
+      "vocher": {
+        "value": 19,
+        "increased": 10
+      }
     },
     {
       "id": "3",
       "month": "march",
-      "expense": { "value": 149, "increased": 41 },
-      "vocher": { "value": 39, "increased": 82 }
+      "expense": {
+        "value": 149,
+        "increased": 41
+      },
+      "vocher": {
+        "value": 39,
+        "increased": 82
+      }
     }
   ],
   "reviews": [
@@ -9525,6 +9543,36 @@
       "position": "Physical Therapy Assistant",
       "sayText": "dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia",
       "rating": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "image": "/img/Pizza.svg",
+      "title": "Pizza",
+      "colorBg": "#FFDE8A",
+      "colorTitle": "#D69900"
+    },
+    {
+      "id": 2,
+      "image": "/img/Hotdog.svg",
+      "title": "Asian",
+      "colorBg": "#F7C5BA",
+      "colorTitle": "#FB471D"
+    },
+    {
+      "id": 3,
+      "image": "/img/Doughnut.svg",
+      "title": "Donat",
+      "colorBg": "#EDB66B",
+      "colorTitle": "#E28B14"
+    },
+    {
+      "id": 4,
+      "image": "/img/Icecream.svg",
+      "title": "Ice",
+      "colorBg": "#5A85FF",
+      "colorTitle": "#002073"
     }
   ]
 }
