@@ -9,8 +9,8 @@ interface SearchProps {
 const Search: FunctionComponent<SearchProps> = ({ className }) => {
   return (
     <div className={`container ${className}`}>
-      <Stock />
-      <CategorySearch className="rounded-[20px] bg-white p-7" />
+      <Stock className="mb-[73px]" />
+      <CategorySearch className="rounded-[20px] bg-white p-[26px]" />
     </div>
   );
 };
