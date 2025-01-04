@@ -3,7 +3,7 @@ import Stock from '@/react/components/search/stock';
 import { FunctionComponent } from 'react';
 
 interface SearchProps {
-  className: string;
+  className?: string;
 }
 
 const Search: FunctionComponent<SearchProps> = ({ className }) => {

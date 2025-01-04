@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { forwardRef, FunctionComponent } from 'react';
+import { ForwardedRef, forwardRef, FunctionComponent, PropsWithChildren } from 'react';
 
 interface MobileNavProps {
   navItems: { label: string; link: string }[];
@@ -8,12 +8,12 @@ interface MobileNavProps {
   onChangePage?: () => void;
 }
 
-const MobileNav: FunctionComponent<MobileNavProps> = forwardRef<HTMLDivElement, MobileNavProps>(
+const MobileNav = forwardRef<HTMLElement, MobileNavProps>(
   ({ navItems, className, onChangePage }, ref) => {
     return (
       <div
         className={`fixed top-0 z-30 h-full w-full max-w-[500px] bg-eatly-violet px-10 pb-5 pt-24 ${className}`}
-        ref={ref}
+        ref={ref as ForwardedRef<HTMLDivElement>}
       >
         <ul>
           {navItems.map((item) => (

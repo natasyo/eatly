@@ -1,5 +1,5 @@
 'use client';
-import { createRef, FunctionComponent, useState } from 'react';
+import { createRef, FunctionComponent, RefObject, useRef, useState } from 'react';
 import Nav from '@/react/components/nav/Nav';
 import BtnPrimary from '@/react/components/buttons/btn-primary';
 import Btn from '@/react/components/buttons/btn';
@@ -10,7 +10,7 @@ import { useOutSideClick } from '@/hooks/outsideClick';
 
 const Header: FunctionComponent = () => {
   const [isShowMobileMenu, setisShowMobileMenu] = useState(false);
-  const refMenu = createRef<HTMLDivElement>();
+  const refMenu = useRef<HTMLDivElement>(null);
   useOutSideClick(refMenu, () => {
     setisShowMobileMenu(false);
   });
