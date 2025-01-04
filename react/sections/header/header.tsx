@@ -1,38 +1,66 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import logo from '@/public/img/logo.svg';
-import { FunctionComponent } from 'react';
+'use client';
+import { createRef, FunctionComponent, RefObject, useRef, useState } from 'react';
 import Nav from '@/react/components/nav/Nav';
 import BtnPrimary from '@/react/components/buttons/btn-primary';
 import Btn from '@/react/components/buttons/btn';
 import BtnMenu from '@/react/components/buttons/btn-menu';
-interface HeaderProps {}
+import Logo from '@/react/components/logo/logo';
+import MobileNav from '@/react/components/nav/mobile-nav';
+import { useOutSideClick } from '@/hooks/outsideClick';
 
-const Header: FunctionComponent<HeaderProps> = () => {
+const Header: FunctionComponent = () => {
+  const [isShowMobileMenu, setisShowMobileMenu] = useState(false);
+  const refMenu = useRef<HTMLDivElement>(null);
+  useOutSideClick(refMenu, () => {
+    setisShowMobileMenu(false);
+  });
   return (
-    <header>
-      <div className="container mx-auto flex items-center justify-between border-b border-eatly-gray pb-[25px] pt-[47px]">
-        <div className="flex items-center">
-          <Link href="/" className="mr-[54px] xl:mr-[77px]">
-            <Image src={logo.src} alt="df" width={logo.width} height={logo.height} />
-          </Link>
-          <Nav
-            className="hidden lg:block"
-            navItems={[
-              { label: 'Menu', link: 'menu' },
-              { label: 'Blog', link: 'blog' },
-              { label: 'Pricing', link: 'pricing' },
-              { label: 'Contact', link: 'contact' },
-            ]}
-          ></Nav>
+    <>
+      <MobileNav
+        ref={refMenu}
+        className={`${isShowMobileMenu ? 'right-0' : '-right-full'} transition-all md:hidden`}
+        navItems={[
+          { label: 'Menu', link: 'menu' },
+          { label: 'Blog', link: 'blog' },
+          { label: 'Pricing', link: 'pricing' },
+          { label: 'Contact', link: 'contact' },
+        ]}
+        onChangePage={() => {
+          setisShowMobileMenu(false);
+        }}
+      />
+      <header>
+        <div className="container relative">
+          <div className="flex items-center justify-between border-b border-eatly-gray pb-[30px] pt-8 md:pb-3 lg:pb-[25px] lg:pt-[47px]">
+            <div className="flex items-center">
+              <Logo className="mr-[54px] w-20 min-w-[111px] xl:mr-[77px]" />
+              <Nav
+                className="hidden md:block"
+                navItems={[
+                  { label: 'Menu', link: 'menu' },
+                  { label: 'Blog', link: 'blog' },
+                  { label: 'Pricing', link: 'pricing' },
+                  { label: 'Contact', link: 'contact' },
+                ]}
+              ></Nav>
+            </div>
+            <div className="hidden md:flex">
+              <Btn className="text-[12.68px] xl:mr-3 xl:text-lg">Login</Btn>
+              <BtnPrimary className="w-[86px] !px-0 text-[12.68px] lg:w-[120px] xl:text-lg">
+                Sign up
+              </BtnPrimary>
+            </div>
+            <BtnMenu
+              isOpen={isShowMobileMenu}
+              className="absolute right-0 top-1 z-40 md:hidden"
+              onShowMenu={() => {
+                setisShowMobileMenu(!isShowMobileMenu);
+              }}
+            ></BtnMenu>
+          </div>
         </div>
-        <div className="hidden lg:flex">
-          <Btn className="text-[12.68px] xl:mr-3 xl:text-lg">Login</Btn>
-          <BtnPrimary className="xl: px-7 text-[12.68px] xl:text-lg">Sign up</BtnPrimary>
-        </div>
-        <BtnMenu className="lg:hidden"></BtnMenu>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
 

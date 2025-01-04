@@ -36,3 +36,20 @@ export interface PurchasesInfo {
   expense: { value: number; increased: number };
   vocher: { value: number; increased: number };
 }
+
+export interface Review {
+  id: number;
+  photo: string;
+  name: string;
+  position: string;
+  sayText: string;
+  rating: string;
+}
+
+export interface Category {
+  id: number;
+  image: string;
+  title: string;
+  colorBg: string;
+  colorTitle: string;
+}

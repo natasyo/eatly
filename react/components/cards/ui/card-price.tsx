@@ -11,8 +11,8 @@ const CardPrice: FunctionComponent<CardPriceProps> = ({ price }) => {
   if (cent < 10) cent = cent * 10;
   return (
     <p className="font-manrope font-bold">
-      <span className="text-[26px]">${dollar}</span>
-      <span className="text-[19px] text-eatly-gray-600">.{cent}</span>
+      <span className="text-lg xl:text-[26px]">${dollar}</span>
+      <span className="text-sm text-eatly-gray-600 xl:text-[19px]">.{cent}</span>
     </p>
   );
 };

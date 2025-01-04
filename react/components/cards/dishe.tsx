@@ -16,26 +16,33 @@ interface DisheCardProps {
 const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
   return (
     <div
-      className={`${className} relative rounded-[34px] border border-eatly-gray-50 bg-white pb-7 shadow-eatly-3xl`}
+      className={`${className ? className : ''} relative rounded-[34px] border border-eatly-gray-50 bg-white pb-4 shadow-eatly-3xl md:pb-7`}
     >
-      <div className="px-4 pt-10">
+      <div className="px-2 pt-5 sm:pt-6 lg:px-4 lg:pt-10">
         <Image
           src={item.image}
           alt={item.name}
           width={201}
           height={208}
-          className="xl:h-[185px] xl:w-[185px]"
+          className="h-[131px] w-[131px] xl:h-[185px] xl:w-[185px]"
         />
       </div>
-      <div className="-mt-1 px-6">
-        <CardType type={item.type} className={`mb-1 h-[22px]`} />
-        <CardTitle className="mb-1 overflow-clip text-nowrap !text-[23px]" text={item.name} />
-        <WaitAndRating wait={item.time_wait} rating={item.rating} className="mb-3 text-[17px]" />
+      <div className="-mt-3 px-[10px] sm:-mt-1 lg:px-6">
+        <CardType type={item.type} className={`-mb-1 h-[11px] md:h-[22px] xl:mb-1`} />
+        <CardTitle
+          className="mb-[-2px] overflow-clip text-nowrap !text-base sm:mb-1 xl:!text-[23px]"
+          text={item.name}
+        />
+        <WaitAndRating
+          wait={item.time_wait}
+          rating={item.rating}
+          className="!xl:text-[17px] mb-2 !text-xs md:mb-3"
+        />
         <div className="flex items-center justify-between">
           <CardPrice price={item.price} />
           <CardAddBtn />
         </div>
-        <CardLike className="absolute right-4 top-5" />
+        <CardLike className="absolute right-3 top-[14px] xl:right-4 xl:top-5" />
       </div>
     </div>
   );

@@ -1,4 +1,12 @@
-import { Dishe, Purchase, PurchasesInfo, PurchaseView, Restaurant } from '@/types';
+import {
+  Category,
+  Dishe,
+  Purchase,
+  PurchasesInfo,
+  PurchaseView,
+  Restaurant,
+  Review,
+} from '@/types';
 import data from './data.json';
 
 export function getTopRestaurants(count?: number): Restaurant[] {
@@ -31,4 +39,12 @@ export function getPurchasesInfo(key: string): PurchasesInfo {
 }
 export function getPurchasesPeriod() {
   return data.purchasesInfo.map((item) => item.month);
+}
+
+export function getReviews(): Review[] {
+  return data.reviews as unknown as Review[];
+}
+
+export function getCategories(): Category[] {
+  return data.categories as unknown as Category[];
 }

@@ -8,31 +8,36 @@ import { FunctionComponent } from 'react';
 const DownLoad: FunctionComponent = () => {
   return (
     <div>
-      <div className="container flex items-end justify-end border-b border-eatly-gray pb-[115px] pt-[104px]">
-        <div className="mr-[97px] flex w-[50%] justify-center">
+      <div className="container flex flex-col-reverse items-end justify-end border-b border-eatly-gray pb-[65px] pt-[66px] sm:flex-row sm:pb-[84px]">
+        <div className="mt-[100px] flex w-full justify-center sm:mt-0 sm:w-[50%] sm:justify-start lg:mr-[97px] lg:justify-center">
           <Image
             src={downImg.src}
             height={downImg.height}
             width={downImg.width}
             alt="Premium Quality For Your Health"
+            className="ml-8 max-h-[352px] w-auto sm:max-h-[625px] sm:w-[264px] md:w-auto"
           />
         </div>
-        <div className="max-w-[547px]">
-          <h2 className="pb-16 xl:pr-4">
+        <div className="max-w-[398px] lg:max-w-[547px]">
+          <h3 className="mx-auto mb-[38px] max-w-[300px] text-center sm:mx-0 sm:mb-11 sm:text-left lg:mb-16 lg:max-w-full xl:pr-4">
             Premium <span className="text-eatly-violet">Quality</span> For Your Health
-          </h2>
+          </h3>
           <ul className="list-disc pl-8">
-            <li className="mb-8 text-xl text-eatly-gray-500">
+            <li className="mb-5 text-xs text-eatly-gray-500 sm:text-sm lg:mb-8 lg:text-xl">
               Premium quality food is made with ingredients that are packed with essential vitamins,
               minerals.
             </li>
-            <li className="mb-8 text-xl text-eatly-gray-500">
+            <li className="mb-8 text-xs text-eatly-gray-500 sm:text-sm lg:text-xl">
               These foods promote overall wellness by support healthy digestion and boosting
               immunity
             </li>
           </ul>
-          <div className="mt-18 max-w-[334px]">
-            <BtnPrimary className={'flex px-7 xl:text-lg'}>
+          <div className="relative mt-5 sm:static sm:mt-18 sm:max-w-[240px] lg:max-w-[334px]">
+            <BtnPrimary
+              className={
+                'mx-auto flex h-[45px] w-[121px] items-center rounded-[10px] text-xs sm:m-0 sm:w-[132px] lg:px-7 xl:text-lg'
+              }
+            >
               <span className="mr-[15px]">Download</span>
               <Image
                 src={arrowRight.src}
@@ -46,7 +51,7 @@ const DownLoad: FunctionComponent = () => {
               height={line.height}
               width={line.width}
               alt="line"
-              className="mx-auto -mt-4 mb-8 mr-0"
+              className="l-[21px] t-[77px] absolute mx-auto -mt-4 mb-8 mr-0 w-28 rotate-[100deg] sm:static sm:rotate-0 lg:w-auto"
             />
           </div>
         </div>

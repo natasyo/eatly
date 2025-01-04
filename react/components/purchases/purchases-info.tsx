@@ -25,43 +25,43 @@ const PurchaseInfo: FunctionComponent<PurchaseInfoProps> = ({ className }) => {
     if (periods) {
       setData(getPurchasesInfo(periods[0]));
     }
-  }, []);
+  }, [periods]);
 
   function changePeriod(opt?: Option) {
-    const data = opt && getPurchasesInfo(opt?.key);
-    data && setData(data);
+    const dataPur = opt && getPurchasesInfo(opt?.key);
+    dataPur && setData(dataPur);
   }
 
   return (
     <div className={`rounded-[25px] bg-white ${className} shadow-eatly-3xl`}>
-      <div className="mb-10 flex items-center justify-between">
-        <p className="text-2.9xl font-manrope font-extrabold">Purchases</p>
+      <div className="mb-5 flex items-center justify-between md:mb-6 lg:mb-10">
+        <p className="font-manrope text-base font-extrabold md:text-xl lg:text-2.9xl">Purchases</p>
         <DropDown
           options={periodOptions}
           placeholder="select period"
           current={periodOptions[0]}
-          className="w-[175px]"
+          className="sm:ml-4 sm:w-[160px] md:ml-0 md:w-[175px]"
           onSelectValue={changePeriod}
         />
       </div>
       {data ? (
         <>
-          <div className="border-eatly-gray-350 -ml-1 mb-[22px] rounded-xl border-2 p-6">
-            <div className="mb-[18px] flex items-center justify-between">
+          <div className="-ml-1 mb-4 rounded-xl border-2 border-eatly-gray-350 px-5 pb-4 pt-3 lg:mb-[22px] lg:p-6">
+            <div className="mb-2 flex items-center justify-between lg:mb-[18px]">
               <div className="flex">
-                <div className="bg-eatly-violet-200 mr-[18px] flex h-[50px] w-[50px] items-center justify-center rounded-full">
-                  <Image alt="expense" src={expenseImg} />
+                <div className="mr-3 flex h-9 w-9 items-center justify-center rounded-full bg-eatly-violet-200 lg:mr-[18px] lg:h-[50px] lg:w-[50px]">
+                  <Image alt="expense" src={expenseImg} className="h-4 w-4 lg:h-auto lg:w-auto" />
                 </div>
                 <div>
-                  <p className="mb-2 font-manrope text-2lg font-extrabold text-eatly-black-200">
+                  <p className="mb-[-6px] font-manrope text-[13px] font-extrabold text-eatly-black-200 lg:mb-2 lg:text-2lg">
                     Expense
                   </p>
-                  <p className="text-eatly-gray-800 font-manrope text-base font-medium tracking-[0.63px]">
+                  <p className="font-manrope text-[11px] font-medium tracking-[0.63px] text-eatly-gray-800 lg:text-base">
                     Increased By {data.expense.increased}%
                   </p>
                 </div>
               </div>
-              <p className="items-end font-manrope text-2.5xl font-extrabold">
+              <p className="items-end font-manrope text-base font-extrabold lg:text-2.5xl">
                 ${data.expense.value}
               </p>
             </div>
@@ -71,28 +71,28 @@ const PurchaseInfo: FunctionComponent<PurchaseInfoProps> = ({ className }) => {
               classNameInner="bg-eatly-violet"
             />
           </div>
-          <div className="border-eatly-gray-350 -ml-1 rounded-xl border-2 p-6">
-            <div className="mb-[18px] flex items-center justify-between">
+          <div className="-ml-1 rounded-xl border-2 border-eatly-gray-350 px-5 pb-4 pt-3 lg:p-6">
+            <div className="mb-2 flex items-center justify-between lg:mb-[18px]">
               <div className="flex">
-                <div className="bg-eatly-violet-200 mr-[18px] flex h-[50px] w-[50px] items-center justify-center rounded-full">
-                  <Image alt="expense" src={vocherImg} />
+                <div className="mr-3 flex h-9 w-9 items-center justify-center rounded-full bg-eatly-violet-200 lg:mr-[18px] lg:h-[50px] lg:w-[50px]">
+                  <Image alt="expense" src={vocherImg} className="h-4 w-4 lg:h-auto lg:w-auto" />
                 </div>
                 <div>
-                  <p className="mb-2 font-manrope text-2lg font-extrabold text-eatly-black-200">
+                  <p className="mb-[-6px] font-manrope text-[13px] font-extrabold text-eatly-black-200 lg:mb-2 lg:text-2lg">
                     Vocher Usage
                   </p>
-                  <p className="text-eatly-gray-800 font-manrope text-base font-medium tracking-[0.63px]">
+                  <p className="font-manrope text-[11px] font-medium tracking-[0.63px] text-eatly-gray-800 lg:text-base">
                     Increased By {data.vocher.increased}%
                   </p>
                 </div>
               </div>
-              <p className="items-end font-manrope text-2.5xl font-extrabold">
+              <p className="items-end font-manrope text-base font-extrabold lg:text-2.5xl">
                 ${data.vocher.value}
               </p>
             </div>
             <Diagram
               increased={data.vocher.increased}
-              className="bg-eatly-orange-100 rounded-full bg-opacity-20"
+              className="rounded-full bg-eatly-orange-100 bg-opacity-20"
               classNameInner="bg-eatly-orange-100"
             />
           </div>

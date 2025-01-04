@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins, Manrope } from 'next/font/google';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { Inter, Poppins, Manrope, Quicksand } from 'next/font/google';
 import './globals.scss';
 import Header from '@/react/sections/header/header';
+import Footer from '@/react/sections/footer/footer';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -12,10 +15,16 @@ const poppins = Poppins({
   variable: '--font-popins',
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
+  style: ['italic', 'normal'],
 });
 const manrope = Manrope({
   variable: '--font-manrope',
   weight: ['400', '700', '800'],
+  subsets: ['latin'],
+});
+const quicksand = Quicksand({
+  variable: '--font-quicksand',
+  weight: ['400', '700'],
   subsets: ['latin'],
 });
 export const metadata: Metadata = {
@@ -29,12 +38,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${inter.variable} ${poppins.variable} ${manrope.variable} bg-eatly-gray-10 antialiased`}
+        className={`${inter.variable} ${poppins.variable} ${quicksand.variable} ${manrope.variable} h-full bg-eatly-gray-10 antialiased`}
       >
-        <Header></Header>
-        {children}
+        <div className="flex h-full flex-col justify-between">
+          <Header />
+          <div className="grow">{children}</div>
+
+          <Footer />
+        </div>
       </body>
     </html>
   );

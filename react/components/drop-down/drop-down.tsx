@@ -41,7 +41,7 @@ const DropDown: FunctionComponent<DropDownProps> = ({
   return (
     <div className={`${className} relative font-manrope capitalize`} ref={refElement}>
       <p
-        className={`flex h-[54px] w-full items-center justify-between rounded-lg bg-eatly-white-100 px-4 text-2lg font-semibold text-eatly-black-200 transition-all`}
+        className={`flex h-[38px] w-full items-center justify-between rounded-lg bg-eatly-white-100 px-4 text-[13px] font-semibold text-eatly-black-200 transition-all lg:h-[54px] lg:text-2lg`}
         onClick={() => setIsOpen(!isOpen)}
       >
         {valueState ? (
@@ -50,7 +50,7 @@ const DropDown: FunctionComponent<DropDownProps> = ({
           <span>{placeholder}</span>
         )}
         <svg
-          className={`ml-[6px] ${isOpen ? '' : '-rotate-90'} transition-all`}
+          className={`ml-[6px] ${isOpen ? '' : '-rotate-90'} max-w-3 transition-all lg:max-w-full`}
           width="16"
           height="9"
           viewBox="0 0 16 9"
@@ -67,13 +67,13 @@ const DropDown: FunctionComponent<DropDownProps> = ({
         </svg>
       </p>
       <ul
-        className={`absolute w-full overflow-hidden bg-eatly-white-100 transition-all ${isOpen ? 'max-h-52' : 'max-h-0 overflow-hidden'}`}
+        className={`absolute z-10 w-full overflow-hidden bg-eatly-white-100 transition-all ${isOpen ? 'max-h-52' : 'max-h-0 overflow-hidden'}z-inde`}
       >
         {options.map((option) => (
           <li
             data-key={option.key}
             key={option.key}
-            className="px-2 py-1 text-lg font-medium hover:bg-eatly-violet-100"
+            className="px-2 py-1 text-[13px] font-medium hover:bg-eatly-violet-100 md:text-lg"
             onClick={(e) => setValue(e, option)}
           >
             {option.value}

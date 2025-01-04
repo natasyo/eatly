@@ -9,10 +9,12 @@ interface WaitAndRatingProps {
 
 const WaitAndRating: FunctionComponent<WaitAndRatingProps> = ({ wait, rating, className }) => {
   return (
-    <p className={`flex items-center font-manrope text-eatly-gray-600 ${className} text-xl}`}>
+    <p
+      className={`flex items-center font-manrope text-[13px] text-eatly-gray-600 lg:text-xl ${className}`}
+    >
       <span>{wait}min •</span>
       <span className="ml-[10px] flex items-center">
-        <Image src={star} alt="star" className="mr-2" />
+        <Image src={star} alt="star" className="mr-2 h-3 w-3 lg:h-auto lg:w-auto" />
         <span>{rating}</span>
       </span>
     </p>

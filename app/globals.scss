@@ -7,13 +7,6 @@
   --foreground: #171717;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 body {
   color: var(--foreground);
   background: var(--background);
@@ -22,31 +15,108 @@ body {
 @layer base {
   h1,
   .h1 {
-    @apply text-8xl;
     @apply font-semibold;
     @apply font-popins;
-    @apply tracking-[-3px];
-    @media screen and (max-width: 1280px) {
+
+    @apply text-4.6xl;
+    @media (width >= 919px) {
       @apply text-5.3xl;
+      letter-spacing: -1px;
+    }
+    @media (width >= 1090px) {
+      @apply text-6xl;
+    }
+    @media (width >= 1296px) {
+      @apply text-7xl;
+      @apply tracking-[-3px];
+    }
+    @media (width >= 1552px) {
+      @apply text-8xl;
     }
   }
   h2,
   .h2 {
-    @apply text-5.1xl;
     line-height: 114%;
     @apply font-bold;
+    @apply text-3xl;
+    @media (width >= 950px) {
+      @apply text-4xl;
+    }
+    @media (width >= 1088px) {
+      @apply text-4.6xl;
+    }
+    @media (width >= 1344px) {
+      @apply text-5.1xl;
+    }
   }
   h3,
   .h3 {
-    @apply text-4.5xl;
     @apply font-semibold;
+    @apply text-3xl;
+    @media (width >= 950px) {
+      @apply text-3.2xl;
+    }
+    @media (width >= 1088px) {
+      @apply text-4.5xl;
+    }
+    @media (width >= 1344px) {
+      @apply text-4.5xl;
+    }
   }
   p {
     @apply text-lg;
     @apply font-inter;
   }
-  .container {
-    @apply px-4;
-    @apply mx-auto;
+}
+
+.reviews {
+  .slick-list {
+    @media (width >= 704px) {
+      margin-right: -1000px;
+    }
+  }
+  .slick-slide {
+    height: 170px;
+    @media (width >= 1344px) {
+      height: 239px;
+    }
+
+    .review-header {
+      display: none;
+    }
+    & > div {
+      height: 100%;
+    }
+    &.slick-current {
+      height: 206px;
+      @media (width >= 704px) {
+        height: 246px;
+      }
+
+      @media (width >= 1344px) {
+        height: 346px;
+      }
+      .review-header {
+        display: flex;
+      }
+    }
+  }
+  .slick-dots {
+    @media (width < 704px) {
+      bottom: -50px;
+    }
+    li {
+      height: 100%;
+      border-radius: 20px;
+      margin: 0;
+      button {
+        &::before {
+          content: none;
+        }
+      }
+      &.slick-active {
+        @apply bg-eatly-violet;
+      }
+    }
   }
 }
