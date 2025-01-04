@@ -39,13 +39,13 @@ body {
     line-height: 114%;
     @apply font-bold;
     @apply text-3xl;
-    @media (width >= 919px) {
+    @media (width >= 950px) {
       @apply text-4xl;
     }
-    @media (width >= 1090px) {
+    @media (width >= 1088px) {
       @apply text-4.6xl;
     }
-    @media (width >= 1296px) {
+    @media (width >= 1344px) {
       @apply text-5.1xl;
     }
   }
@@ -53,13 +53,13 @@ body {
   .h3 {
     @apply font-semibold;
     @apply text-3xl;
-    @media (width >= 919px) {
+    @media (width >= 950px) {
       @apply text-3.2xl;
     }
-    @media (width >= 1090px) {
+    @media (width >= 1088px) {
       @apply text-4.5xl;
     }
-    @media (width >= 1296px) {
+    @media (width >= 1344px) {
       @apply text-4.5xl;
     }
   }
@@ -71,13 +71,13 @@ body {
 
 .reviews {
   .slick-list {
-    @media (width >= 672px) {
+    @media (width >= 704px) {
       margin-right: -1000px;
     }
   }
   .slick-slide {
     height: 170px;
-    @media (width >= 1296px) {
+    @media (width >= 1344px) {
       height: 239px;
     }
 
@@ -89,11 +89,11 @@ body {
     }
     &.slick-current {
       height: 206px;
-      @media (width >= 672px) {
+      @media (width >= 704px) {
         height: 246px;
       }
 
-      @media (width >= 1296px) {
+      @media (width >= 1344px) {
         height: 346px;
       }
       .review-header {
@@ -102,7 +102,7 @@ body {
     }
   }
   .slick-dots {
-    @media (width < 672px) {
+    @media (width < 704px) {
       bottom: -50px;
     }
     li {

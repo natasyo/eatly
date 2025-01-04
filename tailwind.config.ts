@@ -4,6 +4,7 @@ const colors = {
   'eatly-violet-100': '#DBD9EE',
   'eatly-violet-200': '#F4F0FF',
   'eatly-violet-300': '#C5BFED',
+  'eaatly-violet-400': '#7C6FCD',
   'eatly-violet': '#6C5FBC',
   'eatly-gray': '#CBCBCB',
   'eatly-gray-10': '#F9F9F9',
@@ -70,6 +71,7 @@ export default {
         '2.5xl': ['1.375rem', '120%'], //22px
         '2.9xl': ['1.75rem', '120%'], //28px
         '3.2xl': ['2rem', '125%'], //32px
+        '3.5xl': ['2.1875rem', 'auto'], //35px
         '4.1xl': ['2.5625rem', '125%'], //41px
         '4.3xl': ['2.6875rem', '125%'], //43px
         '4.5xl': ['2.8125rem', '125%'], //45px
@@ -85,30 +87,33 @@ export default {
       margin: { ...sizes },
     },
     screens: {
-      '2xl': '1568px',
-      xl: '1312px',
-      lg: '1056px',
-      md: '918px',
-      sm: '672px',
+      '2xl': '1600px',
+      xl: '1344px',
+      lg: '1088px',
+      md: '950px',
+      sm: '704px',
     },
     container: {
       padding: {
         DEFAULT: '1rem',
-        xl: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
       },
       center: true,
       screens: {
-        '2xl': { max: '1567px' },
-        xl: { max: '1311px' },
-        lg: { max: '1055px' },
-        md: { max: '917px' },
-        sm: { max: '671px' },
+        '2xl': { max: '1599px' },
+        xl: { max: '1343px' },
+        lg: { max: '1087px' },
+        md: { max: '949px' },
+        sm: { max: '703px' },
 
-        minsm: { min: '672px' },
-        minmd: { min: '918px' },
-        minlg: { min: '1055px' },
-        minxl: { min: '1312px' },
-        min2xl: { min: '1568px' },
+        minsm: { min: '704px' },
+        minmd: { min: '950px' },
+        minlg: { min: '1088px' },
+        minxl: { min: '1344px' },
+        min2xl: { min: '1600px' },
       },
     },
   },

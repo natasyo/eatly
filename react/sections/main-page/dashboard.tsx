@@ -10,7 +10,7 @@ const Dashboard: FunctionComponent = () => {
 
   return (
     <div>
-      <div className="container justify-between border-b border-eatly-gray px-8 pb-[85px] pt-[85px] sm:flex sm:px-4 sm:pt-[70px] lg:pb-[120px] lg:pt-[104px]">
+      <div className="container justify-between border-b border-eatly-gray pb-[85px] pt-[85px] sm:flex sm:pt-[70px] lg:pb-[120px] lg:pt-[104px]">
         <div className="mb-[103px] max-w-[416px] sm:mb-0 lg:max-w-[514px]">
           <h2 className="mb-6 font-popins leading-[116%] tracking-[0.01em] sm:mb-9 lg:mb-12 lg:pl-3">
             Control <span className="text-eatly-violet">Purchases</span> Via Dashboard
