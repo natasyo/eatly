@@ -18,7 +18,7 @@ const CategoryItem: FunctionComponent<CategoryItemProps> = ({
 }) => {
   return (
     <div
-      className={`${className ? className : ''} flex flex-col items-center rounded-xl bg-opacity-[0.35] pb-3 pt-2`}
+      className={`${className ? className : ''} flex flex-col items-center rounded-xl bg-opacity-[0.35] pb-3 pt-2 ${isSelect && 'shadow-eatly-2xl'}`}
       style={{
         background: nexToRGB(item.colorBg, 0.35),
         border: `${isSelect ? '3px solid ' + item.colorBg : 'none'}`,
