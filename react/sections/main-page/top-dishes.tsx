@@ -21,7 +21,6 @@ const TopDishes: FunctionComponent<TopDishesProps> = ({ className }) => {
         count = 4;
       }
     }
-    console.log(window.innerWidth, count);
     return count;
   };
   const [items, setItems] = useState<Dishe[]>();
@@ -38,10 +37,16 @@ const TopDishes: FunctionComponent<TopDishesProps> = ({ className }) => {
           Our Top <span className="text-eatly-violet">Dishes</span>
         </h3>
         <div className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-4 sm:gap-4 sm:px-0 md:grid-cols-5 md:gap-[21px] xl:gap-[31px] 2xl:grid-cols-6">
-          {items ? items.map((item) => <DisheCard item={item} key={item.id} />) : <p>Loading</p>}
+          {items ? (
+            items.map((item) => (
+              <DisheCard item={item} key={item.id} className="mx-auto w-[250px] max-w-full" />
+            ))
+          ) : (
+            <p>Loading</p>
+          )}
         </div>
         <div className="container mt-[70px] flex justify-end sm:mt-11 lg:mt-18">
-          <BtnMore href="/" text="View All" />
+          <BtnMore href="/" text="View All" className="ml-2" />
         </div>
       </div>
     </div>

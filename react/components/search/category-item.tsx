@@ -28,7 +28,13 @@ const CategoryItem: FunctionComponent<CategoryItemProps> = ({
       }}
     >
       <div className="mb-3 flex h-[37px] w-full items-center justify-center">
-        <Image src={item.image} alt={item.title} width={32} height={37} className="max-h-[37px]" />
+        <Image
+          src={item.image}
+          alt={item.title}
+          width={32}
+          height={37}
+          className="h-auto max-h-full w-auto"
+        />
       </div>
 
       <p

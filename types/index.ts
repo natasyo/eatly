@@ -1,3 +1,4 @@
+export * from './ui-types';
 export interface Restaurant {
   id: string;
   name: string;

@@ -1,0 +1,30 @@
+.stock {
+    .slick-dots {
+        bottom: -5px;
+    }
+    .dots {
+        li {
+            margin: 0 3px;
+            width: 22px;
+            height: 4px;
+            border-radius: 4px;
+            overflow: hidden;
+            button {
+                height: 100%;
+                width: 100%;
+                display: block;
+                background: #dbd9ee;
+                padding: 0;
+                &::before {
+                    content: none;
+                }
+            }
+            &.slick-active {
+                width: 44px;
+                button {
+                    background: #6c5fbc;
+                }
+            }
+        }
+    }
+}

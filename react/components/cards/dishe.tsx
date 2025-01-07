@@ -16,7 +16,7 @@ interface DisheCardProps {
 const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
   return (
     <div
-      className={`${className ? className : ''} relative rounded-[34px] border border-eatly-gray-50 bg-white pb-4 shadow-eatly-3xl md:pb-7`}
+      className={`${className ? className : ''} relative flex flex-col items-center rounded-[34px] border border-eatly-gray-50 bg-white pb-4 shadow-eatly-3xl md:pb-7`}
     >
       <div className="px-2 pt-5 sm:pt-6 lg:px-4 lg:pt-10">
         <Image
@@ -27,10 +27,10 @@ const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
           className="h-[131px] w-[131px] xl:h-[185px] xl:w-[185px]"
         />
       </div>
-      <div className="-mt-3 px-[10px] sm:-mt-1 lg:px-6">
+      <div className="-mt-3 w-[180px] max-w-full px-[10px] sm:-mt-1 lg:px-6">
         <CardType type={item.type} className={`-mb-1 h-[11px] md:h-[22px] xl:mb-1`} />
         <CardTitle
-          className="mb-[-2px] overflow-clip text-nowrap !text-base sm:mb-1 xl:!text-[23px]"
+          className="mb-[-2px] overflow-clip text-wrap !text-base sm:mb-1 xl:!text-[23px]"
           text={item.name}
         />
         <WaitAndRating
@@ -40,7 +40,7 @@ const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
         />
         <div className="flex items-center justify-between">
           <CardPrice price={item.price} />
-          <CardAddBtn />
+          <CardAddBtn className="ml-2" />
         </div>
         <CardLike className="absolute right-3 top-[14px] xl:right-4 xl:top-5" />
       </div>
