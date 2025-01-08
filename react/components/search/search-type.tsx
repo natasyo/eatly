@@ -24,12 +24,12 @@ const SearchType: FunctionComponent<SearchTypeProps> = ({
   }, [currentValue]);
   return (
     <div
-      className={`flex ${className ? className : ''} overflow-hidden rounded-[6px] border border-eatly-violet`}
+      className={`flex ${className ? className : ''} overflow-hidden rounded-[6px] border border-eatly-violet lg:rounded-xl xl:rounded-[15px]`}
     >
       {types.map((type) => (
         <button
           key={type}
-          className={`grow py-4 text-xs ${currentValue === type ? 'text-eatly-violet' : 'bg-eatly-violet text-white'}`}
+          className={`grow py-4 text-xs xl:py-6 ${currentValue === type ? 'text-eatly-violet' : 'bg-eatly-violet text-white'} xl:text-xl`}
           style={{ width: `${width}%` }}
           onClick={() => changeCurrent(type)}
         >

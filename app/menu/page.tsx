@@ -7,8 +7,8 @@ const Menu: FunctionComponent = () => {
   return (
     <>
       <Search />
-      <Restaurants />
-      <TopDishes />
+      <Restaurants classNameHeader="!text-left" />
+      <TopDishes classNameHeader="!text-left" />
     </>
   );
 };

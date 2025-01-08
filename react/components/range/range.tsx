@@ -68,7 +68,7 @@ const Range: FunctionComponent<RangeProps> = ({ valueMinMax, valueData, onChange
       <div className="relative h-6">
         {coordinate.map((item) => (
           <span
-            className={`absolute inline-block w-6 text-center text-[9px] text-eatly-gray`}
+            className={`absolute inline-block w-6 text-center text-[9px] text-eatly-gray xl:text-[10px]`}
             key={`coord${item}`}
             style={{ left: `${setLeft(item)}px` }}
           >
