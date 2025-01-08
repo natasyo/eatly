@@ -9,7 +9,7 @@ interface StockProps {
 
 const Stock: FunctionComponent<StockProps> = ({ className }) => {
   return (
-    <div className={`${className ? className : ''} md:mr-1 md:pt-3`}>
+    <div className={`${className ? className : ''} md:pt-3`}>
       <div className={`flex items-start md:pb-9`}>
         <div
           className={`flex h-[104px] grow rounded-xl bg-[url('../public/img/discont-bg.png')] pl-6 pr-7 pt-[18px] sm:h-[178px] sm:pt-[30px] md:pl-10`}
@@ -25,7 +25,7 @@ const Stock: FunctionComponent<StockProps> = ({ className }) => {
           <Image
             src={stockImg}
             alt="discont"
-            className="m-[-26px] mt-1 size-[102px] flex-shrink-0 sm:ml-5 sm:size-[180px] md:m-[-26px] md:-mr-12 md:mt-2"
+            className="m-[-26px] mt-1 size-[102px] flex-shrink-0 sm:ml-5 sm:size-[180px] md:m-[-26px] md:-ml-12 md:mt-2"
           />
         </div>
         <Image src={sparks} alt="sparks" className="-mt-4 md:-mr-3 md:w-12" />

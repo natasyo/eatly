@@ -18,7 +18,7 @@ const CategoryItem: FunctionComponent<CategoryItemProps> = ({
 }) => {
   return (
     <div
-      className={`${className ? className : ''} flex flex-col items-center rounded-xl bg-opacity-[0.35] pb-3 pt-2 ${isSelect && 'shadow-eatly-2xl'}`}
+      className={`${className ? className : ''} flex flex-col items-center rounded-xl bg-opacity-[0.35] pb-3 pt-2 md:pt-0.5 ${isSelect && 'shadow-eatly-2xl'}`}
       style={{
         background: nexToRGB(item.colorBg, 0.35),
         border: `${isSelect ? '3px solid ' + item.colorBg : 'none'}`,
@@ -27,7 +27,7 @@ const CategoryItem: FunctionComponent<CategoryItemProps> = ({
         onSelectCategory && onSelectCategory(item);
       }}
     >
-      <div className="mb-3 flex h-[37px] w-full items-center justify-center">
+      <div className="mb-3 flex h-[37px] w-full items-center justify-center md:mb-2 md:pb-0">
         <Image
           src={item.image}
           alt={item.title}
@@ -38,7 +38,7 @@ const CategoryItem: FunctionComponent<CategoryItemProps> = ({
       </div>
 
       <p
-        className={`text-center font-popins text-xxs font-medium`}
+        className={`text-center font-popins text-xxs font-medium md:text-[8px]`}
         style={{ color: item.colorTitle }}
       >
         {item.title}

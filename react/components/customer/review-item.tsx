@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FunctionComponent } from 'react';
 import apostrophe from '@/public/img/apostrophe.png';
 import Stars from '../stars/stars';
+import './reviews-style.scss';
 
 interface ReviewItemProps {
   item: Review;

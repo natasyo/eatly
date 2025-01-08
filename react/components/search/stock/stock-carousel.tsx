@@ -12,9 +12,9 @@ const StocksCarousel: FunctionComponent<StocksCarouselProps> = ({ className }) =
   const settings: Settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
+    rows: 1,
     dots: true,
     appendDots: (dots) => {
-      console.log(dots);
       return (
         <div>
           <ul className={`dots flex justify-center`}>{dots}</ul>

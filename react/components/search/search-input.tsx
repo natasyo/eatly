@@ -9,13 +9,13 @@ interface SearchInputProps {
 const SearchInput: FunctionComponent<SearchInputProps> = ({ className }) => {
   return (
     <div
-      className={`${className ? className : ''} bg-eatly-gray-370 flex rounded-lg p-[14px] font-popins text-xs`}
+      className={`${className ? className : ''} flex rounded-lg bg-eatly-gray-370 p-[14px] font-popins`}
     >
       <Image src={Search} alt="Search" className="mr-4" />
       <input
         type="text"
         placeholder="Search"
-        className="placeholder:text-eatly-gray-810 grow bg-transparent font-medium text-eatly-black-600 focus-visible:outline-none"
+        className="grow bg-transparent text-xs font-medium text-eatly-black-600 placeholder:text-eatly-gray-810 focus-visible:outline-none md:text-sm"
       />
     </div>
   );

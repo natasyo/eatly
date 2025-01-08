@@ -10,7 +10,7 @@ interface SortByProps {
 const SortBy: FunctionComponent<SortByProps> = ({ item, className, isChecked, onChecked }) => {
   return (
     <label
-      className={`block font-popins text-[13px] ${className ? className : ''} ${isChecked ? 'text-eatly-violet' : 'text-eatly-gray-700'}`}
+      className={`block font-popins text-[13px] md:text-[11px] ${className ? className : ''} ${isChecked ? 'text-eatly-violet' : 'text-eatly-gray-700'}`}
       onClick={() => {
         onChecked && onChecked(item);
       }}

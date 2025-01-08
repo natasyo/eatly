@@ -28,9 +28,9 @@ const CategorySearch: FunctionComponent<CategorySearchProps> = ({ className }) =
   const sortedBy = ['Recomended', 'Fast Delivery', 'Most Popular'];
 
   return (
-    <div className={`${className ? className : ''} shadow-eatly-xl pb-8 pt-7`}>
-      <p className="mb-4 font-popins text-lg font-semibold">Category</p>
-      <div className="mb-6 grid grid-cols-4 gap-[10px]">
+    <div className={`${className ? className : ''} pb-8 pt-7 shadow-eatly-xl md:pt-5`}>
+      <p className="mb-4 font-popins text-lg font-semibold md:text-[15px]">Category</p>
+      <div className="mb-6 grid grid-cols-4 gap-[10px] md:mb-4">
         {categories ? (
           categories.map((item) => (
             <CategoryItem
@@ -38,15 +38,15 @@ const CategorySearch: FunctionComponent<CategorySearchProps> = ({ className }) =
               item={item}
               onSelectCategory={selectCategory}
               isSelect={item.id === searchData.category?.id}
-              className="max-h-20"
+              className="max-h-20 md:max-h-full"
             />
           ))
         ) : (
           <Loading />
         )}
       </div>
-      <p className="mb-3 font-popins text-lg font-semibold">Sort By</p>
-      <div className="mb-3 flex flex-wrap justify-between">
+      <p className="mb-3 font-popins text-lg font-semibold md:mb-2 md:text-[15px]">Sort By</p>
+      <div className="mb-3 flex flex-wrap justify-between md:mb-1">
         {sortedBy.map((item) => (
           <SortBy
             item={item}
@@ -59,16 +59,16 @@ const CategorySearch: FunctionComponent<CategorySearchProps> = ({ className }) =
           />
         ))}
       </div>
-      <p className="mb-[22px] font-popins text-lg font-semibold">Price</p>
+      <p className="mb-[22px] font-popins text-lg font-semibold md:mb-4 md:text-[15px]">Price</p>
       <Range
         valueData={{ max: 670, min: 100 }}
         valueMinMax={{ min: 0, max: 700 }}
         onChange={(value) => {
           console.log(value);
         }}
-        className="mb-[30px]"
+        className="mb-[30px] md:mb-[18px]"
       />
-      <BtnPrimary className="w-full rounded-xl font-popins text-sm">Apply</BtnPrimary>
+      <BtnPrimary className="w-full rounded-xl font-popins text-sm md:text-xxs">Apply</BtnPrimary>
     </div>
   );
 };
