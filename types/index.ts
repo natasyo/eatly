@@ -1,3 +1,5 @@
+import { RangeType } from './ui-types';
+
 export * from './ui-types';
 export interface Restaurant {
   id: string;
@@ -54,11 +56,15 @@ export interface Category {
   colorBg: string;
   colorTitle: string;
 }
+export interface Range {
+  from: number;
+  to: number;
+}
 
 export interface Search {
   category?: Category;
   sortBy?: string;
-  price?: { from: number; to: number };
+  price?: RangeType;
   searchText?: string;
   type?: string;
 }

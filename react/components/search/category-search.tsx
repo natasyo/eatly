@@ -9,22 +9,29 @@ import Range from '../range/range';
 import BtnPrimary from '../buttons/btn-primary';
 interface CategorySearchProps {
   className?: string;
+  searchData?: Search;
+  onChangeSearchData?: (data: Search) => void;
 }
 
-const CategorySearch: FunctionComponent<CategorySearchProps> = ({ className }) => {
+const CategorySearch: FunctionComponent<CategorySearchProps> = ({
+  className,
+  searchData,
+  onChangeSearchData,
+}) => {
   const categoriesdata = getCategories();
 
-  const [searchData, setSearchData] = useState<Search>({} as Search);
+  const [searchDataState, setSearchDataState] = useState<Search>(searchData as Search);
   const [categories, setCategories] = useState<Category[]>(categoriesdata);
   useEffect(() => {
     setCategories(categoriesdata);
   }, [categoriesdata]);
-  useEffect(() => {});
-  function selectCategory(category: Category) {
-    setSearchData({ ...searchData, category });
-    console.log(searchData);
-  }
 
+  function selectCategory(category: Category) {
+    setSearchDataState({ ...searchDataState, category });
+  }
+  useEffect(() => {
+    onChangeSearchData && onChangeSearchData(searchDataState);
+  }, [searchDataState]);
   const sortedBy = ['Recomended', 'Fast Delivery', 'Most Popular'];
 
   return (
@@ -41,7 +48,7 @@ const CategorySearch: FunctionComponent<CategorySearchProps> = ({ className }) =
               key={item.id}
               item={item}
               onSelectCategory={selectCategory}
-              isSelect={item.id === searchData.category?.id}
+              isSelect={searchData && item.id === searchDataState.category?.id}
               className="max-h-20 md:max-h-full"
             />
           ))
@@ -57,26 +64,26 @@ const CategorySearch: FunctionComponent<CategorySearchProps> = ({ className }) =
           <SortBy
             item={item}
             key={item}
-            isChecked={item === searchData.sortBy}
+            isChecked={!!(searchData && item === searchDataState.sortBy)}
             onChecked={(sortBy: string) => {
-              setSearchData({ ...searchData, sortBy });
+              setSearchDataState({ ...searchDataState, sortBy });
             }}
             className="mx-1 mb-3"
           />
         ))}
       </div>
       <p className="mb-[22px] font-popins text-lg font-semibold md:mb-4 md:text-[15px] xl:mb-7 xl:text-[22px]">
-        Price
+        Prices
       </p>
       <Range
         valueData={{ max: 670, min: 100 }}
         valueMinMax={{ min: 0, max: 700 }}
-        onChange={(value) => {
-          console.log(value);
+        onChange={(price) => {
+          setSearchDataState({ ...searchDataState, price });
         }}
         className="mb-[30px] md:mb-[18px] xl:mb-11"
       />
-      <BtnPrimary className="w-full rounded-xl font-popins text-sm md:text-xxs xl:text-sm xl:py-5">
+      <BtnPrimary className="w-full rounded-xl font-popins text-sm md:text-xxs xl:py-5 xl:text-sm">
         Apply
       </BtnPrimary>
     </div>
