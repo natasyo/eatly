@@ -5,6 +5,7 @@ import { Inter, Poppins, Manrope, Quicksand } from 'next/font/google';
 import './globals.scss';
 import Header from '@/react/sections/header/header';
 import Footer from '@/react/sections/footer/footer';
+import Providers from './providers';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -42,12 +43,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${poppins.variable} ${quicksand.variable} ${manrope.variable} h-full bg-eatly-gray-10 antialiased`}
       >
-        <div className="flex h-full flex-col justify-between">
-          <Header />
-          <div className="grow">{children}</div>
-
-          <Footer />
-        </div>
+        <Providers>
+          <div className="flex h-full flex-col justify-between">
+            <Header />
+            <div className="grow">{children}</div>
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   );

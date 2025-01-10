@@ -59,6 +59,6 @@ export interface Search {
   category?: Category;
   sortBy?: string;
   price?: { from: number; to: number };
-  searchText: string;
-  type: string;
+  searchText?: string;
+  type?: string;
 }

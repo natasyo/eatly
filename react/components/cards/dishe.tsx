@@ -27,7 +27,7 @@ const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
           className="h-[131px] w-[131px] xl:h-[185px] xl:w-[185px]"
         />
       </div>
-      <div className="-mt-3 w-[180px] max-w-full px-[10px] sm:-mt-1 lg:px-6">
+      <div className="-mt-3 w-[180px] max-w-full px-[10px] sm:-mt-1">
         <CardType type={item.type} className={`-mb-1 h-[11px] md:h-[22px] xl:mb-1`} />
         <CardTitle
           className="mb-[-2px] overflow-clip text-wrap !text-base sm:mb-1 xl:!text-[23px]"
