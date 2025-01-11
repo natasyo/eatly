@@ -5,9 +5,9 @@ import SearchInput from '@/react/components/search/search-input';
 import SearchType from '@/react/components/search/search-type';
 import StocksCarousel from '@/react/components/search/stock/stock-carousel';
 import { setSearchState } from '@/store/searchSlice';
-import { Search as SearchDataType } from '@/types';
+import { Search, Search as SearchDataType } from '@/types';
 
-import { FunctionComponent } from 'react';
+import { createContext, FunctionComponent, useContext } from 'react';
 import { useDispatch } from 'react-redux';
 
 interface SearchProps {
@@ -17,6 +17,7 @@ interface SearchProps {
 const Search: FunctionComponent<SearchProps> = ({ className }) => {
   const searchData = useAppselector((state) => state.search.data);
   const dispatch = useDispatch();
+  const SearchContext = createContext({} as Search);
   return (
     <div
       className={`container ${className ? className : ''} :grid-cols-[minmax(578px,_1fr)_268px] md:grid md:grid-cols-[minmax(578px,_1fr)_268px] md:gap-x-10 md:pt-20 xl:grid-cols-[minmax(758px,_1fr)_377px] xl:gap-x-[60px] xl:pt-[120px] 2xl:grid-cols-[minmax(758px,_1fr)_450px] 2xl:gap-x-20`}
