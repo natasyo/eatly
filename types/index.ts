@@ -68,3 +68,9 @@ export interface Search {
   searchText?: string;
   type?: string;
 }
+
+export interface Question {
+  id: number;
+  question: string;
+  answer: string;
+}

@@ -4,6 +4,7 @@ import {
   Purchase,
   PurchasesInfo,
   PurchaseView,
+  Question,
   Restaurant,
   Review,
 } from '@/types';
@@ -64,4 +65,11 @@ export function getReviews(): Review[] {
 
 export function getCategories(): Category[] {
   return data.categories as unknown as Category[];
+}
+
+export function getQuestions(count = 5) {
+  if (count >= 0) {
+    return data.questions.slice(0, count) as unknown as Question[];
+  }
+  return data.questions as unknown as Question[];
 }
