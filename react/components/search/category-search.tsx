@@ -1,37 +1,30 @@
 'use client';
 import { getCategories } from '@/backend/api';
-import { FunctionComponent, useEffect, useState } from 'react';
+import { FunctionComponent, MouseEventHandler, useEffect, useState } from 'react';
 import CategoryItem from './category-item';
-import { Category, Search } from '@/types';
+import { Category } from '@/types';
 import Loading from '../loading';
 import SortBy from './sortBy';
 import Range from '../range/range';
 import BtnPrimary from '../buttons/btn-primary';
+import { useSearchContext } from './search-context';
 interface CategorySearchProps {
   className?: string;
-  searchData?: Search;
-  onChangeSearchData?: (data: Search) => void;
+  onApplyHandler: MouseEventHandler<HTMLButtonElement>;
 }
 
-const CategorySearch: FunctionComponent<CategorySearchProps> = ({
-  className,
-  searchData,
-  onChangeSearchData,
-}) => {
+const CategorySearch: FunctionComponent<CategorySearchProps> = ({ className, onApplyHandler }) => {
   const categoriesdata = getCategories();
 
-  const [searchDataState, setSearchDataState] = useState<Search>(searchData as Search);
   const [categories, setCategories] = useState<Category[]>(categoriesdata);
   useEffect(() => {
     setCategories(categoriesdata);
   }, [categoriesdata]);
 
+  const { searchData, setSearchData } = useSearchContext();
   function selectCategory(category: Category) {
-    setSearchDataState({ ...searchDataState, category });
+    setSearchData && setSearchData({ ...searchData, category });
   }
-  useEffect(() => {
-    onChangeSearchData && onChangeSearchData(searchDataState);
-  }, [searchDataState]);
   const sortedBy = ['Recomended', 'Fast Delivery', 'Most Popular'];
 
   return (
@@ -48,7 +41,7 @@ const CategorySearch: FunctionComponent<CategorySearchProps> = ({
               key={item.id}
               item={item}
               onSelectCategory={selectCategory}
-              isSelect={searchData && item.id === searchDataState.category?.id}
+              isSelect={searchData && item.id === searchData.category?.id}
               className="max-h-20 md:max-h-full"
             />
           ))
@@ -64,9 +57,9 @@ const CategorySearch: FunctionComponent<CategorySearchProps> = ({
           <SortBy
             item={item}
             key={item}
-            isChecked={!!(searchData && item === searchDataState.sortBy)}
+            isChecked={!!(searchData && item === searchData.sortBy)}
             onChecked={(sortBy: string) => {
-              setSearchDataState({ ...searchDataState, sortBy });
+              setSearchData && setSearchData({ ...searchData, sortBy });
             }}
             className="mx-1 mb-3"
           />
@@ -79,11 +72,14 @@ const CategorySearch: FunctionComponent<CategorySearchProps> = ({
         valueData={{ max: 670, min: 100 }}
         valueMinMax={{ min: 0, max: 700 }}
         onChange={(price) => {
-          setSearchDataState({ ...searchDataState, price });
+          setSearchData && setSearchData({ ...searchData, price });
         }}
         className="mb-[30px] md:mb-[18px] xl:mb-11"
       />
-      <BtnPrimary className="w-full rounded-xl font-popins text-sm md:text-xxs xl:py-5 xl:text-sm">
+      <BtnPrimary
+        className="w-full rounded-xl font-popins text-sm md:text-xxs xl:py-5 xl:text-sm"
+        onClick={onApplyHandler}
+      >
         Apply
       </BtnPrimary>
     </div>

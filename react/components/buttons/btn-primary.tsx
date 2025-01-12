@@ -1,13 +1,15 @@
-import { FunctionComponent, ReactNode } from 'react';
+import { ButtonHTMLAttributes, DetailedHTMLProps, FunctionComponent } from 'react';
 import Btn from './btn';
 
-interface BtnPrimaryProps {
-  children: string | ReactNode;
-  className?: string;
-}
+interface BtnPrimaryProps
+  extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {}
 
-const BtnPrimary: FunctionComponent<BtnPrimaryProps> = ({ children, className }) => {
-  return <Btn className={`bg-eatly-violet !text-white ${className}`} >{children}</Btn>;
+const BtnPrimary: FunctionComponent<BtnPrimaryProps> = (props) => {
+  return (
+    <Btn {...props} className={`bg-eatly-violet !text-white ${props.className}`}>
+      {props.children}
+    </Btn>
+  );
 };
 
 export default BtnPrimary;
