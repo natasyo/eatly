@@ -12,6 +12,17 @@ body {
   background: var(--background);
   font-family: var(--font-popins);
 }
+p {
+  @apply text-eatly-gray-600;
+  @apply text-xs;
+
+  @media (width >= 1088px) {
+    @apply text-sm;
+  }
+  @media (width >= 1344px) {
+    @apply text-base;
+  }
+}
 @layer base {
   h1,
   .h1 {
