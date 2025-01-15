@@ -1,13 +1,13 @@
-import { FunctionComponent } from 'react';
+import { ButtonHTMLAttributes, DetailedHTMLProps, FunctionComponent } from 'react';
 
-interface CardAddBtnProps {
-  className?: string;
-}
+interface CardAddBtnProps
+  extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {}
 
-const CardAddBtn: FunctionComponent<CardAddBtnProps> = ({ className }) => {
+const CardAddBtn: FunctionComponent<CardAddBtnProps> = (props) => {
   return (
     <button
-      className={`flex h-7 w-8 items-center justify-center rounded-[5px] bg-eatly-black-600 md:rounded-lg xl:h-10 xl:w-11 ${className}`}
+      {...props}
+      className={`flex h-7 w-8 items-center justify-center rounded-[5px] bg-eatly-black-600 md:rounded-lg xl:h-10 xl:w-11 ${props.className}`}
     >
       <svg
         width="16"

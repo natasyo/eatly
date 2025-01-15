@@ -7,6 +7,7 @@ import BtnMenu from '@/react/components/buttons/btn-menu';
 import Logo from '@/react/components/logo/logo';
 import MobileNav from '@/react/components/nav/mobile-nav';
 import { useOutSideClick } from '@/hooks/outsideClick';
+import { useAppselector } from '@/hooks/reduxhooks';
 
 const Header: FunctionComponent = () => {
   const [isShowMobileMenu, setisShowMobileMenu] = useState(false);
@@ -14,16 +15,18 @@ const Header: FunctionComponent = () => {
   useOutSideClick(refMenu, () => {
     setisShowMobileMenu(false);
   });
+  const basket = useAppselector((state) => state.basket);
+  // console.log(basket);
   return (
     <>
       <MobileNav
         ref={refMenu}
         className={`${isShowMobileMenu ? 'right-0' : '-right-full'} transition-all md:hidden`}
         navItems={[
-          { label: 'Menu', link: 'menu' },
-          { label: 'Blog', link: 'blog' },
-          { label: 'Pricing', link: 'pricing' },
-          { label: 'Contact', link: 'contact' },
+          { label: 'Menu', link: '/menu' },
+          { label: 'Blog', link: '/blog' },
+          { label: 'Pricing', link: '/pricing' },
+          { label: 'Contact', link: '/contact' },
         ]}
         onChangePage={() => {
           setisShowMobileMenu(false);
@@ -37,10 +40,10 @@ const Header: FunctionComponent = () => {
               <Nav
                 className="hidden md:block"
                 navItems={[
-                  { label: 'Menu', link: 'menu' },
-                  { label: 'Blog', link: 'blog' },
-                  { label: 'Pricing', link: 'pricing' },
-                  { label: 'Contact', link: 'contact' },
+                  { label: 'Menu', link: '/menu' },
+                  { label: 'Blog', link: '/blog' },
+                  { label: 'Pricing', link: '/pricing' },
+                  { label: 'Contact', link: '/contact' },
                 ]}
               ></Nav>
             </div>

@@ -7,6 +7,11 @@ import WaitAndRating from './ui/wait-and-rating';
 import CardPrice from './ui/card-price';
 import CardLike from './ui/card-like';
 import CardAddBtn from './ui/card-add-btn';
+import Link from 'next/link';
+import { useAppselector } from '@/hooks/reduxhooks';
+import { useDispatch } from 'react-redux';
+import logo from '@/public/img/logo.svg';
+import { addInBasket } from '@/store/basketSlice';
 
 interface DisheCardProps {
   className?: string;
@@ -14,8 +19,11 @@ interface DisheCardProps {
 }
 
 const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
+  const basket = useAppselector((state) => state.basket);
+  const dispatch = useDispatch();
   return (
-    <div
+    <Link
+      href={`/menu/dishes/${item.id}`}
       className={`${className ? className : ''} relative flex flex-col items-center rounded-[34px] border border-eatly-gray-50 bg-white pb-4 shadow-eatly-3xl md:pb-7`}
     >
       <div className="px-2 pt-5 sm:pt-6 lg:px-4 lg:pt-10">
@@ -40,11 +48,17 @@ const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
         />
         <div className="flex items-center justify-between">
           <CardPrice price={item.price} />
-          <CardAddBtn className="ml-2" />
+          <CardAddBtn
+            className="ml-2"
+            onClick={(e) => {
+              e.preventDefault();
+              dispatch(addInBasket(item));
+            }}
+          />
         </div>
         <CardLike className="absolute right-3 top-[14px] xl:right-4 xl:top-5" />
       </div>
-    </div>
+    </Link>
   );
 };
 

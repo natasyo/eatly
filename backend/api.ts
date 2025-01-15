@@ -41,6 +41,11 @@ export function searchDishes(text: string) {
     .slice(0, 30);
   return dishe as unknown as Array<Dishe>;
 }
+export function getDishe(id: string) {
+  const dishe = data.dishes.find((item) => item.id === +id);
+  console.log(dishe);
+  return dishe as unknown as Dishe;
+}
 export function getPurchases(count?: number): Array<PurchaseView> {
   let purchases = [];
   if (count && count > 0) purchases = data.purchases.slice(0, count) as unknown as Array<Purchase>;

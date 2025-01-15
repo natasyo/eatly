@@ -74,3 +74,19 @@ export interface Question {
   question: string;
   answer: string;
 }
+
+export interface User {
+  id: string;
+  name: string;
+}
+
+export interface Basket {
+  id?: string;
+  user?: User;
+  items?: [
+    {
+      product: Dishe;
+      count: number;
+    },
+  ];
+}

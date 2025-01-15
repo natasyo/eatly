@@ -1,8 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
-import SearchSlice from './searchSlice';
+import basketSlice from './basketSlice';
+function preloaded() {
+  const serializebleState = localStorage.getItem('basket');
+  console.log(serializebleState);
+  console.log('preloaded');
+  return undefined;
+}
 
 export const store = configureStore({
-  reducer: { search: SearchSlice },
+  reducer: { basket: basketSlice },
+  preloadedState: preloaded(),
+  // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(basketMiddleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
