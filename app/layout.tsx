@@ -44,7 +44,7 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} ${quicksand.variable} ${manrope.variable} h-full bg-eatly-gray-10 antialiased`}
       >
         <Providers>
-          <div className="flex h-full flex-col justify-between">
+          <div className="relative flex h-full flex-col justify-between overflow-auto">
             <Header />
             <div className="grow">{children}</div>
             <Footer />

@@ -1,20 +1,22 @@
-import { Basket } from '@/types';
+import { Basket, ProductCount } from '@/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Dishe } from '../types/index';
 
-const initialState: Basket = {};
+const initialState: Basket = { items: [] };
 
 const basketSlice = createSlice({
   name: 'Basket',
   initialState,
   reducers: {
-    addInBasket: (state, product: PayloadAction<Dishe>) => {
-      const index = state.items?.findIndex((value) => value.product.id === product.payload.id);
-      if (state.items && index && index >= 0) {
-        state.items[index].count++;
-      } else {
-        state.items?.push({ product: product.payload, count: 1 });
-      }
+    addInBasket: (state, product: PayloadAction<ProductCount>) => {
+      const index = state.items!.findIndex((item) => item.dishe.id === product.payload.dishe.id);
+      if (index >= 0) {
+        console.log(!state.items[index].count);
+        if (state.items[index].count === undefined) state.items[index].count = 0;
+        state.items[index].count += product.payload.count ? product.payload.count : 1;
+        if (state.items[index].count <= 0) {
+          state.items.splice(index, 1);
+        }
+      } else state.items?.push({ ...product.payload, count: 1 });
     },
   },
 });

@@ -80,13 +80,13 @@ export interface User {
   name: string;
 }
 
+export interface ProductCount {
+  dishe: Dishe;
+  count?: number;
+}
+
 export interface Basket {
   id?: string;
   user?: User;
-  items?: [
-    {
-      product: Dishe;
-      count: number;
-    },
-  ];
+  items: Array<ProductCount>;
 }
