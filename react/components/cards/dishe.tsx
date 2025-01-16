@@ -1,12 +1,17 @@
 import { Dishe } from '@/types';
 import Image from 'next/image';
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useEffect } from 'react';
 import CardType from './ui/card-type';
 import CardTitle from './ui/card-title';
 import WaitAndRating from './ui/wait-and-rating';
 import CardPrice from './ui/card-price';
 import CardLike from './ui/card-like';
 import CardAddBtn from './ui/card-add-btn';
+import Link from 'next/link';
+import { useAppselector } from '@/hooks/reduxhooks';
+import { useDispatch } from 'react-redux';
+import { addInBasket } from '@/store/basketSlice';
+import Animate from '../basket/animate';
 
 interface DisheCardProps {
   className?: string;
@@ -14,23 +19,37 @@ interface DisheCardProps {
 }
 
 const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
+  const basket = useAppselector((state) => state.basket);
+  const dispatch = useDispatch();
   return (
-    <div
-      className={`${className ? className : ''} relative rounded-[34px] border border-eatly-gray-50 bg-white pb-4 shadow-eatly-3xl md:pb-7`}
+    <Link
+      href={`/menu/dishes/${item.id}`}
+      className={`${className ? className : ''} relative flex flex-col items-center rounded-[34px] border border-eatly-gray-50 bg-white pb-4 shadow-eatly-3xl md:pb-7`}
     >
       <div className="px-2 pt-5 sm:pt-6 lg:px-4 lg:pt-10">
-        <Image
-          src={item.image}
-          alt={item.name}
-          width={201}
-          height={208}
-          className="h-[131px] w-[131px] xl:h-[185px] xl:w-[185px]"
-        />
+        <div className="relative">
+          <Image
+            src={item.image}
+            alt={item.name}
+            width={201}
+            height={208}
+            className="h-[131px] w-[131px] xl:h-[185px] xl:w-[185px]"
+          />
+          <Animate className="absolute top-0 opacity-0">
+            <Image
+              src={item.image}
+              alt={item.name}
+              width={201}
+              height={208}
+              className="h-[131px] w-[131px] xl:h-[185px] xl:w-[185px]"
+            />
+          </Animate>
+        </div>
       </div>
-      <div className="-mt-3 px-[10px] sm:-mt-1 lg:px-6">
+      <div className="-mt-3 w-[180px] max-w-full px-[10px] sm:-mt-1">
         <CardType type={item.type} className={`-mb-1 h-[11px] md:h-[22px] xl:mb-1`} />
         <CardTitle
-          className="mb-[-2px] overflow-clip text-nowrap !text-base sm:mb-1 xl:!text-[23px]"
+          className="mb-[-2px] overflow-clip text-wrap !text-base sm:mb-1 xl:!text-[23px]"
           text={item.name}
         />
         <WaitAndRating
@@ -40,11 +59,17 @@ const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
         />
         <div className="flex items-center justify-between">
           <CardPrice price={item.price} />
-          <CardAddBtn />
+          <CardAddBtn
+            className="ml-2"
+            onClick={(e) => {
+              e.preventDefault();
+              dispatch(addInBasket({ dishe: item }));
+            }}
+          />
         </div>
         <CardLike className="absolute right-3 top-[14px] xl:right-4 xl:top-5" />
       </div>
-    </div>
+    </Link>
   );
 };
 

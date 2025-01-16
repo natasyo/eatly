@@ -1,3 +1,6 @@
+import { RangeType } from './ui-types';
+
+export * from './ui-types';
 export interface Restaurant {
   id: string;
   name: string;
@@ -52,4 +55,38 @@ export interface Category {
   title: string;
   colorBg: string;
   colorTitle: string;
+}
+export interface Range {
+  from: number;
+  to: number;
+}
+
+export interface Search {
+  category?: Category;
+  sortBy?: string;
+  price?: RangeType;
+  searchText?: string;
+  type?: string;
+}
+
+export interface Question {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+export interface User {
+  id: string;
+  name: string;
+}
+
+export interface ProductCount {
+  dishe: Dishe;
+  count?: number;
+}
+
+export interface Basket {
+  id?: string;
+  user?: User;
+  items: Array<ProductCount>;
 }
