@@ -1,7 +1,6 @@
 'use client';
 import { getDishe } from '@/backend/api';
 import BtnPrimary from '@/react/components/buttons/btn-primary';
-import CardAddBtn from '@/react/components/cards/ui/card-add-btn';
 import CardPrice from '@/react/components/cards/ui/card-price';
 import CardTitle from '@/react/components/cards/ui/card-title';
 import CardType from '@/react/components/cards/ui/card-type';
@@ -13,9 +12,7 @@ import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { FunctionComponent, useEffect, useState } from 'react';
 
-interface ProductProps {}
-
-const Product: FunctionComponent<ProductProps> = () => {
+const Product: FunctionComponent = () => {
   const { slug } = useParams();
   const [dishe, setDishe] = useState<Dishe | undefined>();
 
