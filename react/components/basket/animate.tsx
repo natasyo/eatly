@@ -1,5 +1,6 @@
 'use client';
-import { createRef, FunctionComponent, ReactNode, Ref, useEffect, useRef } from 'react';
+import { createRef, FunctionComponent, ReactNode, useEffect } from 'react';
+import { useBasketContext } from './basket-provider';
 
 interface AnimateProps {
   className?: string;
@@ -9,7 +10,10 @@ interface AnimateProps {
 
 const Animate: FunctionComponent<AnimateProps> = ({ children, className }) => {
   const animateRef = createRef<HTMLDivElement>();
-
+  const basketRect = useBasketContext();
+  useEffect(() => {
+    console.log(basketRect);
+  }, [basketRect]);
   return (
     <div
       className={`${className ? className : ''}`}

@@ -1,5 +1,5 @@
 'use client';
-import { createRef, FunctionComponent, RefObject, useRef, useState } from 'react';
+import { FunctionComponent, useEffect, useRef, useState } from 'react';
 import Nav from '@/react/components/nav/Nav';
 import BtnPrimary from '@/react/components/buttons/btn-primary';
 import Btn from '@/react/components/buttons/btn';
@@ -7,17 +7,22 @@ import BtnMenu from '@/react/components/buttons/btn-menu';
 import Logo from '@/react/components/logo/logo';
 import MobileNav from '@/react/components/nav/mobile-nav';
 import { useOutSideClick } from '@/hooks/outsideClick';
-import { useAppselector } from '@/hooks/reduxhooks';
 import Link from 'next/link';
 import Basket from '@/react/components/basket/basket';
+import { useBasketContext } from '@/react/components/basket/basket-provider';
 
 const Header: FunctionComponent = () => {
-  const [isShowMobileMenu, setisShowMobileMenu] = useState(false);
+  const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
   const refMenu = useRef<HTMLDivElement>(null);
   useOutSideClick(refMenu, () => {
-    setisShowMobileMenu(false);
+    setIsShowMobileMenu(false);
   });
-  const basket = useAppselector((state) => state.basket);
+
+  const { setRect } = useBasketContext();
+  const basketRef = useRef<HTMLAnchorElement>(null);
+  useEffect(() => {
+    if (basketRef.current) setRect(basketRef.current?.getBoundingClientRect());
+  }, [setRect]);
   const [isShowBasket, setIsShowBasket] = useState(false);
   return (
     <>
@@ -31,7 +36,7 @@ const Header: FunctionComponent = () => {
           { label: 'Contact', link: '/contact' },
         ]}
         onChangePage={() => {
-          setisShowMobileMenu(false);
+          setIsShowMobileMenu(false);
         }}
       />
       <header className="sticky top-0 z-50 bg-eatly-gray-10">
@@ -56,6 +61,7 @@ const Header: FunctionComponent = () => {
               }}
             >
               <Link
+                ref={basketRef}
                 href="/basket"
                 className="block size-6 fill-eatly-violet"
                 onMouseEnter={() => {
@@ -79,7 +85,7 @@ const Header: FunctionComponent = () => {
               isOpen={isShowMobileMenu}
               className="absolute right-0 top-1 z-40 md:hidden"
               onShowMenu={() => {
-                setisShowMobileMenu(!isShowMobileMenu);
+                setIsShowMobileMenu(!isShowMobileMenu);
               }}
             ></BtnMenu>
           </div>
