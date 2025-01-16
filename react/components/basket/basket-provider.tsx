@@ -4,12 +4,12 @@ interface BasketProviderProps {
   children: ReactNode;
 }
 type BasketContextType = {
-  rect: DOMRect;
+  rect?: DOMRect;
   setRect: (rect: DOMRect) => void;
 };
 export const BasketContext = createContext<BasketContextType | undefined>(undefined);
 const BasketProvider: FunctionComponent<BasketProviderProps> = ({ children }) => {
-  const [rect, setRect] = useState<DOMRect>(new DOMRect());
+  const [rect, setRect] = useState<DOMRect | undefined>();
   return <BasketContext.Provider value={{ rect, setRect }}>{children}</BasketContext.Provider>;
 };
 
