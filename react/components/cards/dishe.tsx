@@ -1,6 +1,6 @@
 import { Dishe } from '@/types';
 import Image from 'next/image';
-import { FunctionComponent, useEffect } from 'react';
+import { FunctionComponent, useEffect, useState } from 'react';
 import CardType from './ui/card-type';
 import CardTitle from './ui/card-title';
 import WaitAndRating from './ui/wait-and-rating';
@@ -19,6 +19,7 @@ interface DisheCardProps {
 
 const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
   const dispatch = useDispatch();
+  const [isAnimate, setIsAnimate] = useState(false);
   return (
     <Link
       href={`/menu/dishes/${item.id}`}
@@ -33,7 +34,7 @@ const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
             height={208}
             className="h-[131px] w-[131px] xl:h-[185px] xl:w-[185px]"
           />
-          <Animate className="">
+          <Animate className="" dishe={item} isAnimate={isAnimate}>
             <Image
               src={item.image}
               alt={item.name}
@@ -62,6 +63,10 @@ const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
             onClick={(e) => {
               e.preventDefault();
               dispatch(addInBasket({ dishe: item }));
+              setIsAnimate(true);
+              setTimeout(() => {
+                setIsAnimate(false);
+              }, 1500);
             }}
           />
         </div>
