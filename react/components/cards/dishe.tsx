@@ -66,7 +66,7 @@ const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
               setIsAnimate(true);
               setTimeout(() => {
                 setIsAnimate(false);
-              }, 1500);
+              }, 500);
             }}
           />
         </div>
