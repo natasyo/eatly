@@ -45,17 +45,19 @@ const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
           </Animate>
         </div>
       </div>
-      <div className="-mt-3 w-[180px] max-w-full px-[10px] sm:-mt-1">
-        <CardType type={item.type} className={`-mb-1 h-[11px] md:h-[22px] xl:mb-1`} />
-        <CardTitle
-          className="mb-[-2px] overflow-clip text-wrap !text-base sm:mb-1 xl:!text-[23px]"
-          text={item.name}
-        />
-        <WaitAndRating
-          wait={item.time_wait}
-          rating={item.rating}
-          className="!xl:text-[17px] mb-2 !text-xs md:mb-3"
-        />
+      <div className="-mt-3 flex h-full w-[180px] max-w-full flex-col justify-between px-[10px] sm:-mt-1">
+        <div>
+          <CardType type={item.type} className={`-mb-1 h-[11px] md:h-[22px] xl:mb-1`} />
+          <CardTitle
+            className="mb-[-2px] overflow-clip text-wrap !text-base sm:mb-1 xl:!text-[23px]"
+            text={item.name}
+          />
+          <WaitAndRating
+            wait={item.time_wait}
+            rating={item.rating}
+            className="!xl:text-[17px] mb-2 !text-xs md:mb-3"
+          />
+        </div>
         <div className="flex items-center justify-between">
           <CardPrice price={item.price} />
           <CardAddBtn
