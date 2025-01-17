@@ -21,7 +21,6 @@ const PurchaseInfo: FunctionComponent<PurchaseInfoProps> = ({ className }) => {
   const [data, setData] = useState<PurchasesInfo>();
 
   useEffect(() => {
-    console.log(periods[0]);
     if (periods) {
       setData(getPurchasesInfo(periods[0]));
     }

@@ -8,7 +8,6 @@ import CardPrice from './ui/card-price';
 import CardLike from './ui/card-like';
 import CardAddBtn from './ui/card-add-btn';
 import Link from 'next/link';
-import { useAppselector } from '@/hooks/reduxhooks';
 import { useDispatch } from 'react-redux';
 import { addInBasket } from '@/store/basketSlice';
 import Animate from '../basket/animate';
@@ -19,7 +18,6 @@ interface DisheCardProps {
 }
 
 const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
-  const basket = useAppselector((state) => state.basket);
   const dispatch = useDispatch();
   return (
     <Link
@@ -35,7 +33,7 @@ const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
             height={208}
             className="h-[131px] w-[131px] xl:h-[185px] xl:w-[185px]"
           />
-          <Animate className="absolute top-0 opacity-0">
+          <Animate className="">
             <Image
               src={item.image}
               alt={item.name}
