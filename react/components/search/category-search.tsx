@@ -31,7 +31,7 @@ const CategorySearch: FunctionComponent<CategorySearchProps> = ({ className, onA
     <div
       className={`${className ? className : ''} pb-8 pt-7 shadow-eatly-xl md:pt-5 lg:px-8 lg:pt-[29px] xl:pb-9`}
     >
-      <p className="mb-4 font-popins text-lg font-semibold md:text-[15px] xl:text-[22px]">
+      <p className="mb-4 font-popins text-lg font-semibold text-eatly-black-500 md:text-[15px] xl:text-[22px]">
         Category
       </p>
       <div className="mb-6 grid grid-cols-4 gap-[10px] md:mb-4 xl:mb-8">
@@ -49,7 +49,7 @@ const CategorySearch: FunctionComponent<CategorySearchProps> = ({ className, onA
           <Loading />
         )}
       </div>
-      <p className="mb-3 font-popins text-lg font-semibold md:mb-2 md:text-[15px] xl:mb-4 xl:text-[22px]">
+      <p className="mb-3 font-popins text-lg font-semibold text-eatly-black-500 md:mb-2 md:text-[15px] xl:mb-4 xl:text-[22px]">
         Sort By
       </p>
       <div className="mb-3 flex flex-wrap justify-between md:mb-1 xl:mb-6">
@@ -65,7 +65,7 @@ const CategorySearch: FunctionComponent<CategorySearchProps> = ({ className, onA
           />
         ))}
       </div>
-      <p className="mb-[22px] font-popins text-lg font-semibold md:mb-4 md:text-[15px] xl:mb-7 xl:text-[22px]">
+      <p className="mb-[22px] font-popins text-lg font-semibold text-eatly-black-500 md:mb-4 md:text-[15px] xl:mb-7 xl:text-[22px]">
         Prices
       </p>
       <Range
