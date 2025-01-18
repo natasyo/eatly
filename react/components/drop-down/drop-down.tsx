@@ -74,7 +74,10 @@ const DropDown: FunctionComponent<DropDownProps> = ({
             data-key={option.key}
             key={option.key}
             className="px-2 py-1 text-[13px] font-medium hover:bg-eatly-violet-100 md:text-lg"
-            onClick={(e) => setValue(e, option)}
+            onClick={(e) => {
+              console.log('click');
+              setValue(e, option);
+            }}
           >
             {option.value}
           </li>

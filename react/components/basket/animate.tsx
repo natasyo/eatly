@@ -21,7 +21,7 @@ const Animate: FunctionComponent<AnimateProps> = ({ children, className, dishe, 
       if (position) {
         setPosition({
           x: rect!.x - 3 * rect!.width - position.x,
-          y: rect!.y - 2 * rect!.height - position.y,
+          y: rect!.y - 3 * rect!.height - position.y,
         });
       }
     }
@@ -35,14 +35,14 @@ const Animate: FunctionComponent<AnimateProps> = ({ children, className, dishe, 
              transform: translate(${position.x / 10}px, ${position.y / 10}px);
             }
         50%{
-         transform: translate(${position.x * 0.7}px, ${position.y * 0.7}px) scale(70%);
+         transform: translate(${position.x * 0.7}px, ${position.y * 0.7}px) scale(50%);
         }
         60% {   
-              transform: translate(${position.x * 0.9}px, ${position.y * 0.9}px) scale(60%);
+              transform: translate(${position.x * 0.9}px, ${position.y * 0.9}px) scale(50%);
               opasity:1;
           }
         99% {   
-              transform: translate(${position.x}px, ${position.y}px) scale(60%);
+              transform: translate(${position.x}px, ${position.y}px) scale(10%);
               opasity:0.9;
           }
         100%{
@@ -53,7 +53,7 @@ const Animate: FunctionComponent<AnimateProps> = ({ children, className, dishe, 
       </style>
       <div
         ref={animateRef}
-        className={`${className ? className : ''} absolute top-0 ${isAnimate ? 'z-50' : 'opacity-0'}`}
+        className={`${className ? className : ''} absolute top-0 ${isAnimate ? 'z-[99999]' : 'opacity-0'}`}
       >
         <div style={{ animation: `${isAnimate ? `animate${dishe.id} .5s linear .01s` : ''}` }}>
           {children}

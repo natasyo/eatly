@@ -63,7 +63,7 @@ const Header: FunctionComponent = () => {
               <Link
                 ref={basketRef}
                 href="/basket"
-                className="block size-6 fill-eatly-violet"
+                className="block size-6 fill-eatly-violet hover:opacity-85"
                 onMouseEnter={() => {
                   setIsShowBasket(true);
                 }}
@@ -76,7 +76,7 @@ const Header: FunctionComponent = () => {
                 className={`absolute right-0 top-full w-[350px] rounded-lg ${isShowBasket ? 'block' : 'hidden'}`}
               />
 
-              <Btn className="text-[12.68px] xl:mr-3 xl:text-lg">Login</Btn>
+              <Btn className="ml-4 text-[12.68px] xl:mr-3 xl:text-lg">Login</Btn>
               <BtnPrimary className="w-[86px] !px-0 text-[12.68px] lg:w-[120px] xl:text-lg">
                 Sign up
               </BtnPrimary>

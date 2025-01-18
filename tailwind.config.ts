@@ -61,8 +61,9 @@ export default {
       backgroundColor: colors,
       boxShadow: {
         'eatly-xl': ' 4.78788px 7.9798px 23.9394px 0.79798px rgba(108, 95, 188, 0.12)',
-        'eatly-3xl': '5.94564px 71.3477px 35.6738px rgba(229, 229, 229, 0.7)',
+        'eatly-3xl': '6px 71px 35px rgba(229, 229, 229, 0.7)',
         'eatly-2xl': '0px 13.7456px 20.6184px rgba(135, 125, 200, 0.25)',
+        'eatly-4xl': '1px -2px 20px 4px #6C5FBC3b',
       },
       fontFamily: {
         popins: 'var(--font-popins)',
