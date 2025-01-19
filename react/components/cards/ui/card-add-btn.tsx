@@ -7,7 +7,7 @@ const CardAddBtn: FunctionComponent<CardAddBtnProps> = (props) => {
   return (
     <button
       {...props}
-      className={`flex h-7 w-8 items-center justify-center rounded-[5px] bg-eatly-black-600 md:rounded-lg xl:h-10 xl:w-11 ${props.className}`}
+      className={`flex h-7 w-8 items-center justify-center rounded-[5px] bg-eatly-black-600 md:rounded-lg xl:h-10 xl:w-11 ${props.className} hover:opacity-85`}
     >
       <svg
         width="16"

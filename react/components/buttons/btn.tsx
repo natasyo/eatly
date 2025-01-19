@@ -7,7 +7,7 @@ const Btn: FunctionComponent<BtnProps> = (props) => {
   return (
     <button
       {...props}
-      className={` ${props.className} rounded-2xl px-6 py-4 font-inter font-bold text-eatly-gray-400`}
+      className={` ${props.className} rounded-2xl px-6 py-4 font-inter font-bold text-eatly-gray-400 hover:opacity-85`}
     >
       {props.children}
     </button>

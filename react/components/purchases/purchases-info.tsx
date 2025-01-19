@@ -27,7 +27,9 @@ const PurchaseInfo: FunctionComponent<PurchaseInfoProps> = ({ className }) => {
   }, [periods]);
 
   function changePeriod(opt?: Option) {
+    console.log(opt);
     const dataPur = opt && getPurchasesInfo(opt?.key);
+    console.log(dataPur);
     dataPur && setData(dataPur);
   }
 

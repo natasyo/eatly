@@ -6,7 +6,7 @@ interface BtnPrimaryProps
 
 const BtnPrimary: FunctionComponent<BtnPrimaryProps> = (props) => {
   return (
-    <Btn {...props} className={`bg-eatly-violet !text-white ${props.className}`}>
+    <Btn {...props} className={`bg-eatly-violet !text-white ${props.className} `}>
       {props.children}
     </Btn>
   );
