@@ -3,14 +3,12 @@ import { useAppselector } from '@/hooks/reduxhooks';
 import BasketItem from '@/react/components/basket/basket-item';
 import { FunctionComponent } from 'react';
 
-interface BasketPageProps {}
-
-const BasketPage: FunctionComponent<BasketPageProps> = () => {
+const BasketPage: FunctionComponent = () => {
   const basket = useAppselector((state) => state.basket);
 
   return (
     <div>
-      <div className="container">
+      <div className="container py-20">
         <div className="max-w-[500px]">
           {basket && basket.items.length > 0 ? (
             basket.items.map((item) => (
