@@ -331,7 +331,7 @@
       "time_wait": 11,
       "rating": 3.8,
       "price": 2809.93,
-      "image": "http://dummyimage.com/221x100.png/cc0000/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 20,
@@ -340,7 +340,7 @@
       "time_wait": 97,
       "rating": 2.4,
       "price": 5714.01,
-      "image": "http://dummyimage.com/131x100.png/5fa2dd/ffffff"
+      "image": "/img/dishe4.png"
     },
     {
       "id": 21,
@@ -349,7 +349,7 @@
       "time_wait": 66,
       "rating": 1.9,
       "price": 8685.32,
-      "image": "http://dummyimage.com/105x100.png/ff4444/ffffff"
+      "image": "/img/dishe3.png"
     },
     {
       "id": 22,
@@ -358,7 +358,7 @@
       "time_wait": 6,
       "rating": 3.8,
       "price": 625.31,
-      "image": "http://dummyimage.com/201x100.png/ff4444/ffffff"
+      "image": "/img/swe-dish.png"
     },
     {
       "id": 23,
@@ -646,7 +646,7 @@
       "time_wait": 25,
       "rating": 2.7,
       "price": 7881.98,
-      "image": "http://dummyimage.com/238x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 55,
@@ -655,7 +655,7 @@
       "time_wait": 74,
       "rating": 1.7,
       "price": 6642.24,
-      "image": "http://dummyimage.com/221x100.png/cc0000/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 56,
@@ -1276,7 +1276,7 @@
       "time_wait": 50,
       "rating": 4.6,
       "price": 7026.07,
-      "image": "http://dummyimage.com/105x100.png/ff4444/ffffff"
+      "image": "/img/dishe3.png"
     },
     {
       "id": 125,
@@ -1663,7 +1663,7 @@
       "time_wait": 94,
       "rating": 3.5,
       "price": 3575.24,
-      "image": "http://dummyimage.com/105x100.png/ff4444/ffffff"
+      "image": "/img/dishe3.png"
     },
     {
       "id": 168,
@@ -1834,7 +1834,7 @@
       "time_wait": 72,
       "rating": 3.7,
       "price": 343.34,
-      "image": "http://dummyimage.com/131x100.png/5fa2dd/ffffff"
+      "image": "/img/dishe4.png"
     },
     {
       "id": 187,
@@ -2635,7 +2635,7 @@
       "time_wait": 23,
       "rating": 1.4,
       "price": 9658.68,
-      "image": "http://dummyimage.com/238x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 276,
@@ -3319,7 +3319,7 @@
       "time_wait": 87,
       "rating": 2.9,
       "price": 6674.52,
-      "image": "http://dummyimage.com/221x100.png/cc0000/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 352,
@@ -4381,7 +4381,7 @@
       "time_wait": 10,
       "rating": 3.0,
       "price": 3325.67,
-      "image": "http://dummyimage.com/162x100.png/5fa2dd/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 470,
@@ -5596,7 +5596,7 @@
       "time_wait": 34,
       "rating": 2.6,
       "price": 7623.11,
-      "image": "http://dummyimage.com/131x100.png/5fa2dd/ffffff"
+      "image": "/img/dishe4.png"
     },
     {
       "id": 605,
@@ -6829,7 +6829,7 @@
       "time_wait": 30,
       "rating": 4.0,
       "price": 7073.15,
-      "image": "http://dummyimage.com/221x100.png/cc0000/ffffff"
+      "image": "/img/dishe5.png"
     },
     {
       "id": 742,
@@ -7081,7 +7081,7 @@
       "time_wait": 22,
       "rating": 4.7,
       "price": 3078.49,
-      "image": "http://dummyimage.com/238x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 770,
@@ -7432,7 +7432,7 @@
       "time_wait": 88,
       "rating": 2.9,
       "price": 6949.16,
-      "image": "http://dummyimage.com/238x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 809,
@@ -7513,7 +7513,7 @@
       "time_wait": 45,
       "rating": 2.7,
       "price": 7797.62,
-      "image": "http://dummyimage.com/131x100.png/5fa2dd/ffffff"
+      "image": "/img/dishe4.png"
     },
     {
       "id": 818,
@@ -7621,7 +7621,7 @@
       "time_wait": 44,
       "rating": 2.9,
       "price": 531.17,
-      "image": "http://dummyimage.com/238x100.png/ff4444/ffffff"
+      "image": "/img/chicken-hell.png"
     },
     {
       "id": 830,
@@ -7873,7 +7873,7 @@
       "time_wait": 80,
       "rating": 2.4,
       "price": 6956.07,
-      "image": "http://dummyimage.com/201x100.png/ff4444/ffffff"
+      "image": "/img/swe-dish.png"
     },
     {
       "id": 858,
@@ -7954,7 +7954,7 @@
       "time_wait": 53,
       "rating": 2.5,
       "price": 5049.48,
-      "image": "http://dummyimage.com/105x100.png/ff4444/ffffff"
+      "image": "/img/dishe3.png"
     },
     {
       "id": 867,
@@ -8512,7 +8512,7 @@
       "time_wait": 22,
       "rating": 3.1,
       "price": 7559.82,
-      "image": "http://dummyimage.com/201x100.png/ff4444/ffffff"
+      "image": "/img/swe-dish.png"
     },
     {
       "id": 929,
@@ -8962,7 +8962,7 @@
       "time_wait": 24,
       "rating": 2.2,
       "price": 8630.57,
-      "image": "http://dummyimage.com/201x100.png/ff4444/ffffff"
+      "image": "/img/swe-dish.png"
     },
     {
       "id": 979,

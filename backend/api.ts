@@ -31,6 +31,18 @@ export function getTopDishes(count?: number) {
   }
   return data.dishes as unknown as Array<Dishe>;
 }
+export function getDishes(countInPage: number, page: number) {
+  const dishes = data.dishes.slice(
+    (page - 1) * countInPage,
+    (page - 1) * countInPage + countInPage,
+  ) as unknown as Array<Dishe>;
+  if (dishes.length === 0) return undefined;
+  return dishes;
+}
+
+export function getCountDishes() {
+  return data.dishes.length;
+}
 
 export function searchDishes(text: string) {
   const dishe = data.dishes

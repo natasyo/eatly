@@ -1,6 +1,6 @@
 import { Dishe } from '@/types';
 import Image from 'next/image';
-import { FunctionComponent, useEffect, useState } from 'react';
+import { FunctionComponent, useState } from 'react';
 import CardType from './ui/card-type';
 import CardTitle from './ui/card-title';
 import WaitAndRating from './ui/wait-and-rating';
@@ -23,7 +23,7 @@ const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
   return (
     <Link
       href={`/menu/dishes/${item.id}`}
-      className={`${className ? className : ''} hover:shadow-eatly-4xl relative flex flex-col items-center rounded-[34px] border border-eatly-gray-50 bg-white pb-4 shadow-eatly-3xl transition-all md:pb-7`}
+      className={`${className ? className : ''} relative flex flex-col items-center rounded-[34px] border border-eatly-gray-50 bg-white pb-4 shadow-eatly-3xl transition-all hover:shadow-eatly-4xl md:pb-7`}
     >
       <div className="px-2 pt-5 sm:pt-6 lg:px-4 lg:pt-10">
         <div className="relative">

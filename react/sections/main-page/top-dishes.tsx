@@ -49,7 +49,7 @@ const TopDishes: FunctionComponent<TopDishesProps> = ({ className, classNameHead
           )}
         </div>
         <div className="container mt-[70px] flex justify-end sm:mt-11 lg:mt-18">
-          <BtnMore href="/" text="View All" className="ml-2" />
+          <BtnMore href="/dishes" text="View All" className="ml-2" />
         </div>
       </div>
     </div>
