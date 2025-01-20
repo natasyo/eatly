@@ -1,7 +1,7 @@
 import { Basket, ProductCount } from '@/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-const initialState: Basket = { items: [] };
+const initialState: Basket = { items: [], id: 'kjfksjhd' };
 
 const basketSlice = createSlice({
   name: 'Basket',

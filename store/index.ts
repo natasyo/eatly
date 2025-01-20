@@ -1,19 +1,17 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import basketSlice from './basketSlice';
-const loadState = () => {
-  try {
-    const serializedState = localStorage.getItem('basket');
-    return serializedState ? JSON.parse(serializedState) : undefined;
-  } catch (err) {
-    console.log(err);
-    return undefined;
-  }
-};
+import { loadState, saveState } from './localStorage';
+const preloadedState = loadState();
 
 export const store = configureStore({
-  reducer: { basket: basketSlice },
-  // preloadedState: loadState(),
+  reducer: combineReducers({ basket: basketSlice }),
+  preloadedState,
 });
+if (typeof window !== 'undefined') {
+  store.subscribe(() => {
+    saveState(store.getState().basket);
+  });
+}
 
 export type RootState = ReturnType<typeof store.getState>;
 

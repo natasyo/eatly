@@ -1,6 +1,6 @@
 'use client';
 import { useAppselector } from '@/hooks/reduxhooks';
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useEffect, useState } from 'react';
 import BasketItem from './basket-item';
 
 interface BasketProps {
@@ -9,9 +9,13 @@ interface BasketProps {
 
 const Basket: FunctionComponent<BasketProps> = ({ className }) => {
   const basket = useAppselector((state) => state.basket);
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   return (
     <div className={`${className ? className : ''} bg-white p-4 shadow-eatly-2xl`}>
-      {basket && basket.items.length > 0 ? (
+      {isClient && basket && basket.items.length > 0 ? (
         basket.items.map((item) => <BasketItem className="mb-2" item={item} key={item.dishe.id} />)
       ) : (
         <p>Basket is empty.</p>
