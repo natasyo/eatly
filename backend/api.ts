@@ -70,6 +70,7 @@ export function getPurchases(count?: number): Array<PurchaseView> {
 }
 
 export function getPurchasesInfo(key: string): PurchasesInfo {
+  console.log(key);
   return data.purchasesInfo.filter((item) => item.month === key)[0] as unknown as PurchasesInfo;
 }
 export function getPurchasesPeriod() {

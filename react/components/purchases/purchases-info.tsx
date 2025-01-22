@@ -24,19 +24,18 @@ const PurchaseInfo: FunctionComponent<PurchaseInfoProps> = ({ className }) => {
     if (periods) {
       setData(getPurchasesInfo(periods[0]));
     }
-  }, [periods]);
+  }, []);
 
   function changePeriod(opt?: Option) {
-    console.log(opt);
     const dataPur = opt && getPurchasesInfo(opt?.key);
-    console.log(dataPur);
-    dataPur && setData(dataPur);
+    setData(dataPur);
   }
-
   return (
     <div className={`rounded-[25px] bg-white ${className} shadow-eatly-3xl`}>
       <div className="mb-5 flex items-center justify-between md:mb-6 lg:mb-10">
-        <p className="font-manrope text-base font-extrabold md:text-xl lg:text-2.9xl">Purchases</p>
+        <p className="font-manrope text-base font-extrabold text-eatly-black-500 md:text-xl lg:text-2.9xl">
+          Purchases
+        </p>
         <DropDown
           options={periodOptions}
           placeholder="select period"
@@ -62,7 +61,7 @@ const PurchaseInfo: FunctionComponent<PurchaseInfoProps> = ({ className }) => {
                   </p>
                 </div>
               </div>
-              <p className="items-end font-manrope text-base font-extrabold lg:text-2.5xl">
+              <p className="items-end font-manrope text-base font-extrabold text-eatly-black-500 lg:text-2.5xl">
                 ${data.expense.value}
               </p>
             </div>
@@ -87,7 +86,7 @@ const PurchaseInfo: FunctionComponent<PurchaseInfoProps> = ({ className }) => {
                   </p>
                 </div>
               </div>
-              <p className="items-end font-manrope text-base font-extrabold lg:text-2.5xl">
+              <p className="items-end font-manrope text-base font-extrabold text-eatly-black-500 lg:text-2.5xl">
                 ${data.vocher.value}
               </p>
             </div>
