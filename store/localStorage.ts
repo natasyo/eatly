@@ -15,7 +15,6 @@ export const loadState = () => {
 export const saveState = (state: Basket) => {
   try {
     const data = { basket: state };
-    console.log(data);
     const serializeteState = JSON.stringify(data);
     localStorage.setItem('redux', serializeteState);
   } catch (err) {
