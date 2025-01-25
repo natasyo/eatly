@@ -2,13 +2,12 @@ import { Basket } from '@/types';
 
 export const loadState = () => {
   try {
-    const state = localStorage.getItem('redux');
-    console.log();
-    if (!state) return undefined;
-    console.log(JSON.parse(state));
-    return JSON.parse(state);
+    if (typeof window === 'object') {
+      const state = localStorage.getItem('redux');
+      if (state) return JSON.parse(state);
+    }
+    return undefined;
   } catch (err) {
-    console.log('Could not load state', err);
     return undefined;
   }
 };
