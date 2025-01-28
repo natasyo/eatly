@@ -90,3 +90,9 @@ export interface Basket {
   user?: User;
   items: Array<ProductCount>;
 }
+
+export interface Type {
+  id?: string;
+  title?: string;
+  bgColor?: string;
+}
