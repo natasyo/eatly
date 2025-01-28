@@ -1,11 +1,12 @@
 'use client';
-import { Type } from '@prisma/client';
+
+import { ProductTypeController } from '@/controllers/prisma/product_type_controller';
+import { TypeDTO } from '@/types';
 import { ChangeEvent, FunctionComponent, useState } from 'react';
 
-interface TypesProductPageProps {}
-
-const TypesProductPage: FunctionComponent<TypesProductPageProps> = () => {
-  const [type, setType] = useState<Type>();
+const TypesProductPage: FunctionComponent = () => {
+  const [type, setType] = useState<TypeDTO>();
+  const typeController = new ProductTypeController();
   return (
     <div>
       <h2 className="text-center">Types</h2>
@@ -17,8 +18,21 @@ const TypesProductPage: FunctionComponent<TypesProductPageProps> = () => {
           setType({ ...type, title });
         }}
       />
-      <input type="color" value={type?.bgColor} />
-      <button>Add type</button>
+      <input
+        type="color"
+        value={type?.bgColor}
+        onChange={(e: ChangeEvent) => {
+          const bgColor = (e.target as HTMLInputElement).value;
+          setType({ ...type, bgColor });
+        }}
+      />
+      <button
+        onClick={() => {
+          typeController.create(type!);
+        }}
+      >
+        Add type
+      </button>
     </div>
   );
 };

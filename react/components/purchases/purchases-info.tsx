@@ -1,5 +1,5 @@
 'use client';
-import { getPurchasesPeriod, getPurchasesInfo } from '@/backend/api';
+import { getPurchasesPeriod, getPurchasesInfo } from '@/controllers/api';
 import { FunctionComponent, useEffect, useState } from 'react';
 import DropDown, { Option } from '@/react/components/drop-down/drop-down';
 import expenseImg from '@/public/img/expense.png';

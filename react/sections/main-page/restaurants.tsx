@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import { getTopRestaurants } from '@/backend/api';
+import { getTopRestaurants } from '@/controllers/api';
 import RestaurantCard from '@/react/components/cards/restaurant';
 import BtnMore from '@/react/components/buttons/btn-more';
 interface TopRestaurantsProps {

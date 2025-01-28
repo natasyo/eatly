@@ -91,7 +91,7 @@ export interface Basket {
   items: Array<ProductCount>;
 }
 
-export interface Type {
+export interface TypeDTO {
   id?: string;
   title?: string;
   bgColor?: string;

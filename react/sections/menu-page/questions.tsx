@@ -1,5 +1,5 @@
 'use client';
-import { getQuestions } from '@/backend/api';
+import { getQuestions } from '@/controllers/api';
 import QuestionItem from '@/react/components/questions/question-item';
 import { Question } from '@/types';
 import { FunctionComponent, useState } from 'react';

@@ -1,5 +1,5 @@
 'use client';
-import { getDishe } from '@/backend/api';
+import { getDishe } from '@/controllers/api';
 import BtnPrimary from '@/react/components/buttons/btn-primary';
 import CardPrice from '@/react/components/cards/ui/card-price';
 import CardTitle from '@/react/components/cards/ui/card-title';

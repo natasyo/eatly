@@ -1,5 +1,5 @@
 'use client';
-import { getCategories } from '@/backend/api';
+import { getCategories } from '@/controllers/api';
 import { FunctionComponent, MouseEventHandler, useEffect, useState } from 'react';
 import CategoryItem from './category-item';
 import { Category } from '@/types';

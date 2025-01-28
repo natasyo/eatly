@@ -1,5 +1,5 @@
 'use client';
-import { getCountDishes, getDishes } from '@/backend/api';
+import { getCountDishes, getDishes } from '@/controllers/api';
 import DisheCard from '@/react/components/cards/dishe';
 import Pagination from '@/react/components/pagination/pagination';
 import { FunctionComponent, useEffect, useState } from 'react';

@@ -1,5 +1,5 @@
 'use client';
-import { getTopDishes } from '@/backend/api';
+import { getTopDishes } from '@/controllers/api';
 import { useResizeWindow } from '@/hooks/resizeWindow';
 import BtnMore from '@/react/components/buttons/btn-more';
 import DisheCard from '@/react/components/cards/dishe';
