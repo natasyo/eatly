@@ -1,6 +1,5 @@
 'use client';
-
-import { ProductTypeController } from '@/controllers/prisma/product_type_controller';
+import { ProductTypeController } from '@/controllers/product_type_controller';
 import BtnPrimary from '@/react/components/buttons/btn-primary';
 import ColorBox from '@/react/components/fields/color-box';
 import TextBox from '@/react/components/fields/text-box';
@@ -9,13 +8,14 @@ import { FunctionComponent } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 const TypesProductPage: FunctionComponent = () => {
+  const productController = new ProductTypeController();
   const { register, handleSubmit } = useForm<TypeDTO>({
     defaultValues: {
       title: '',
     },
   });
   const onSubmitData: SubmitHandler<TypeDTO> = (data) => {
-    console.log(data);
+    productController.create(data);
   };
   return (
     <div>

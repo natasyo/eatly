@@ -12,7 +12,7 @@ const LayoutShop: FunctionComponent<LayoutShopProps> = ({ children }) => {
         <li>
           <Link
             className="block border-b border-eatly-violet-300 p-2 text-lg font-medium"
-            href="../admin/user"
+            href="../../admin/user"
           >
             User
           </Link>
@@ -20,7 +20,7 @@ const LayoutShop: FunctionComponent<LayoutShopProps> = ({ children }) => {
         <li>
           <Link
             className="mt-[-1px] block border-b border-eatly-violet-300 p-2 text-lg font-medium"
-            href="../admin/shop"
+            href="../../admin/shop"
           >
             Shop
           </Link>
