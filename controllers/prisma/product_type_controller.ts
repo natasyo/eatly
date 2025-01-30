@@ -6,9 +6,7 @@ export class ProductTypeController {
   constructor() {
     this.prisma = new PrismaClient();
   }
-
   create(type: TypeDTO) {
     console.log(type);
-    console.log(this.prisma);
   }
 }
