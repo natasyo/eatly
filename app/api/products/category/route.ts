@@ -1,9 +1,9 @@
-import { prisma } from '@/lib/prisma';
 import { requestFunc } from '@/lib/functions';
+import { prisma } from '@/lib/prisma';
 
 export async function GET() {
   return requestFunc(async () => {
-    const types = await prisma.type.findMany();
+    const types = await prisma.category.findMany();
     return types;
   });
 }
@@ -11,14 +11,14 @@ export async function GET() {
 export async function POST(req: Request) {
   return requestFunc(async () => {
     const data = await req.json();
-    const result = await prisma.type.create({ data: data });
+    const result = await prisma.category.create({ data: data });
     return result;
   });
 }
 export async function DELETE(req: Request) {
   return requestFunc(async () => {
     const data = await req.json();
-    const result = await prisma.type.delete({ where: { id: data.id } });
+    const result = await prisma.category.delete({ where: { id: data.id } });
     return result;
   });
 }
@@ -26,7 +26,7 @@ export async function DELETE(req: Request) {
 export async function PUT(req: Request) {
   return requestFunc(async () => {
     const data = await req.json();
-    const result = await prisma.type.update({ where: { id: data.id }, data });
+    const result = await prisma.category.update({ where: { id: data.id }, data });
     return result;
   });
 }

@@ -14,14 +14,16 @@ datasource db {
 }
 
 model Product {
-  id       String @id
-  name     String
-  type     Type   @relation(fields: [typeId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  typeId   String
-  timeWait Int
-  rating   Float
-  image    String
-  price    Float
+  id         String   @id @default(uuid())
+  name       String
+  type       Type     @relation(fields: [typeId], references: [id], onDelete: SetDefault, onUpdate: Cascade)
+  typeId     String
+  timeWait   Int
+  rating     Float
+  image      String
+  price      Float
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: SetDefault, onUpdate: Cascade)
+  categoryId String
 }
 
 model Type {
@@ -30,11 +32,12 @@ model Type {
   bgColor  String
   products Product[]
 }
-
+             
 model Category {
-  id         String @id
+  id         String    @id @default(uuid())
   image      String
   title      String
   colorBg    String
   colorTitle String
+  Product    Product[]
 }

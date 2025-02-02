@@ -8,10 +8,10 @@ interface LayoutShopProps {
 const LayoutShop: FunctionComponent<LayoutShopProps> = ({ children }) => {
   return (
     <div className="container flex py-15">
-      <ul className="mr-8 w-[300px] shrink-0 rounded border border-eatly-violet-300">
+      <ul className="mr-8 w-[300px] shrink-0 rounded border border-eatly-violet-200">
         <li>
           <Link
-            className="block border-b border-eatly-violet-300 p-2 text-lg font-medium"
+            className="block border-b border-eatly-violet-200 p-2 text-lg font-medium"
             href="../../admin/user"
           >
             User
@@ -19,13 +19,13 @@ const LayoutShop: FunctionComponent<LayoutShopProps> = ({ children }) => {
         </li>
         <li>
           <Link
-            className="mt-[-1px] block border-b border-eatly-violet-300 p-2 text-lg font-medium"
+            className="mt-[-1px] block border-b border-eatly-violet-200 p-2 text-lg font-medium"
             href="../../admin/shop"
           >
             Shop
           </Link>
-          <ul>
-            <li>
+          <ul className="pl-6">
+            <li className="border-b border-eatly-violet-200 p-2 font-medium">
               <Link href="../admin/shop/types">Types</Link>
             </li>
           </ul>
