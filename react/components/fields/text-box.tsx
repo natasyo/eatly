@@ -4,6 +4,7 @@ interface TextBoxProps
   extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
   label?: string;
   classNameWrap?: string;
+  error?: string;
 }
 
 const TextBox: FunctionComponent<TextBoxProps> = (props) => {
@@ -17,6 +18,7 @@ const TextBox: FunctionComponent<TextBoxProps> = (props) => {
         type="text"
         className={`rounded-lg border-eatly-violet-500 p-3 text-lg text-eatly-black focus-visible:outline-eatly-violet ${props.className ? props.className : ''}`}
       />
+      {props.error && <p className="text-eatly-red-700">{props.error}</p>}
     </label>
   );
 };

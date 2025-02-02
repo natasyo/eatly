@@ -8,7 +8,7 @@ interface LayoutShopProps {
 const LayoutShop: FunctionComponent<LayoutShopProps> = ({ children }) => {
   return (
     <div className="container flex py-15">
-      <ul className="mr-8 w-[300px] rounded border border-eatly-violet-300">
+      <ul className="mr-8 w-[300px] shrink-0 rounded border border-eatly-violet-300">
         <li>
           <Link
             className="block border-b border-eatly-violet-300 p-2 text-lg font-medium"

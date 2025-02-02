@@ -1,34 +1,63 @@
 'use client';
 import { ProductTypeController } from '@/controllers/product_type_controller';
-import BtnPrimary from '@/react/components/buttons/btn-primary';
-import ColorBox from '@/react/components/fields/color-box';
-import TextBox from '@/react/components/fields/text-box';
+import TypesAll from '@/react/sections/admin/types-page/all-types';
+import TypeForm from '@/react/sections/admin/types-page/type-form';
 import { TypeDTO } from '@/types';
-import { FunctionComponent } from 'react';
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { FunctionComponent, useEffect, useState } from 'react';
 
-const TypesProductPage: FunctionComponent = () => {
-  const productController = new ProductTypeController();
-  const { register, handleSubmit } = useForm<TypeDTO>({
-    defaultValues: {
-      title: '',
-    },
-  });
-  const onSubmitData: SubmitHandler<TypeDTO> = (data) => {
-    productController.create(data);
+interface AdminTypesPageProps {}
+
+const AdminTypesPage: FunctionComponent<AdminTypesPageProps> = () => {
+  const typeController = ProductTypeController.instance;
+  const [typesData, setTypesData] = useState<{ types: TypeDTO[]; status: number }>();
+  const [selectType, setSelectType] = useState<TypeDTO>();
+  const getTypes = () => {
+    typeController.getAll().then((resp) => {
+      setTypesData({ status: resp.status, types: resp.data });
+    });
   };
+
+  useEffect(() => {
+    getTypes();
+  }, []);
   return (
-    <div>
-      <h2 className="text-center">Types</h2>
-      <form onSubmit={handleSubmit(onSubmitData)}>
-        <TextBox {...register('title')} label="Type" />
-        <ColorBox {...register('bgColor')} label="Background color" />
-        <BtnPrimary type="submit" className="w-40">
-          Add
-        </BtnPrimary>
-      </form>
+    <div className="">
+      <TypeForm
+        className="mb-6"
+        type={selectType}
+        onSave={(type) => {
+          console.log(type);
+          if (type.id) {
+            console.log('edit');
+            typeController.update(type).then((data) => {
+              console.log(data);
+              if (data.status === 200) {
+                getTypes();
+              }
+            });
+          } else {
+            typeController.create(type).then((data) => {
+              if (data.status === 200) {
+                getTypes();
+              }
+            });
+          }
+        }}
+      />
+      <TypesAll
+        types={typesData?.types}
+        status={typesData?.status}
+        removeType={(type) => {
+          typeController.remove(type.id!).then((data) => {
+            getTypes();
+          });
+        }}
+        selectType={(type) => {
+          setSelectType(type);
+        }}
+      />
     </div>
   );
 };
 
-export default TypesProductPage;
+export default AdminTypesPage;
