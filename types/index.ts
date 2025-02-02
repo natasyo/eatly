@@ -10,7 +10,7 @@ export interface Restaurant {
   image: string;
 }
 
-export interface Dishe {
+export interface Product {
   id: string;
   name: string;
   type: string;
@@ -29,7 +29,7 @@ export interface Purchase {
 
 export interface PurchaseView {
   id: string;
-  dishe: Dishe;
+  product: Product;
   status: string;
   dateTime: string;
 }
@@ -55,6 +55,7 @@ export interface Category {
   title: string;
   colorBg: string;
   colorTitle: string;
+  products?: Product[];
 }
 export interface Range {
   from: number;
@@ -81,7 +82,7 @@ export interface User {
 }
 
 export interface ProductCount {
-  dishe: Dishe;
+  product: Product;
   count?: number;
 }
 

@@ -1,8 +1,6 @@
 import { FunctionComponent } from 'react';
 
-interface ShopPageProps {}
-
-const ShopPage: FunctionComponent<ShopPageProps> = () => {
+const ShopPage: FunctionComponent = () => {
   return (
     <div className="">
       <h1>Shop</h1>

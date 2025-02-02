@@ -2,7 +2,7 @@ import { TypeDTO } from '@/types';
 import axios from 'axios';
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
-export class ProductTypeController {
+class ProductTypeController {
   private static _instance: ProductTypeController;
   constructor() {}
   async create(type: TypeDTO) {
@@ -22,10 +22,6 @@ export class ProductTypeController {
     console.log(result);
     return result;
   }
-  public static get instance(): ProductTypeController {
-    if (!ProductTypeController._instance) {
-      ProductTypeController._instance = new ProductTypeController();
-    }
-    return ProductTypeController._instance;
-  }
 }
+
+export const productTypeController = new ProductTypeController();

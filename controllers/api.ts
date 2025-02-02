@@ -64,7 +64,7 @@ export function getPurchases(count?: number): Array<PurchaseView> {
   purchases = data.purchases as unknown as Array<Purchase>;
   const purchasesView = purchases.map((item) => {
     const dishe = data.dishes.findLast((value) => value.id == +item.productId);
-    return { ...item, dishe } as unknown as PurchaseView;
+    return { ...item, product: dishe } as unknown as PurchaseView;
   });
   return purchasesView.slice(0, count) as unknown as Array<PurchaseView>;
 }

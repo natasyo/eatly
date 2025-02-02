@@ -32,12 +32,12 @@ model Type {
   bgColor  String
   products Product[]
 }
-             
+
 model Category {
   id         String    @id @default(uuid())
   image      String
   title      String
   colorBg    String
   colorTitle String
-  Product    Product[]
+  products   Product[]
 }

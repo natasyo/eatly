@@ -26,7 +26,10 @@ const LayoutShop: FunctionComponent<LayoutShopProps> = ({ children }) => {
           </Link>
           <ul className="pl-6">
             <li className="border-b border-eatly-violet-200 p-2 font-medium">
-              <Link href="../admin/shop/types">Types</Link>
+              <Link href="../../admin/shop/types">Types</Link>
+            </li>
+            <li className="border-b border-eatly-violet-200 p-2 font-medium">
+              <Link href="../../admin/shop/categories">Categories</Link>
             </li>
           </ul>
         </li>

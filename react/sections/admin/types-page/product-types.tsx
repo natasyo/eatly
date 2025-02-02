@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { TypeDTO } from '../../../../types/index';
-import CardType from '../../cards/ui/card-type';
-import BtnRemove from '../../buttons/btn-remove';
+import CardType from '../../../components/cards/ui/card-type';
+import BtnRemove from '../../../components/buttons/btn-remove';
 
 interface ProductTypesProps {
   onSelectType?: (type: TypeDTO) => void;

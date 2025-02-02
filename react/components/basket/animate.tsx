@@ -1,13 +1,13 @@
 'use client';
 import { createRef, FunctionComponent, ReactNode, useEffect, useState } from 'react';
 import { useBasketContext } from './basket-provider';
-import { Dishe } from '@/types';
+import { Product } from '@/types';
 
 interface AnimateProps {
   className?: string;
   children: ReactNode;
   isAnimate?: boolean;
-  dishe: Dishe;
+  dishe: Product;
 }
 
 const Animate: FunctionComponent<AnimateProps> = ({ children, className, dishe, isAnimate }) => {

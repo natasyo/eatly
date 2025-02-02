@@ -1,18 +1,15 @@
 'use client';
-import { ProductTypeController } from '@/controllers/product_type_controller';
+import { productTypeController } from '@/controllers';
 import TypesAll from '@/react/sections/admin/types-page/all-types';
 import TypeForm from '@/react/sections/admin/types-page/type-form';
 import { TypeDTO } from '@/types';
 import { FunctionComponent, useEffect, useState } from 'react';
 
-interface AdminTypesPageProps {}
-
-const AdminTypesPage: FunctionComponent<AdminTypesPageProps> = () => {
-  const typeController = ProductTypeController.instance;
+const AdminTypesPage: FunctionComponent = () => {
   const [typesData, setTypesData] = useState<{ types: TypeDTO[]; status: number }>();
   const [selectType, setSelectType] = useState<TypeDTO>();
   const getTypes = () => {
-    typeController.getAll().then((resp) => {
+    productTypeController.getAll().then((resp) => {
       setTypesData({ status: resp.status, types: resp.data });
     });
   };
@@ -29,14 +26,14 @@ const AdminTypesPage: FunctionComponent<AdminTypesPageProps> = () => {
           console.log(type);
           if (type.id) {
             console.log('edit');
-            typeController.update(type).then((data) => {
+            productTypeController.update(type).then((data) => {
               console.log(data);
               if (data.status === 200) {
                 getTypes();
               }
             });
           } else {
-            typeController.create(type).then((data) => {
+            productTypeController.create(type).then((data) => {
               if (data.status === 200) {
                 getTypes();
               }
@@ -48,7 +45,7 @@ const AdminTypesPage: FunctionComponent<AdminTypesPageProps> = () => {
         types={typesData?.types}
         status={typesData?.status}
         removeType={(type) => {
-          typeController.remove(type.id!).then((data) => {
+          productTypeController.remove(type.id!).then(() => {
             getTypes();
           });
         }}

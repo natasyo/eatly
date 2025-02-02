@@ -1,4 +1,4 @@
-import { Dishe } from '@/types';
+import { Product } from '@/types';
 import Image from 'next/image';
 import { FunctionComponent, useState } from 'react';
 import CardType from './ui/card-type';
@@ -14,7 +14,7 @@ import Animate from '../basket/animate';
 
 interface DisheCardProps {
   className?: string;
-  item: Dishe;
+  item: Product;
 }
 
 const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
@@ -64,7 +64,7 @@ const DisheCard: FunctionComponent<DisheCardProps> = ({ className, item }) => {
             className="ml-2"
             onClick={(e) => {
               e.preventDefault();
-              dispatch(addInBasket({ dishe: item }));
+              dispatch(addInBasket({ product: item }));
               setIsAnimate(true);
               setTimeout(() => {
                 setIsAnimate(false);
