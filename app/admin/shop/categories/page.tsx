@@ -8,7 +8,7 @@ const CategoriesAdmin: FunctionComponent = () => {
     <div>
       <CategoryForm
         onSave={(category) => {
-          console.log(category);
+          console.log((category.image as unknown as FileList)[0]);
         }}
       />
     </div>
