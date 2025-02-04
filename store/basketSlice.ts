@@ -8,7 +8,9 @@ const basketSlice = createSlice({
   initialState,
   reducers: {
     addInBasket: (state, product: PayloadAction<ProductCount>) => {
-      const index = state.items!.findIndex((item) => item.dishe.id === product.payload.dishe.id);
+      const index = state.items!.findIndex(
+        (item) => item.product.id === product.payload.product.id,
+      );
       if (index >= 0) {
         console.log(!state.items[index].count);
         if (state.items[index].count === undefined) state.items[index].count = 0;
@@ -16,7 +18,7 @@ const basketSlice = createSlice({
         if (state.items[index].count <= 0) {
           state.items.splice(index, 1);
         }
-      } else state.items?.push({ ...product.payload, count: 1 });
+      } else state.items?.push({ product: product.payload.product, count: 1 });
     },
   },
 });

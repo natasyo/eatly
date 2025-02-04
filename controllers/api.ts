@@ -1,6 +1,6 @@
 import {
   Category,
-  Dishe,
+  Product,
   Purchase,
   PurchasesInfo,
   PurchaseView,
@@ -27,17 +27,17 @@ export function searchRestaurants(text: string) {
 
 export function getTopDishes(count?: number) {
   if (count && count > 0) {
-    return data.dishes.slice(0, count) as unknown as Array<Dishe>;
+    return data.dishes.slice(0, count) as unknown as Array<Product>;
   }
-  return data.dishes as unknown as Array<Dishe>;
+  return data.dishes as unknown as Array<Product>;
 }
 export function getDishes(countInPage: number, page: number) {
   const dishes = data.dishes.slice(
     (page - 1) * countInPage,
     (page - 1) * countInPage + countInPage,
-  ) as unknown as Array<Dishe>;
+  ) as unknown as Array<Product>;
   if (dishes.length === 0) return undefined;
-  return dishes;
+  return { ...dishes };
 }
 
 export function getCountDishes() {
@@ -51,12 +51,12 @@ export function searchDishes(text: string) {
       return index < 0 ? false : true;
     })
     .slice(0, 30);
-  return dishe as unknown as Array<Dishe>;
+  return dishe as unknown as Array<Product>;
 }
 export function getDishe(id: string) {
   const dishe = data.dishes.find((item) => item.id === +id);
   console.log(dishe);
-  return dishe as unknown as Dishe;
+  return dishe as unknown as Product;
 }
 export function getPurchases(count?: number): Array<PurchaseView> {
   let purchases = [];
