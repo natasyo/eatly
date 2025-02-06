@@ -29,6 +29,7 @@ const FileBox: FunctionComponent<FileBoxProps> = (props) => {
         className="hidden"
         {...props}
         onChange={(e) => {
+          console.log(e.target.value);
           const fileImage = e.target.files?.[0];
           if (fileImage) setFile({ url: URL.createObjectURL(fileImage), filename: fileImage.name });
           props.onChange && props.onChange(e);

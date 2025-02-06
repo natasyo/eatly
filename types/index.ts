@@ -50,9 +50,9 @@ export interface Review {
 }
 
 export interface Category {
-  id: number;
-  image: string;
-  title: string;
+  id?: number;
+  image?: string | File;
+  title?: string;
   colorBg: string;
   colorTitle: string;
   products?: Product[];

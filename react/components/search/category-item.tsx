@@ -20,7 +20,7 @@ const CategoryItem: FunctionComponent<CategoryItemProps> = ({
     <div
       className={`${className ? className : ''} flex flex-col items-center rounded-xl bg-opacity-[0.35] pb-3 pt-2 md:pt-0.5 ${isSelect && 'shadow-eatly-2xl'} xl:pt-3`}
       style={{
-        background: nexToRGB(item.colorBg, 0.35),
+        background: item.colorBg && nexToRGB(item.colorBg, 0.35),
         border: `${isSelect ? '3px solid ' + item.colorBg : 'none'}`,
       }}
       onClick={() => {
@@ -29,8 +29,8 @@ const CategoryItem: FunctionComponent<CategoryItemProps> = ({
     >
       <div className="mb-3 flex h-[37px] w-full items-center justify-center md:mb-2 md:pb-0 xl:mb-[14px] xl:h-[50px]">
         <Image
-          src={item.image}
-          alt={item.title}
+          src={item.image && item.image !== '' ? item.image : '/img/no-image.svg'}
+          alt={item.title || ''}
           width={40}
           height={50}
           className="xl::size-full h-auto max-h-full w-auto xl:object-contain"

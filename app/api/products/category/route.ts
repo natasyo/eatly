@@ -12,6 +12,7 @@ export async function POST(req: Request) {
   return requestFunc(async () => {
     const data = await req.json();
     const result = await prisma.category.create({ data: data });
+    console.log(result);
     return result;
   });
 }

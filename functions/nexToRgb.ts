@@ -1,4 +1,5 @@
 export function nexToRGB(color: string, opacity?: number) {
+  console.log(color);
   let d = color.replace('#', '');
   let c2hex = `rgba(${Array.from(d)
     .map((a, _) => (_ % 2 == 0 ? parseInt(d[_] + d[_ + 1], 16) + ',' : null))
