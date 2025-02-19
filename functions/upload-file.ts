@@ -11,13 +11,13 @@ export async function uploadFile(formData: FormData) {
     }
     // console.log(file);
     // Чтение файла
-    const buffer = Buffer.from(await file.arrayBuffer());
+    const buffer = Buffer.from(await (file as File).arrayBuffer());
 
     // Сохранение файла
-    const filePath = path.join(process.cwd(), 'public/img/upload', file.name);
+    const filePath = path.join(process.cwd(), 'public/img/upload', (file as File).name);
     fs.writeFileSync(filePath, buffer);
     return NextResponse.json(
-      { message: 'File uploaded successfully', filename: file.name },
+      { message: 'File uploaded successfully', filename: (file as File).name },
       { status: 200 },
     );
   } catch (error) {

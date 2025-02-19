@@ -28,7 +28,7 @@ const CategoriesAdmin: FunctionComponent = () => {
           console.log(result);
         }}
         onChange={(data) => {
-          data && setCategory({ ...data, image: fakeUrlImg });
+          if (data) setCategory({ ...data, image: fakeUrlImg });
         }}
         onChangeFakeImgUrl={(url) => {
           setFakeUrlImg(url);
@@ -47,7 +47,7 @@ const CategoriesAdmin: FunctionComponent = () => {
               <BtnRemove
                 className="absolute right-3 top-3 hover:scale-110"
                 onClick={() => {
-                  category.id && productCategoryController.remove(category.id);
+                  if (category.id) productCategoryController.remove(category.id);
                 }}
               />
               {/* <CategoryItem className="m-2 w-[108px]" item={{ ...category, image: undefined }} /> */}

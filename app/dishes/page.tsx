@@ -13,18 +13,20 @@ const Dishes: FunctionComponent = () => {
   const [currentPage, setCurrentPage] = useState(1);
   useEffect(() => {
     dishesData = getDishes(countItemsInPage, currentPage);
-    setDishes(dishesData);
+    if (dishesData) setDishes(dishesData);
   }, [currentPage]);
   return (
     <div className="py-18">
       <div className="container">
         <h2 className="mb-4">Dishes</h2>
-        {dishes && (
+        {dishes && dishes.length > 0 ? (
           <div className="md:grid-x-4 grid gap-5 md:grid-cols-5 md:gap-y-6 2xl:grid-cols-6">
             {dishes.map((item) => (
               <DisheCard item={item} key={item.id} />
             ))}
           </div>
+        ) : (
+          <></>
         )}
       </div>
       <Pagination

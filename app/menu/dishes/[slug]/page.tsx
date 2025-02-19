@@ -7,14 +7,14 @@ import CardType from '@/react/components/cards/ui/card-type';
 import WaitAndRating from '@/react/components/cards/ui/wait-and-rating';
 import Loading from '@/react/components/loading';
 import TopDishes from '@/react/sections/main-page/top-dishes';
-import { Dishe } from '@/types';
+import { Product as ProductType } from '@/types';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { FunctionComponent, useEffect, useState } from 'react';
 
 const Product: FunctionComponent = () => {
   const { slug } = useParams();
-  const [dishe, setDishe] = useState<Dishe | undefined>();
+  const [dishe, setDishe] = useState<ProductType | undefined>();
 
   useEffect(() => {
     if (slug) {

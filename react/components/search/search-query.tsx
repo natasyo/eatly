@@ -2,7 +2,7 @@ import { FunctionComponent, RefObject, useEffect, useRef, useState } from 'react
 import SearchInput from './search-input';
 import { useSearchContext } from './search-context';
 import { searchDishes, searchRestaurants } from '@/controllers/api';
-import { Dishe, Restaurant } from '@/types';
+import { Product as Dishe, Restaurant } from '@/types';
 import { useOutSideClick } from '@/hooks/outsideClick';
 
 interface SearchQueryProps {

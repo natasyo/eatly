@@ -3,7 +3,7 @@ import { getTopDishes } from '@/controllers/api';
 import { useResizeWindow } from '@/hooks/resizeWindow';
 import BtnMore from '@/react/components/buttons/btn-more';
 import DisheCard from '@/react/components/cards/dishe';
-import { Dishe } from '@/types';
+import { Product as Dishe } from '@/types';
 import { FunctionComponent, useEffect, useState } from 'react';
 
 interface TopDishesProps {
