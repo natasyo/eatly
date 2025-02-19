@@ -1,8 +1,5 @@
 import { FunctionComponent } from 'react';
-
-interface AdminProps {}
-
-const Admin: FunctionComponent<AdminProps> = () => {
+const Admin: FunctionComponent = () => {
   return <div></div>;
 };
 

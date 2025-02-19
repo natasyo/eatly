@@ -29,7 +29,9 @@ const CategoryItem: FunctionComponent<CategoryItemProps> = ({
     >
       <div className="mb-3 flex h-[37px] w-full items-center justify-center md:mb-2 md:pb-0 xl:mb-[14px] xl:h-[50px]">
         <Image
-          src={item.image && item.image !== '' ? item.image : '/img/no-image.svg'}
+          src={
+            typeof item.image === 'string' && item.image !== '' ? item.image : '/img/no-image.svg'
+          }
           alt={item.title || ''}
           width={40}
           height={50}

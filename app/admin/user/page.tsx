@@ -1,8 +1,6 @@
 import { FunctionComponent } from 'react';
 
-interface UserPageProps {}
-
-const UserPage: FunctionComponent<UserPageProps> = () => {
+const UserPage: FunctionComponent = () => {
   return (
     <div className="">
       <h1>User</h1>

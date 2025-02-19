@@ -10,7 +10,6 @@ interface BasketProps {
 const Basket: FunctionComponent<BasketProps> = ({ className }) => {
   const basket = useAppSelector((state) => state.basket);
   const [isClient, setIsClient] = useState(false);
-  console.log(basket);
   useEffect(() => {
     setIsClient(true);
   }, []);

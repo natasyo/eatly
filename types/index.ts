@@ -50,7 +50,7 @@ export interface Review {
 }
 
 export interface Category {
-  id?: number;
+  id?: string;
   image?: string | File;
   title?: string;
   colorBg: string;

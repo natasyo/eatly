@@ -35,7 +35,7 @@ model Type {
 
 model Category {
   id         String    @id @default(uuid())
-  image      String
+  image      String?
   title      String
   colorBg    String
   colorTitle String

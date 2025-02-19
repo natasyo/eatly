@@ -12,7 +12,7 @@ const Dishes: FunctionComponent = () => {
   const [dishes, setDishes] = useState(dishesData);
   const [currentPage, setCurrentPage] = useState(1);
   useEffect(() => {
-    const dishesData = getDishes(countItemsInPage, currentPage);
+    dishesData = getDishes(countItemsInPage, currentPage);
     setDishes(dishesData);
   }, [currentPage]);
   return (
