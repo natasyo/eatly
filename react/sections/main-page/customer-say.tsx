@@ -1,5 +1,5 @@
 'use client';
-import { getReviews } from '@/backend/api';
+import { getReviews } from '@/controllers/api';
 import ReviewItem from '@/react/components/customer/review-item';
 import { FunctionComponent } from 'react';
 import Slider, { Settings } from 'react-slick';

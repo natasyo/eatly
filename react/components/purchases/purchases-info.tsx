@@ -1,5 +1,5 @@
 'use client';
-import { getPurchasesPeriod, getPurchasesInfo } from '@/backend/api';
+import { getPurchasesPeriod, getPurchasesInfo } from '@/controllers/api';
 import { FunctionComponent, useEffect, useState } from 'react';
 import DropDown, { Option } from '@/react/components/drop-down/drop-down';
 import expenseImg from '@/public/img/expense.png';
@@ -21,21 +21,21 @@ const PurchaseInfo: FunctionComponent<PurchaseInfoProps> = ({ className }) => {
   const [data, setData] = useState<PurchasesInfo>();
 
   useEffect(() => {
-    console.log(periods[0]);
     if (periods) {
       setData(getPurchasesInfo(periods[0]));
     }
-  }, [periods]);
+  }, []);
 
   function changePeriod(opt?: Option) {
     const dataPur = opt && getPurchasesInfo(opt?.key);
-    dataPur && setData(dataPur);
+    setData(dataPur);
   }
-
   return (
     <div className={`rounded-[25px] bg-white ${className} shadow-eatly-3xl`}>
       <div className="mb-5 flex items-center justify-between md:mb-6 lg:mb-10">
-        <p className="font-manrope text-base font-extrabold md:text-xl lg:text-2.9xl">Purchases</p>
+        <p className="font-manrope text-base font-extrabold text-eatly-black-500 md:text-xl lg:text-2.9xl">
+          Purchases
+        </p>
         <DropDown
           options={periodOptions}
           placeholder="select period"
@@ -61,7 +61,7 @@ const PurchaseInfo: FunctionComponent<PurchaseInfoProps> = ({ className }) => {
                   </p>
                 </div>
               </div>
-              <p className="items-end font-manrope text-base font-extrabold lg:text-2.5xl">
+              <p className="items-end font-manrope text-base font-extrabold text-eatly-black-500 lg:text-2.5xl">
                 ${data.expense.value}
               </p>
             </div>
@@ -86,7 +86,7 @@ const PurchaseInfo: FunctionComponent<PurchaseInfoProps> = ({ className }) => {
                   </p>
                 </div>
               </div>
-              <p className="items-end font-manrope text-base font-extrabold lg:text-2.5xl">
+              <p className="items-end font-manrope text-base font-extrabold text-eatly-black-500 lg:text-2.5xl">
                 ${data.vocher.value}
               </p>
             </div>

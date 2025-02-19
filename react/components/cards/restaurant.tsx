@@ -14,7 +14,7 @@ interface RestaurantCardProps {
 const RestaurantCard: FunctionComponent<RestaurantCardProps> = ({ className, item }) => {
   return (
     <div
-      className={`${className ? className : ''} overflow-hidden rounded-[30px] border border-eatly-gray-50 bg-white shadow-eatly-3xl`}
+      className={`${className ? className : ''} hover:shadow-eatly-4xl overflow-hidden rounded-[30px] border border-eatly-gray-50 bg-white shadow-eatly-3xl hover:cursor-pointer`}
     >
       <Image
         src={item.image}

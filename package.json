@@ -8,13 +8,18 @@
     "start": "next start",
     "lint": "next lint",
     "lint-es": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@prisma/client": "^6.4.0",
     "@reduxjs/toolkit": "^2.5.0",
-    "next": "15.1.2",
+    "axios": "^1.7.9",
+    "next": "^15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.2",
+    "react-redux": "^9.2.0",
     "react-slick": "^0.30.3",
     "redux": "^5.0.1",
     "slick-carousel": "^1.8.1"
@@ -33,6 +38,7 @@
     "postcss": "^8",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
+    "prisma": "^6.4.0",
     "sass": "^1.83.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

@@ -1,5 +1,5 @@
 'use client';
-import { getPurchases } from '@/backend/api';
+import { getPurchases } from '@/controllers/api';
 import Purchase from '@/react/components/cards/purchase';
 import PurchaseInfo from '@/react/components/purchases/purchases-info';
 
