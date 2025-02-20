@@ -14,7 +14,7 @@ class ProductTypeController {
     return result;
   }
   async getAll() {
-    const result = await axios.get(`${apiUrl}/products/type`);
+    const result = await axios.get(`${apiUrl}/products/type`, { timeout: 10000 });
     return result;
   }
   async remove(id: string) {

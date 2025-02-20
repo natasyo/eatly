@@ -30,7 +30,7 @@ class ProductCategoryController {
     return result;
   }
   async getAll() {
-    const result = await axios.get(`${apiUrl}/products/categories`);
+    const result = await axios.get(`${apiUrl}/products/categories`, { timeout: 10000 });
     if (result.status === 200) return result.data;
     return { message: 'Error' };
   }
