@@ -4,7 +4,6 @@ const apiUrl =
   typeof window !== 'undefined' ? `${window.location.origin}/api` : process.env.NEXT_PUBLIC_API_URL;
 
 class ProductTypeController {
-  private static _instance: ProductTypeController;
   constructor() {}
   async create(type: TypeDTO) {
     const result = axios.post(`${apiUrl}/products/type`, { ...type });
