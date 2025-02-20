@@ -1,6 +1,7 @@
 import { TypeDTO } from '@/types';
 import axios from 'axios';
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl =
+  typeof window !== 'undefined' ? window.location.origin : process.env.NEXT_PUBLIC_API_URL;
 
 class ProductTypeController {
   private static _instance: ProductTypeController;
@@ -14,7 +15,7 @@ class ProductTypeController {
     return result;
   }
   async getAll() {
-    const result = axios.get(`${apiUrl}/products/type`);
+    const result = await axios.get(`${apiUrl}/products/type`);
     return result;
   }
   async remove(id: string) {
