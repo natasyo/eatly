@@ -11,10 +11,14 @@ const CategoriesAdmin: FunctionComponent = () => {
   const [category, setCategory] = useState<Category>();
   const [categories, setCategories] = useState<Category[]>();
   useEffect(() => {
-    productCategoryController.getAll().then((data) => {
-      setCategories(data);
-      console.log(data);
-    });
+    productCategoryController.getAll().then(
+      (data) => {
+        setCategories(data.data);
+      },
+      (data) => {
+        console.log(data);
+      },
+    );
   }, []);
   useEffect(() => {
     if (category) setCategory({ ...category, image: fakeUrlImg });
@@ -50,7 +54,7 @@ const CategoriesAdmin: FunctionComponent = () => {
                   if (category.id) productCategoryController.remove(category.id);
                 }}
               />
-              {/* <CategoryItem className="m-2 w-[108px]" item={{ ...category, image: undefined }} /> */}
+              <CategoryItem className="m-2 w-[108px]" item={category} />
             </div>
           ))}
         </div>
