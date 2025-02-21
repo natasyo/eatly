@@ -19,14 +19,21 @@ const CategoryItem: FunctionComponent<CategoryItemProps> = ({
   isSelect,
   onSelectCategory,
 }) => {
-  const image = `${imageUrl}/categories/${item.image}`;
+  const image =
+    typeof item.image === 'string' && item.image?.startsWith('http')
+      ? item.image
+      : `${imageUrl}/categories/${item.image}`;
   const [isValidImage, setIsValidImage] = useState(false);
   useEffect(() => {
     checkImageUrl(image).then((data) => {
-      setIsValidImage(data);
+      if (image?.startsWith('http')) {
+        setIsValidImage(true);
+        console.log(true);
+      } else {
+        setIsValidImage(data);
+      }
     });
-    console.log(isValidImage, image);
-  }, []);
+  }, [image]);
   return (
     <div
       className={`${className ? className : ''} flex flex-col items-center rounded-xl bg-opacity-[0.35] pb-3 pt-2 md:pt-0.5 ${isSelect && 'shadow-eatly-2xl'} xl:pt-3`}
@@ -35,7 +42,7 @@ const CategoryItem: FunctionComponent<CategoryItemProps> = ({
         border: `${isSelect ? '3px solid ' + item.colorBg : 'none'}`,
       }}
       onClick={() => {
-        onSelectCategory && onSelectCategory(item);
+        if (onSelectCategory) onSelectCategory(item);
       }}
     >
       <div className="mb-3 flex h-[37px] w-full items-center justify-center md:mb-2 md:pb-0 xl:mb-[14px] xl:h-[50px]">
