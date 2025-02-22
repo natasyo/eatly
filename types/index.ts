@@ -56,6 +56,7 @@ export interface Category {
   colorBg: string;
   colorTitle: string;
   products?: Product[];
+  createdAt?: Date;
 }
 export interface Range {
   from: number;
@@ -96,4 +97,5 @@ export interface TypeDTO {
   id?: string;
   title?: string;
   bgColor?: string;
+  createdAt?: Date;
 }

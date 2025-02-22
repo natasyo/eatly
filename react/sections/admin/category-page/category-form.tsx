@@ -3,7 +3,7 @@ import BtnPrimary from '@/react/components/buttons/btn-primary';
 import FileBox from '@/react/components/fields/file-box';
 import TextBox from '@/react/components/fields/text-box';
 import { Category } from '@/types';
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import ColorBox from '@/react/components/fields/color-box';
 
@@ -28,17 +28,33 @@ const CategoryForm: FunctionComponent<CategoryFormProps> = ({
     setValue,
     formState: { errors },
     watch,
+    reset
   } = useForm<Category>({
     defaultValues: {
-      colorBg: '#00ff00',
+      colorBg: '#00aaff',
+      colorTitle: '#ffdd00'
     },
   });
+
+  const fileRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    onChange && onChange({ ...watch() });
+    console.log(register('image'))
+  }, []);
+
   return (
     <div className={`${className ? className : ''}`}>
       <form
         onSubmit={handleSubmit(
           (category) => {
             onSave && onSave(category);
+            reset();
+            setValue('image', undefined)
+            if (fileRef.current?.value) {
+              fileRef.current.value = "";
+            }
+            console.log(watch())
           },
           (categ) => {
             console.log(categ);
@@ -75,6 +91,7 @@ const CategoryForm: FunctionComponent<CategoryFormProps> = ({
         </div>
         <FileBox
           {...register('image')}
+          ref={fileRef}
           onChange={(e) => {
             const fileImage = e.target.files?.[0];
             if (fileImage) {

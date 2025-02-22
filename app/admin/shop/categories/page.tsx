@@ -1,35 +1,57 @@
 'use client';
 import { productCategoryController } from '@/controllers';
-import BtnRemove from '@/react/components/buttons/btn-remove';
+import Loading from '@/react/components/loading';
 import CategoryItem from '@/react/components/search/category-item';
 import CategoryForm from '@/react/sections/admin/category-page/category-form';
+import CategoryItemsAdmin from '@/react/sections/admin/category-page/category-items-admin';
 import { Category } from '@/types';
 import { FunctionComponent, useEffect, useState } from 'react';
 
 const CategoriesAdmin: FunctionComponent = () => {
   const [fakeUrlImg, setFakeUrlImg] = useState<string>('');
-  const [category, setCategory] = useState<Category>();
+  const [category, setCategory] = useState<Category | undefined>(undefined);
   const [categories, setCategories] = useState<Category[]>();
-  useEffect(() => {
+  const [errorRequest, setErrorRequest] = useState<string>();
+  const [isLoadingCategories, setIsLoadingCategories] = useState(false);
+
+  function getCtegories() {
+    if (!categories)
+      setIsLoadingCategories(true);
     productCategoryController.getAll().then(
       (data) => {
         setCategories(data.data);
+        setIsLoadingCategories(false);
       },
       (data) => {
-        console.log(data);
+        setIsLoadingCategories(false);
       },
     );
+  }
+  useEffect(() => {
+    getCtegories()
   }, []);
+
+
   useEffect(() => {
     if (category) setCategory({ ...category, image: fakeUrlImg });
   }, [fakeUrlImg]);
+  useEffect(() => {
+    if (errorRequest) {
+      setTimeout(() => { setErrorRequest('') }, 4000)
+    }
+  }, [errorRequest])
   return (
     <div>
       <CategoryForm
         imgFakeUrl={fakeUrlImg}
-        onSave={async (data) => {
-          const result = await productCategoryController.create(data);
-          console.log(result);
+        onSave={(data) => {
+          productCategoryController.create(data).then(() => {
+            getCtegories();
+          }, (data) => {
+            console.log(data)
+            setErrorRequest(data.message)
+          })
+
         }}
         onChange={(data) => {
           if (data) setCategory({ ...data, image: fakeUrlImg });
@@ -38,29 +60,26 @@ const CategoriesAdmin: FunctionComponent = () => {
           setFakeUrlImg(url);
         }}
       />
-      {category && (
-        <>
-          <p className="mb-2 mt-10 text-xl font-bold text-eatly-black-100">Preview</p>
-          <CategoryItem item={category} isSelect={true} className="max-w-28" />
-        </>
-      )}
-      {categories && categories.length > 0 ? (
-        <div className="flex flex-wrap">
-          {categories.map((category) => (
-            <div key={category.id} className="relative">
-              <BtnRemove
-                className="absolute right-3 top-3 hover:scale-110"
-                onClick={() => {
-                  if (category.id) productCategoryController.remove(category.id);
-                }}
-              />
-              <CategoryItem className="m-2 w-[108px]" item={category} />
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div></div>
-      )}
+      {
+        errorRequest && <p className='text-red-400'>{errorRequest}</p>
+      }
+      {(category?.image || category?.title)
+        && (
+          <div className='mb-9'>
+            <p className="mb-2 mt-10 text-xl font-bold text-eatly-black-100">Preview</p>
+            <CategoryItem item={category} isSelect={true} className="max-w-28" />
+          </div>
+        )}
+
+      {
+        isLoadingCategories ? <Loading className='mt-9' /> :
+          categories && <CategoryItemsAdmin categories={categories} onRemove={(category) => {
+            productCategoryController.remove(category.id!);
+            getCtegories();
+          }} />
+      }
+
+
     </div>
   );
 };

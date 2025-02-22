@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import { imageUrl } from '@/config';
 import { checkImageUrl } from '@/functions/checkImageUrl';
 import { nexToRGB } from '@/functions/nexToRgb';
@@ -19,21 +19,21 @@ const CategoryItem: FunctionComponent<CategoryItemProps> = ({
   isSelect,
   onSelectCategory,
 }) => {
-  const image =
-    typeof item.image === 'string' && item.image?.startsWith('http')
-      ? item.image
-      : `${imageUrl}/categories/${item.image}`;
-  const [isValidImage, setIsValidImage] = useState(false);
+  const [image, setImage] = useState('/img/no-image.svg');
   useEffect(() => {
-    checkImageUrl(image).then((data) => {
-      if (image?.startsWith('http')) {
-        setIsValidImage(true);
-        console.log(true);
-      } else {
-        setIsValidImage(data);
+    if (typeof item.image === 'string' && item.image !== "") {
+      if (item.image.startsWith('blob')) {
+        setImage(item.image);
       }
-    });
-  }, [image]);
+      else {
+        checkImageUrl(`${imageUrl}/categories/${item.image}`).then((data) => {
+          if (typeof item.image === 'string') setImage(`${imageUrl}/categories/${item.image}`)
+        })
+      }
+    }
+  }, [item]);
+
+
   return (
     <div
       className={`${className ? className : ''} flex flex-col items-center rounded-xl bg-opacity-[0.35] pb-3 pt-2 md:pt-0.5 ${isSelect && 'shadow-eatly-2xl'} xl:pt-3`}
@@ -45,13 +45,13 @@ const CategoryItem: FunctionComponent<CategoryItemProps> = ({
         if (onSelectCategory) onSelectCategory(item);
       }}
     >
-      <div className="mb-3 flex h-[37px] w-full items-center justify-center md:mb-2 md:pb-0 xl:mb-[14px] xl:h-[50px]">
+      <div className="mb-3 flex h-[37px] w-full items-center justify-center md:mb-2 md:pb-0 xl:mb-[14px] xl:h-[50px]  max-w-[60px]">
         <Image
-          src={isValidImage ? image : '/img/no-image.svg'}
+          src={image}
           alt={item.title || ''}
           width={40}
           height={50}
-          className="xl::size-full h-auto max-h-full w-auto xl:object-contain"
+          className="xl::size-full h-auto max-h-full max-w-full w-auto  xl:object-contain"
         />
       </div>
 

@@ -19,7 +19,7 @@ class ProductCategoryController {
       });
       return result;
     }
-    return await axios.put(`${apiUrl}/products/categories`, { ...category });
+    return await axios.post(`${apiUrl}/products/categories`, { ...category, image: '' });
   }
   async update(category: Category) {
     const result = axios.put(`${apiUrl}/products/categories`, { ...category });

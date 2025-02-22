@@ -1,18 +1,14 @@
-'ese client';
 import Image from 'next/image';
-import { DetailedHTMLProps, FunctionComponent, InputHTMLAttributes, useState } from 'react';
+import { DetailedHTMLProps, FunctionComponent, InputHTMLAttributes, useState, } from 'react';
 
 interface FileBoxProps
   extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
-  label?: string;
-  file?: File;
 }
 
 const FileBox: FunctionComponent<FileBoxProps> = (props) => {
   const [file, setFile] = useState<{ filename: string; url: string }>();
   return (
     <label className="mb-3 flex items-center">
-      {props.label && <span className="mr-3">{props.label}</span>}
       <span className="mr-5 fill-eatly-violet-500">
         {file?.url ? (
           <Image className="ml-5" src={`${file.url}`} width={48} height={48} alt="" />
@@ -29,7 +25,7 @@ const FileBox: FunctionComponent<FileBoxProps> = (props) => {
         className="hidden"
         {...props}
         onChange={(e) => {
-          console.log(e.target.value);
+          console.log(e)
           const fileImage = e.target.files?.[0];
           if (fileImage) setFile({ url: URL.createObjectURL(fileImage), filename: fileImage.name });
           props.onChange && props.onChange(e);

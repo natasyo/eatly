@@ -27,10 +27,11 @@ model Product {
 }
 
 model Type {
-  id       String    @id @default(uuid())
-  title    String
-  bgColor  String
-  products Product[]
+  id        String    @id @default(uuid())
+  title     String
+  bgColor   String
+  products  Product[]
+  createdAt DateTime  @default(now())
 }
 
 model Category {
@@ -40,4 +41,5 @@ model Category {
   colorBg    String
   colorTitle String
   products   Product[]
+  createdAt  DateTime  @default(now())
 }
