@@ -1,7 +1,6 @@
 'use client';
 import { productCategoryController } from '@/controllers';
 import Loading from '@/react/components/loading';
-import CategoryItem from '@/react/components/search/category-item';
 import CategoryForm from '@/react/sections/admin/category-page/category-form';
 import CategoryItemsAdmin from '@/react/sections/admin/category-page/category-items-admin';
 import { Category } from '@/types';

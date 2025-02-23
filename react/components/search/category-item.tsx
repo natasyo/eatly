@@ -26,7 +26,7 @@ const CategoryItem: FunctionComponent<CategoryItemProps> = ({
         setImage(item.image);
       }
       else {
-        checkImageUrl(`${imageUrl}/categories/${item.image}`).then((data) => {
+        checkImageUrl(`${imageUrl}/categories/${item.image}`).then(() => {
           if (typeof item.image === 'string') setImage(`${imageUrl}/categories/${item.image}`)
         })
       }
