@@ -36,7 +36,7 @@ const CategoryForm: FunctionComponent<CategoryFormProps> = ({
     },
   });
 
-  const fileRef = useRef<HTMLInputElement>(null);
+  const fileRef = useRef<{ resetFile: () => void }>(null);
 
   useEffect(() => {
     onChange && onChange({ ...watch() });
@@ -51,10 +51,7 @@ const CategoryForm: FunctionComponent<CategoryFormProps> = ({
             onSave && onSave(category);
             reset();
             setValue('image', undefined)
-            if (fileRef.current?.value) {
-              fileRef.current.value = "";
-            }
-            console.log(watch())
+            fileRef.current?.resetFile()
           },
           (categ) => {
             console.log(categ);

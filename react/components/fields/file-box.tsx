@@ -1,12 +1,19 @@
 import Image from 'next/image';
-import { DetailedHTMLProps, FunctionComponent, InputHTMLAttributes, useState, } from 'react';
+import { DetailedHTMLProps, forwardRef, InputHTMLAttributes, useState, useImperativeHandle, useRef } from 'react';
 
 interface FileBoxProps
   extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
 }
 
-const FileBox: FunctionComponent<FileBoxProps> = (props) => {
+const FileBox = forwardRef<{ resetFile: () => void }, FileBoxProps>((props, ref) => {
   const [file, setFile] = useState<{ filename: string; url: string }>();
+  const fileRef = useRef<HTMLInputElement>(null);
+  useImperativeHandle(ref, () => ({
+    resetFile: () => {
+      setFile(undefined)
+      if (fileRef.current) fileRef.current.value = "";
+    }
+  }))
   return (
     <label className="mb-3 flex items-center">
       <span className="mr-5 fill-eatly-violet-500">
@@ -20,7 +27,7 @@ const FileBox: FunctionComponent<FileBoxProps> = (props) => {
       </span>
       <span>{file?.filename}</span>
 
-      <input
+      <input ref={fileRef}
         type="file"
         className="hidden"
         {...props}
@@ -33,6 +40,6 @@ const FileBox: FunctionComponent<FileBoxProps> = (props) => {
       />
     </label>
   );
-};
+});
 
 export default FileBox;

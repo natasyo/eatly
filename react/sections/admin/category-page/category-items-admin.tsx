@@ -1,8 +1,6 @@
-import { productCategoryController } from "@/controllers";
 import BtnRemove from "@/react/components/buttons/btn-remove";
 import CategoryItem from "@/react/components/search/category-item";
 import { Category } from "@/types";
-import { on } from "process";
 import { FunctionComponent } from "react";
 
 interface CategoryItemsAdminProps {

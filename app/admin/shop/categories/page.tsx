@@ -47,6 +47,7 @@ const CategoriesAdmin: FunctionComponent = () => {
         onSave={(data) => {
           productCategoryController.create(data).then(() => {
             getCtegories();
+            setCategory(undefined);
           }, (data) => {
             console.log(data)
             setErrorRequest(data.message)
