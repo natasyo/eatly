@@ -10,6 +10,7 @@ import { useOutSideClick } from '@/hooks/outsideClick';
 import Link from 'next/link';
 import Basket from '@/react/components/basket/basket';
 import { useBasketContext } from '@/react/components/basket/basket-provider';
+import BtnLink from '@/react/components/buttons/btn-link';
 
 const Header: FunctionComponent = () => {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
@@ -76,8 +77,9 @@ const Header: FunctionComponent = () => {
                 className={`absolute right-0 top-full w-[350px] rounded-lg ${isShowBasket ? 'block' : 'hidden'}`}
               />
 
-              <Btn className="ml-4 text-[12.68px] xl:mr-3 xl:text-lg">Login</Btn>
-              <BtnPrimary className="w-[86px] !px-0 text-[12.68px] lg:w-[120px] xl:text-lg">
+
+              <BtnLink href='/login' className="ml-4 text-[12.68px] xl:mr-3 xl:text-lg">Login</BtnLink>
+              <BtnPrimary href='/register' className="w-[86px] !px-0 text-[12.68px] lg:w-[120px] xl:text-lg">
                 Sign up
               </BtnPrimary>
             </div>

@@ -80,6 +80,15 @@ export interface Question {
 export interface User {
   id: string;
   name: string;
+  username: string;
+}
+
+export interface Register {
+  id?: string;
+  name: string;
+  userName: string;
+  password: string;
+  repeatPassword: string;
 }
 
 export interface ProductCount {
