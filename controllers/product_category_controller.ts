@@ -1,37 +1,33 @@
 import { Category } from '@/types';
 import axios from 'axios';
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl =
+  typeof window !== 'undefined' ? `${window.location.origin}/api` : process.env.NEXT_PUBLIC_API_URL;
 
 class ProductCategoryController {
   constructor() {}
 
   async create(category: Category) {
-    const formData = new FormData();
-    const categoryData = {
-      ...category,
-      image: category.image ? (category.image as File).name : '',
-    };
-    if (category.image && category.image instanceof File) {
-      const file = category.image;
-      formData.append('file', file);
+    if (category.image instanceof File) {
+      const formData = new FormData();
+      const jsonData = JSON.stringify({ ...category, image: category.image.name });
+      formData.append('category', jsonData);
+      formData.append('file', category.image);
+      const result = await axios.post(`${apiUrl}/products/categories`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      return result;
     }
-    formData.append('category', JSON.stringify(categoryData));
-    const result = await axios.post(`${apiUrl}/products/categories`, formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    });
-    return result;
+    return await axios.post(`${apiUrl}/products/categories`, { ...category, image: '' });
   }
   async update(category: Category) {
     const result = axios.put(`${apiUrl}/products/categories`, { ...category });
-    console.log(result);
     return result;
   }
   async getAll() {
-    const result = await axios.get(`${apiUrl}/products/categories`);
-    if (result.status === 200) return result.data;
-    return { message: 'Error' };
+    const result = await axios.get(`${apiUrl}/products/categories`, { timeout: 10000 });
+    return result;
   }
   async remove(id: string) {
     const result = await axios.delete(`${apiUrl}/products/categories`, { data: { id } });
