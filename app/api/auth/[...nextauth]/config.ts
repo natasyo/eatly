@@ -14,7 +14,7 @@ export const authOptions: NextAuthOptions = {
     adapter: PrismaAdapter(prisma),
 
     session: {
-        strategy: 'jwt', // Use JWT for better performance
+        strategy: 'database', // Use JWT for better performance
     },
     callbacks: {
         async session({ session, user }) {
