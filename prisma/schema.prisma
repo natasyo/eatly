@@ -44,6 +44,13 @@ model Category {
   createdAt  DateTime  @default(now())
 }
 
+
+enum Role {
+  USER
+  ADMIN
+}
+
+
 model User {
   id            String          @id @default(cuid())
   name          String?
@@ -54,6 +61,8 @@ model User {
   sessions      Session[]
   // Optional for WebAuthn support
   Authenticator Authenticator[]
+
+  role Role @default(USER)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -81,6 +90,7 @@ model Account {
 }
 
 model Session {
+  id           String  @id @default(cuid())
   sessionToken String   @unique
   userId       String
   expires      DateTime
