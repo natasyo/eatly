@@ -78,7 +78,7 @@ const Header: FunctionComponent = () => {
               />
 
 
-              <BtnLink href='/login' className="ml-4 text-[12.68px] xl:mr-3 xl:text-lg">Login</BtnLink>
+              <BtnLink href='/auth' className="ml-4 text-[12.68px] xl:mr-3 xl:text-lg">Login</BtnLink>
               <BtnPrimary href='/register' className="w-[86px] !px-0 text-[12.68px] lg:w-[120px] xl:text-lg">
                 Sign up
               </BtnPrimary>
