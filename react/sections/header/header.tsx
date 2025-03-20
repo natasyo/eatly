@@ -10,6 +10,7 @@ import { useOutSideClick } from '@/hooks/outsideClick';
 import Link from 'next/link';
 import Basket from '@/react/components/basket/basket';
 import { useBasketContext } from '@/react/components/basket/basket-provider';
+import BtnLink from '@/react/components/buttons/btn-link';
 
 const Header: FunctionComponent = () => {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
@@ -39,9 +40,9 @@ const Header: FunctionComponent = () => {
           setIsShowMobileMenu(false);
         }}
       />
-      <header className="sticky top-0 z-50 bg-eatly-gray-10">
+      <header className="sticky top-0 z-50 border-b border-eatly-gray bg-eatly-gray-10 pb-[30px] pt-8 md:pb-3 lg:pb-[25px] lg:pt-[47px]">
         <div className="container relative">
-          <div className="flex items-center justify-between border-b border-eatly-gray pb-[30px] pt-8 md:pb-3 lg:pb-[25px] lg:pt-[47px]">
+          <div className="flex items-center justify-between">
             <div className="flex items-center">
               <Logo className="mr-[54px] w-20 min-w-[111px] xl:mr-[77px]" />
               <Nav
@@ -76,8 +77,9 @@ const Header: FunctionComponent = () => {
                 className={`absolute right-0 top-full w-[350px] rounded-lg ${isShowBasket ? 'block' : 'hidden'}`}
               />
 
-              <Btn className="ml-4 text-[12.68px] xl:mr-3 xl:text-lg">Login</Btn>
-              <BtnPrimary className="w-[86px] !px-0 text-[12.68px] lg:w-[120px] xl:text-lg">
+
+              <BtnLink href='/auth' className="ml-4 text-[12.68px] xl:mr-3 xl:text-lg">Login</BtnLink>
+              <BtnPrimary href='/register' className="w-[86px] !px-0 text-[12.68px] lg:w-[120px] xl:text-lg">
                 Sign up
               </BtnPrimary>
             </div>
