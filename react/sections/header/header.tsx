@@ -11,6 +11,7 @@ import Link from 'next/link';
 import Basket from '@/react/components/basket/basket';
 import { useBasketContext } from '@/react/components/basket/basket-provider';
 import BtnLink from '@/react/components/buttons/btn-link';
+import { signOut, useSession } from 'next-auth/react';
 
 const Header: FunctionComponent = () => {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
@@ -25,6 +26,7 @@ const Header: FunctionComponent = () => {
     if (basketRef.current) setRect(basketRef.current?.getBoundingClientRect());
   }, [setRect]);
   const [isShowBasket, setIsShowBasket] = useState(false);
+  const  {data:session, status}=useSession();
   return (
     <>
       <MobileNav
@@ -77,11 +79,13 @@ const Header: FunctionComponent = () => {
                 className={`absolute right-0 top-full w-[350px] rounded-lg ${isShowBasket ? 'block' : 'hidden'}`}
               />
 
+              {
+                session?<BtnPrimary onClick={()=>signOut({ redirect: false })}>Sgn out</BtnPrimary>:<><BtnLink href='/auth' className="ml-4 text-[12.68px] xl:mr-3 xl:text-lg">Login</BtnLink>
+                  <BtnPrimary href='/register' className="w-[86px] !px-0 text-[12.68px] lg:w-[120px] xl:text-lg">
+                    Sign up
+                  </BtnPrimary></>
+              }
 
-              <BtnLink href='/auth' className="ml-4 text-[12.68px] xl:mr-3 xl:text-lg">Login</BtnLink>
-              <BtnPrimary href='/register' className="w-[86px] !px-0 text-[12.68px] lg:w-[120px] xl:text-lg">
-                Sign up
-              </BtnPrimary>
             </div>
             <BtnMenu
               isOpen={isShowMobileMenu}

@@ -3,9 +3,12 @@ import Btn from '@/react/components/buttons/btn';
 import BtnPrimary from '@/react/components/buttons/btn-primary';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { FunctionComponent } from 'react';
+// import { useSearchParams } from 'next/navigation';
 
 const Auth: FunctionComponent = () => {
   const { data: session } = useSession();
+  // const searchParams = useSearchParams();
+  // const callbackUrl = searchParams.get("callbackUrl") || "/";
 
   return session ? (
     <div className="container">

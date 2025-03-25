@@ -1,4 +1,5 @@
 import {NextAuthOptions} from "next-auth";
+
 import GoogleProvider from "next-auth/providers/google";
 import {PrismaAdapter} from "@next-auth/prisma-adapter";
 import {prisma} from "@/lib/prisma";
@@ -25,6 +26,21 @@ export const authOptions: NextAuthOptions = {
             }
             return session;
         },
+        async signIn(data){
+            const isAdmin = data.user.email === "natasyo23@gmail.com";
+            if(isAdmin){
+                await prisma.user.update({
+                    where: {email: data.user.email as string },
+                    data: {role:"ADMIN"}  ,
+                });
+            }
+
+            return true;
+        },
+      async redirect({url, baseUrl}){
+          console.log(url, baseUrl)
+          return url.startsWith(baseUrl)?url:baseUrl;
+      }
     },
     secret: process.env.NEXTAUTH_SECRET, // Use a strong secret key
 };
