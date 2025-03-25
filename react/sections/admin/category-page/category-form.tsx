@@ -3,42 +3,53 @@ import BtnPrimary from '@/react/components/buttons/btn-primary';
 import FileBox from '@/react/components/fields/file-box';
 import TextBox from '@/react/components/fields/text-box';
 import { Category } from '@/types';
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import ColorBox from '@/react/components/fields/color-box';
+import CategoryItem from '@/react/components/search/category-item';
 
 interface CategoryFormProps {
   className?: string;
-  category?: Category;
   onChange?: (category: Category) => void;
   onChangeFakeImgUrl?: (fakeUrl: string) => void;
   imgFakeUrl?: string;
   onSave?: (category: Category) => void;
 }
 
-const CategoryForm: FunctionComponent<CategoryFormProps> = ({
-  className,
-  onSave,
-  onChange,
-  onChangeFakeImgUrl,
-}) => {
+const CategoryForm: FunctionComponent<CategoryFormProps> = ({ className, onSave, onChange }) => {
   const {
     register,
     handleSubmit,
     setValue,
     formState: { errors },
     watch,
+    reset,
   } = useForm<Category>({
     defaultValues: {
-      colorBg: '#00ff00',
+      colorBg: '#00aaff',
+      colorTitle: '#ffdd00',
     },
   });
+
+  const fileRef = useRef<{ resetFile: () => void }>(null);
+
+  useEffect(() => {
+    if (onChange) onChange({ ...watch() });
+    console.log(register('image'));
+  }, []);
+
+  const [category, setCategory] = useState<Category | null>(null);
   return (
-    <div className={`${className ? className : ''}`}>
+    <div className={`${className ? className : ''} flex`}>
       <form
+        className="mr-10 shrink-0"
         onSubmit={handleSubmit(
-          (category) => {
-            onSave && onSave(category);
+          (data) => {
+            if (onSave) onSave(data);
+            reset();
+            setCategory(null);
+            setValue('image', undefined);
+            fileRef.current?.resetFile();
           },
           (categ) => {
             console.log(categ);
@@ -51,7 +62,7 @@ const CategoryForm: FunctionComponent<CategoryFormProps> = ({
           error={errors.title?.message}
           onChange={(e) => {
             const title = (e.target as HTMLInputElement).value;
-            onChange && onChange({ ...watch(), title });
+            setCategory({ ...watch(), title });
           }}
         />
         <div className="flex">
@@ -61,7 +72,7 @@ const CategoryForm: FunctionComponent<CategoryFormProps> = ({
             className="mr-4"
             onChange={(e) => {
               const colorTitle = (e.target as HTMLInputElement).value;
-              onChange && onChange({ ...watch(), colorTitle });
+              setCategory({ ...watch(), colorTitle });
             }}
           />
           <ColorBox
@@ -69,22 +80,30 @@ const CategoryForm: FunctionComponent<CategoryFormProps> = ({
             {...register('colorBg', { required: 'This Field is required' })}
             onChange={(e) => {
               const colorBg = (e.target as HTMLInputElement).value;
-              onChange && onChange({ ...watch(), colorBg });
+              setCategory({ ...watch(), colorBg });
             }}
           />
         </div>
+
         <FileBox
           {...register('image')}
+          ref={fileRef}
           onChange={(e) => {
             const fileImage = e.target.files?.[0];
             if (fileImage) {
-              onChangeFakeImgUrl && onChangeFakeImgUrl(URL.createObjectURL(fileImage));
+              setCategory({ ...watch(), image: URL.createObjectURL(fileImage) });
               setValue('image', fileImage);
             }
           }}
         />
         <BtnPrimary type="submit">Save</BtnPrimary>
       </form>
+      {category && (category?.image || category?.title) && (
+        <div className="grow-1 w-full">
+          <p className="text-xl font-bold text-eatly-black-100">Preview</p>
+          <CategoryItem item={category} isSelect={true} className="max-w-28" />
+        </div>
+      )}
     </div>
   );
 };

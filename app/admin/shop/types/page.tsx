@@ -6,17 +6,27 @@ import { TypeDTO } from '@/types';
 import { FunctionComponent, useEffect, useState } from 'react';
 
 const AdminTypesPage: FunctionComponent = () => {
-  const [typesData, setTypesData] = useState<{ types: TypeDTO[]; status: number }>();
+  const [typesData, setTypesData] = useState<{ types?: TypeDTO[]; status: number }>();
   const [selectType, setSelectType] = useState<TypeDTO>();
   const getTypes = () => {
-    productTypeController.getAll().then((resp) => {
-      setTypesData({ status: resp.status, types: resp.data });
-    });
+    productTypeController.getAll().then(
+      (resp) => {
+        console.log('resp', resp.status);
+        setTypesData({ status: resp.status, types: resp.data });
+      },
+      (data) => {
+        setTypesData({ status: data.status });
+        console.log(data.status);
+      },
+    );
   };
 
   useEffect(() => {
     getTypes();
   }, []);
+  useEffect(() => {
+    console.log(typesData);
+  }, [typesData]);
   return (
     <div className="">
       <TypeForm

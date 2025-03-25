@@ -56,6 +56,7 @@ export interface Category {
   colorBg: string;
   colorTitle: string;
   products?: Product[];
+  createdAt?: Date;
 }
 export interface Range {
   from: number;
@@ -79,6 +80,15 @@ export interface Question {
 export interface User {
   id: string;
   name: string;
+  username: string;
+}
+
+export interface Register {
+  id?: string;
+  name: string;
+  userName: string;
+  password: string;
+  repeatPassword: string;
 }
 
 export interface ProductCount {
@@ -96,4 +106,5 @@ export interface TypeDTO {
   id?: string;
   title?: string;
   bgColor?: string;
+  createdAt?: Date;
 }
