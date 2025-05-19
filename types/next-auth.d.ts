@@ -1,10 +1,5 @@
-import NextAuth from 'next-auth';
-
 declare module 'next-auth' {
 
-  enum Role{ USER,
-    ADMIN
-  }
   interface Session {
     user: {
       id: string;

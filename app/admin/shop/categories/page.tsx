@@ -55,7 +55,6 @@ const CategoriesAdmin: FunctionComponent = () => {
         }}
         onChange={(data) => {
           if (data) setCategory({ ...data, image: fakeUrlImg });
-          console.log(category);
         }}
         onChangeFakeImgUrl={(url) => {
           setFakeUrlImg(url);
