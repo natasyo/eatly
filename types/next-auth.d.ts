@@ -1,4 +1,4 @@
-import NextAuth  from 'next-auth';
+import  'next-auth';
 import { Role } from '@/types/ui-types';
 
 declare module 'next-auth' {
