@@ -1,3 +1,6 @@
+import NextAuth  from 'next-auth';
+import { Role } from '@/types/ui-types';
+
 declare module 'next-auth' {
 
   interface Session {
@@ -6,12 +9,12 @@ declare module 'next-auth' {
       name?: string | null;
       email?: string | null;
       image?: string | null;
-role:"USER" | "ADMIN";
+role:Role;
     };
   }
   interface User {
     id: string;
-    role: "USER" | "ADMIN"; // Add role to user
+    role: Role; // Add role to user
   }
 
 }

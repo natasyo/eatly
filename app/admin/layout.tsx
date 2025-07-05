@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { FunctionComponent, ReactNode } from 'react';
 import { useSession } from 'next-auth/react';
 import Loading from '@/react/components/loading';
+import { redirect } from 'next/navigation';
 
 interface LayoutShopProps {
   children: ReactNode;
@@ -18,9 +19,14 @@ interface LayoutShopProps {
 
 const LayoutShop: FunctionComponent<LayoutShopProps> = ({ children }) => {
   const {data:session, status}=useSession();
+
   if(status=='loading'){
     return  <Loading/>
   }
+  if(status=='unauthenticated'){
+    redirect('/auth')
+  }
+if(status=='authenticated')
   return (
     <div className="container flex py-15">
       <ul className="mr-8 w-[300px] shrink-0 rounded border border-eatly-violet-200">
@@ -55,6 +61,7 @@ const LayoutShop: FunctionComponent<LayoutShopProps> = ({ children }) => {
       <div className="grow">{children}</div>
     </div>
   );
+return <p>Error</p>
 };
 
 export default LayoutShop;
