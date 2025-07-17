@@ -12,7 +12,6 @@ const basketSlice = createSlice({
         (item) => item.product.id === product.payload.product.id,
       );
       if (index >= 0) {
-        console.log(!state.items[index].count);
         if (state.items[index].count === undefined) state.items[index].count = 0;
         state.items[index].count += product.payload.count ? product.payload.count : 1;
         if (state.items[index].count <= 0) {

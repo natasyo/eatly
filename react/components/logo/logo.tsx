@@ -10,7 +10,7 @@ interface LogoProps {
 const Logo: FunctionComponent<LogoProps> = ({ className }) => {
   return (
     <Link href="/" className={`${className}`}>
-      <Image src={logo.src} alt="df" width={logo.width} height={logo.height} className="w-full" />
+      <Image src={logo.src} alt="df" width={logo.width} height={logo.height} className="w-full" priority />
     </Link>
   );
 };

@@ -12,33 +12,35 @@ interface AllTypesProps {
 }
 
 const AllTypes: FunctionComponent<AllTypesProps> = ({ types, status, removeType, selectType }) => {
-  if (!status || !types) {
+  console.log(status);
+  if (!status && !types) {
     return <Loading />;
   }
-  if (types.length < 1) {
+  if (types && types.length < 1) {
     return <p>Not fount</p>;
   }
-  if (status !== 200) return <p>Request error</p>;
+  if (status !== 200) return <p className="text-red-400">Request error</p>;
   return (
     <div className="flex flex-wrap">
-      {types.map((item) => (
-        <div key={item.id} className="relative m-2">
-          <CardType
-            type={item.title!}
-            color={item.bgColor!}
-            className="cursor-pointer !py-2 !pl-2 !pr-6 !text-lg font-medium"
-            onClick={() => {
-              selectType && selectType(item);
-            }}
-          />
-          <BtnRemove
-            className="absolute right-0 top-0 p-1"
-            onClick={() => {
-              removeType && removeType(item);
-            }}
-          />
-        </div>
-      ))}
+      {types &&
+        types.map((item) => (
+          <div key={item.id} className="relative m-2">
+            <CardType
+              type={item.title!}
+              color={item.bgColor!}
+              className="cursor-pointer !py-2 !pl-2 !pr-6 !text-lg font-medium"
+              onClick={() => {
+                selectType && selectType(item);
+              }}
+            />
+            <BtnRemove
+              className="absolute right-0 top-0 p-1"
+              onClick={() => {
+                removeType && removeType(item);
+              }}
+            />
+          </div>
+        ))}
     </div>
   );
 };

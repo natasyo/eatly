@@ -1,4 +1,5 @@
 import { RangeType } from './ui-types';
+import { Product } from '@prisma/client';
 
 export * from './ui-types';
 export interface Restaurant {
@@ -9,17 +10,20 @@ export interface Restaurant {
   rating: number;
   image: string;
 }
-
-export interface Product {
-  id: string;
-  name: string;
-  type: string;
-  time_wait: number;
-  rating: number;
-  image: string;
-  price: number;
+//
+// export interface Product {
+//   id: string;
+//   name: string;
+//   type: string;
+//   time_wait: number;
+//   rating: number;
+//   image: string;
+//   price: number;
+//   categoryId: string;
+// }
+export type ProductDTO=Omit<Product, 'image'> &{
+  image:File|string;
 }
-
 export interface Purchase {
   id: string;
   productId: string;
@@ -56,6 +60,7 @@ export interface Category {
   colorBg: string;
   colorTitle: string;
   products?: Product[];
+  createdAt?: Date;
 }
 export interface Range {
   from: number;
@@ -79,6 +84,15 @@ export interface Question {
 export interface User {
   id: string;
   name: string;
+  username: string;
+}
+
+export interface Register {
+  id?: string;
+  name: string;
+  userName: string;
+  password: string;
+  repeatPassword: string;
 }
 
 export interface ProductCount {
@@ -96,4 +110,5 @@ export interface TypeDTO {
   id?: string;
   title?: string;
   bgColor?: string;
+  createdAt?: Date;
 }

@@ -20,7 +20,6 @@ const TypeForm: FunctionComponent<TypeFormProps> = ({ className, type, onSave })
     },
   });
   useEffect(() => {
-    console.log(type);
     setValue('id', type?.id);
     setValue('title', type?.title);
     setValue('bgColor', type?.bgColor);
@@ -29,7 +28,7 @@ const TypeForm: FunctionComponent<TypeFormProps> = ({ className, type, onSave })
     <div className={`${className ? className : ''}`}>
       <form
         onSubmit={handleSubmit((type) => {
-          onSave && onSave(type);
+          if(onSave) onSave(type);
           reset();
         })}
       >

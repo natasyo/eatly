@@ -1,12 +1,11 @@
 import { requestFunc } from '@/lib/functions';
-import { prisma } from '@/lib/prisma';
+import { prisma } from "@/lib/prisma";
 import fs from 'fs';
 import path from 'path';
 
 export async function GET() {
   return requestFunc(async () => {
-    const types = await prisma.category.findMany();
-    return types;
+    return await prisma.category.findMany();
   });
 }
 
@@ -19,12 +18,9 @@ export async function POST(req: Request) {
     const result = await prisma.category.create({ data: data });
     if (file && file instanceof File) {
       const buffer = await Buffer.from(await file.arrayBuffer());
-      const filePtah = path.join(
-        process.cwd(),
-        'public/img/upload/categories',
-        `public/img/upload/categories/${file.name}`,
-      );
-      fs.writeFileSync(filePtah, buffer);
+      const filePath = path.join(process.cwd(), 'public/img/upload/categories', `${file.name}`);
+      console.log(filePath);
+      fs.writeFileSync(filePath, buffer);
     }
     return result;
   });

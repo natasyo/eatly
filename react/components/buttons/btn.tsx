@@ -1,7 +1,6 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps, FunctionComponent } from 'react';
 
-interface BtnProps
-  extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {}
+type BtnProps = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 
 const Btn: FunctionComponent<BtnProps> = (props) => {
   return (

@@ -15,8 +15,12 @@ const TextBox: FunctionComponent<TextBoxProps> = (props) => {
       )}
       <input
         {...props}
-        type="text"
-        className={`rounded-lg border-eatly-violet-500 p-3 text-lg text-eatly-black focus-visible:outline-eatly-violet ${props.className ? props.className : ''}`}
+        // onChange={(e)=>{
+        //   if(props.type==='number')
+        //     console.log('number')
+        //   if(props.onChange) props.onChange(e)
+        // }}
+        className={`rounded-lg border-eatly-violet-500 p-3 text-lg bg-white-text-eatly-black focus-visible:outline-eatly-violet ${props.className ? props.className : ''}`}
       />
       {props.error && <p className="text-eatly-red-700">{props.error}</p>}
     </label>
