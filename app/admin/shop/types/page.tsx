@@ -11,12 +11,10 @@ const AdminTypesPage: FunctionComponent = () => {
   const getTypes = () => {
     productTypeController.getAll().then(
       (resp) => {
-        console.log('resp', resp.status);
         setTypesData({ status: resp.status, types: resp.data });
       },
       (data) => {
         setTypesData({ status: data.status });
-        console.log(data.status);
       },
     );
   };
@@ -33,11 +31,8 @@ const AdminTypesPage: FunctionComponent = () => {
         className="mb-6"
         type={selectType}
         onSave={(type) => {
-          console.log(type);
           if (type.id) {
-            console.log('edit');
             productTypeController.update(type).then((data) => {
-              console.log(data);
               if (data.status === 200) {
                 getTypes();
               }

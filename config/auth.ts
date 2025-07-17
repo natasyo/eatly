@@ -19,7 +19,6 @@ export const authOptions: NextAuthOptions = {
     },
     callbacks: {
         async session({ session, user }) {
-            console.log(session, user)
             if (session.user) {
                 session.user.id = user.id;
                 session.user.role=user.role;
@@ -39,7 +38,6 @@ export const authOptions: NextAuthOptions = {
             return true;
         },
       async redirect({url, baseUrl}){
-          console.log(url, baseUrl)
           if (!url || url.includes("/auth")) {
               return baseUrl;
           }

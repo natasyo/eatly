@@ -17,7 +17,6 @@ class ProductTypeController {
   }
   async remove(id: string) {
     const result = await axios.delete(`${apiUrl}/products/type`, { data: { id } });
-    console.log(result);
     return result;
   }
   async checkImage(url: string) {

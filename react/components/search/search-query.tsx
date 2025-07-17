@@ -14,7 +14,6 @@ const SearchQuery: FunctionComponent<SearchQueryProps> = () => {
   const [isShowResults, setisShowResults] = useState(true);
   const [results, setResults] = useState<Restaurant[] | Dishe[]>();
   function search(text: string) {
-    console.log(searchData?.type);
     if (searchData?.type === 'Resturent') {
       setResults(searchRestaurants(text));
     }

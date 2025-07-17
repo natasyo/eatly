@@ -53,6 +53,9 @@ if(status=='authenticated')
               <li className="border-b border-eatly-violet-200 p-2 font-medium">
                 <Link href="../../admin/shop/categories">Categories</Link>
               </li>
+              <li className="border-b border-eatly-violet-200 p-2 font-medium">
+                <Link href="../../admin/shop/products">Products</Link>
+              </li>
             </ul>
           </li>
         }

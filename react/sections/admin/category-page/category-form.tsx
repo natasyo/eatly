@@ -35,7 +35,6 @@ const CategoryForm: FunctionComponent<CategoryFormProps> = ({ className, onSave,
 
   useEffect(() => {
     if (onChange) onChange({ ...watch() });
-    console.log(register('image'));
   }, []);
 
   const [category, setCategory] = useState<Category | null>(null);

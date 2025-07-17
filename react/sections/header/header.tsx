@@ -26,7 +26,6 @@ const Header: FunctionComponent = () => {
   }, [setRect]);
   const [isShowBasket, setIsShowBasket] = useState(false);
   const  {data:session,}=useSession();
-  console.log(session)
   return (
     <>
       <MobileNav

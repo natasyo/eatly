@@ -1,9 +1,7 @@
 import Image from 'next/image';
 import { DetailedHTMLProps, forwardRef, InputHTMLAttributes, useState, useImperativeHandle, useRef } from 'react';
 
-interface FileBoxProps
-  extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
-}
+type FileBoxProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 const FileBox = forwardRef<{ resetFile: () => void }, FileBoxProps>((props, ref) => {
   const [file, setFile] = useState<{ filename: string; url: string }>();

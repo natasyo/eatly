@@ -1,5 +1,5 @@
 import { requestFunc } from '@/lib/functions';
-import { prisma } from '@/lib/prisma';
+import { prisma } from "@/lib/prisma";
 import fs from 'fs';
 import path from 'path';
 
@@ -16,7 +16,6 @@ export async function POST(req: Request) {
     const data = dataString && JSON.parse(dataString);
     const file = formData.get('file');
     const result = await prisma.category.create({ data: data });
-    console.log(file);
     if (file && file instanceof File) {
       const buffer = await Buffer.from(await file.arrayBuffer());
       const filePath = path.join(process.cwd(), 'public/img/upload/categories', `${file.name}`);

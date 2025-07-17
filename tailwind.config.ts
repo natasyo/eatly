@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
+import { RecursiveKeyValuePair, ResolvableTo } from 'tailwindcss/types/config';
 
-const colors = {
+const colors: ResolvableTo<RecursiveKeyValuePair<string, string>> | undefined = {
   'eatly-violet-100': '#DBD9EE',
   'eatly-violet-200': '#F4F0FF',
   'eatly-violet-300': '#C5BFED',

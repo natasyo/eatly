@@ -10,7 +10,7 @@ class ProductCategoryController {
     if (category.image instanceof File) {
       const formData = new FormData();
       const jsonData = JSON.stringify({ ...category, image: category.image.name });
-      formData.append('category', jsonData);
+      formData.append('product', jsonData);
       formData.append('file', category.image);
       const result = await axios.post(`${apiUrl}/products/categories`, formData, {
         headers: {
@@ -31,12 +31,10 @@ class ProductCategoryController {
   }
   async remove(id: string) {
     const result = await axios.delete(`${apiUrl}/products/categories`, { data: { id } });
-    console.log(result);
     return result;
   }
 
   async uploadImage(file: File) {
-    console.log('image', file);
     const formData = new FormData();
     formData.append('file', file);
     try {
@@ -47,7 +45,7 @@ class ProductCategoryController {
       });
       return response.data.filename;
     } catch (error) {
-      console.log('Ошибка при загрузке файла');
+      console.log('Ошибка при загрузке файла',error);
     }
   }
 }

@@ -13,7 +13,7 @@ const CategoriesAdmin: FunctionComponent = () => {
   const [errorRequest, setErrorRequest] = useState<string>();
   const [isLoadingCategories, setIsLoadingCategories] = useState(false);
 
-  function getCtegories() {
+  function getCategories() {
     if (!categories) setIsLoadingCategories(true);
     productCategoryController.getAll().then(
       (data) => {
@@ -26,7 +26,7 @@ const CategoriesAdmin: FunctionComponent = () => {
     );
   }
   useEffect(() => {
-    getCtegories();
+    getCategories();
   }, []);
   useEffect(() => {
     if (category) setCategory({ ...category, image: fakeUrlImg });
@@ -45,7 +45,7 @@ const CategoriesAdmin: FunctionComponent = () => {
         onSave={(data) => {
           productCategoryController.create(data).then(
             () => {
-              getCtegories();
+              getCategories();
               setCategory(null);
             },
             (data) => {
@@ -70,7 +70,7 @@ const CategoriesAdmin: FunctionComponent = () => {
             categories={categories}
             onRemove={(category) => {
               productCategoryController.remove(category.id!);
-              getCtegories();
+              getCategories();
             }}
           />
         )
